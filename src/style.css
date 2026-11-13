@@ -62,3 +62,14 @@ html[data-theme=dark] .seg button.on{background:#f5b800;border-color:#f5b800;col
 html[data-theme=dark] .sheet{background:#111418;color:#e8edf5;border:1px solid #262c36}
 html[data-theme=dark] .sheet-head h2{color:#7db4ff}
 html[data-theme=dark] .warn{background:#3a2c00;color:#ffd666}
+
+/* ===== iPhone: barra superiore fissa e sotto la status bar / notch (v0.2.1) ===== */
+html{-webkit-text-size-adjust:100%}
+.wrap{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+header{position:sticky;top:0;z-index:40;height:auto;min-height:calc(58px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 14px 0;margin:0 -14px 12px;background:#123f7a;color:#fff;border-bottom:1px solid #1f4f94}
+header .icon-btn{color:#fff}
+.brand span{font-size:15px}
+.brand b{color:#f5b800}
+@media(min-width:650px){header{margin:0 -20px 14px;padding-left:20px;padding-right:20px;border-radius:0 0 14px 14px}}
+html[data-theme=dark] header{background:#000;color:#fff;border-bottom-color:#262c36}
+.sheet{max-height:88vh;max-height:88dvh}

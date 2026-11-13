@@ -1,5 +1,5 @@
 // Service worker minimale StaseraVolley: shell offline, mai cache per le chiamate a Supabase.
-const CACHE = 'staseravolley-v1';
+const CACHE = 'staseravolley-v2';
 const SHELL = ['/', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {

@@ -66,3 +66,7 @@ Frontend SPA Vite/React. Database PostgreSQL gestito da Supabase. RLS attivo su 
 - Menu **Impostazioni** (ingranaggio in alto a destra): tema Chiaro / Scuro / Automatico, scorciatoia per scaricare l'app, account e logout. Il tema è salvato sul dispositivo.
 - `public/manifest.webmanifest`, `public/icons/`, `public/sw.js` (service worker minimo; Supabase non viene mai messo in cache, attivo solo in produzione), `src/pwa.js`, `src/extras.jsx`.
 - Dopo modifiche importanti a `sw.js`, incrementa `CACHE`.
+
+## iPhone: barra superiore
+- La barra con il logo è fissa in alto e tiene conto di notch/Dynamic Island (`env(safe-area-inset-*)`), perché la web app installata usa la status bar traslucida.
+- Se l'icona era già stata aggiunta alla Home, va rimossa e riaggiunta per applicare le nuove impostazioni.
