@@ -1,1 +1,20 @@
-{"name":"STASERA PALLAVOLO","short_name":"Pallavolo","start_url":"/","display":"standalone","background_color":"#ffffff","theme_color":"#123f7a","icons":[]}
+{
+  "id": "/",
+  "name": "StaseraVolley",
+  "short_name": "StaseraVolley",
+  "description": "Trova partite, gruppi e giocatori di pallavolo amatoriale.",
+  "lang": "it",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#123f7a",
+  "categories": ["sports", "social"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

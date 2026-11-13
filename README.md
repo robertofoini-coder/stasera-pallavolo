@@ -1,4 +1,4 @@
-# STASERA PALLAVOLO — MVP 0.1
+# StaseraVolley — MVP 0.2
 
 Web app mobile-first React/Vite + Supabase, primo codice sorgente per test pilota. Non ancora pubblicata. Lingua italiana.
 
@@ -58,3 +58,11 @@ Frontend SPA Vite/React. Database PostgreSQL gestito da Supabase. RLS attivo su 
 3. Palestra condivisa tra gruppi, fotografie autorizzate, servizi e segnalazioni.
 4. Notifiche email reali e accettazione delle candidature tardive.
 5. Distribuzione su HTTPS con dominio di test.
+
+
+## App installabile (PWA), tema scuro, impostazioni
+
+- Banner "Scarica l'app" in cima a tutte le schermate (chiudibile; sparisce se l'app è già installata) con due pulsanti, Android e iPhone, che aprono la guida all'installazione. Su Android, se il browser lo consente, compare il pulsante "Installa ora".
+- Menu **Impostazioni** (ingranaggio in alto a destra): tema Chiaro / Scuro / Automatico, scorciatoia per scaricare l'app, account e logout. Il tema è salvato sul dispositivo.
+- `public/manifest.webmanifest`, `public/icons/`, `public/sw.js` (service worker minimo; Supabase non viene mai messo in cache, attivo solo in produzione), `src/pwa.js`, `src/extras.jsx`.
+- Dopo modifiche importanti a `sw.js`, incrementa `CACHE`.
