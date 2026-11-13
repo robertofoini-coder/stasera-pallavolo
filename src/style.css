@@ -73,3 +73,26 @@ header .icon-btn{color:#fff}
 @media(min-width:650px){header{margin:0 -20px 14px;padding-left:20px;padding-right:20px;border-radius:0 0 14px 14px}}
 html[data-theme=dark] header{background:#000;color:#fff;border-bottom-color:#262c36}
 .sheet{max-height:88vh;max-height:88dvh}
+
+/* ===== Foto profilo (v0.3) ===== */
+.avatar.img{object-fit:cover;background:#eaf0f8;flex-shrink:0}
+.player-card .avatar.big{margin:0 auto 6px;border:3px solid #f5b800;background:#1b3f73;color:#fff}
+.player-line .avatar{flex-shrink:0}
+.av-edit{border-bottom:1px solid #e1e7ef;padding-bottom:14px;margin-bottom:6px}
+.av-row{display:flex;gap:14px;align-items:flex-start}
+.av-actions{display:grid;gap:7px;flex:1;min-width:0}.av-actions label.check{font-weight:500;font-size:12px}
+.av-btns{display:flex;gap:8px;flex-wrap:wrap}
+.err{background:#fdecec;color:#8a2323;border-radius:10px;padding:11px 12px;margin:12px 0;font-size:13px}.err ul{margin:6px 0;padding-left:18px}
+.av-rules{margin-top:10px;font-size:13px}.av-rules summary{cursor:pointer;color:#123f7a;font-weight:600}.av-rules ul{padding-left:18px;line-height:1.5}
+html[data-theme=dark] .avatar.img{background:#1b2a42}
+html[data-theme=dark] .av-edit{border-bottom-color:#262c36}
+html[data-theme=dark] .err{background:#3a1616;color:#ffb3b3}
+html[data-theme=dark] .av-rules summary{color:#7db4ff}
+
+/* ===== Moderazione foto (v0.4) ===== */
+.mod-card{display:grid;gap:8px;border-top:1px solid #e1e7ef;padding:14px 0}
+.mod-img{width:100%;max-height:320px;object-fit:contain;background:#f4f6f8;border-radius:12px}
+.reasons{display:grid;gap:8px;margin:10px 0}.reasons .check{font-weight:500;font-size:13px}
+.mod-card .primary,.mod-card .outline{margin-top:0}
+html[data-theme=dark] .mod-card{border-top-color:#262c36}
+html[data-theme=dark] .mod-img{background:#0b0e12}

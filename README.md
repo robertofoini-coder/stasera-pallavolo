@@ -70,3 +70,11 @@ Frontend SPA Vite/React. Database PostgreSQL gestito da Supabase. RLS attivo su 
 ## iPhone: barra superiore
 - La barra con il logo è fissa in alto e tiene conto di notch/Dynamic Island (`env(safe-area-inset-*)`), perché la web app installata usa la status bar traslucida.
 - Se l'icona era già stata aggiunta alla Home, va rimossa e riaggiunta per applicare le nuove impostazioni.
+
+## Foto profilo con approvazione manuale (v0.4, gratuita)
+1. SQL Editor di Supabase: esegui `supabase/avatars.sql` (colonne, tabelle, funzioni, bucket `avatars`, permessi).
+2. Sempre nello SQL Editor, esegui la riga finale del file con la TUA email per diventare amministratore (chi approva le foto).
+3. Fai il deploy come al solito. Nessuna chiave a pagamento.
+
+Come funziona: il browser ridimensiona la foto, toglie i metadati (GPS), controlla nitidezza/luminosità e (se riesce a caricare il rilevatore gratuito MediaPipe) il numero di volti; poi la invia. La foto resta in attesa e la vedono solo il proprietario e gli amministratori finché un amministratore non la approva da Impostazioni, Moderazione foto. I controlli nel browser sono solo di aiuto; l'approvazione manuale è l'unico filtro affidabile. Le foto rifiutate vengono cancellate.
+Un'eventuale moderazione automatica a pagamento (modello di visione) potrà essere aggiunta in futuro come primo filtro, riusando le stesse funzioni.
