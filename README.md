@@ -1,6 +1,6 @@
 # StaseraVolley — beta integrata
 
-Questa versione unisce il mockup StaseraVolley all’app React/Vite della beta. Le pagine per giocatori usano Supabase Auth e PostgreSQL: gruppi, partite, iscrizioni, profili e foto non sono salvati soltanto nel browser. È inclusa una dashboard amministrativa multi pagina (`/admin.html`) con permessi verificati dal database.
+Questa versione unisce il mockup StaseraVolley all’app React/Vite della beta. L’interfaccia del mockup in `/` carica partite, iscrizioni, pagamenti e rimborsi da Supabase dopo l’accesso; anche l’area amministrativa (`/admin.html`) legge gli stessi movimenti. I pagamenti Satispay/PayPal sono simulati, ma vengono registrati una sola volta nel database condiviso. È inclusa una dashboard amministrativa multi pagina con permessi verificati dal database.
 
 ## Requisiti
 
@@ -15,8 +15,9 @@ Nel SQL Editor di Supabase esegui i file nell’ordine indicato:
 1. `supabase/schema.sql`
 2. `supabase/avatars.sql`
 3. `supabase/merge-mockup-migration.sql`
+4. `supabase/admin-management.sql`
 
-Crea poi il tuo account amministratore dalla schermata di registrazione. In fondo a `merge-mockup-migration.sql` trovi il comando commentato: sostituisci l’indirizzo con l’email del tuo account ed eseguilo una volta nel SQL Editor. L’area admin si apre con l’accesso normale dell’app; la funzione SQL nega i dati agli account non autorizzati. Il vecchio PIN demo non è usato.
+Crea poi il tuo account dalla schermata Profilo. In fondo a `merge-mockup-migration.sql` trovi il comando commentato per assegnare il primo amministratore: sostituisci l’indirizzo con l’email del tuo account ed eseguilo una volta nel SQL Editor. Dopo `admin-management.sql`, gli amministratori esistenti possono abilitare o revocare altri account già registrati dalla scheda Amministratori. Il vecchio PIN demo non è usato.
 
 ## Avvio locale
 
@@ -34,6 +35,7 @@ Non inserire la chiave `service_role` nel frontend. Per il deploy configura le s
 - Registrazione, profilo, caricamento foto con approvazione, gruppi, partite ricorrenti, inviti e candidatura con approvazione.
 - Prenotazione atomica con controllo dei posti lato database.
 - Pagamento Satispay/PayPal simulato, commissione demo del 5%, registrazione dei movimenti e gestione admin.
+- Prenotazioni, pagamenti e rimborsi sono visibili sia nell’app sia nel pannello admin perché entrambi leggono le stesse tabelle Supabase.
 - Disdetta almeno 24 ore prima: rimborso simulato della sola quota. Entro 24 ore la quota è trattenuta. La commissione non viene rimborsata.
 - Dashboard admin per vedere tutte le partite, le iscrizioni e il rendiconto dei pagamenti; può modificare partite, confermare/rifiutare/ritirare iscrizioni e registrare un pagamento manuale.
 
