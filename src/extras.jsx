@@ -106,6 +106,11 @@ export function InstallBanner() {
 /* ---------- Impostazioni ---------- */
 export function SettingsPanel({ sb, user, onSignOut, onBack }) {
   const [mode, setMode] = useState(getMode);
+  const [isPlatformAdmin, setIsPlatformAdmin] = useState(false);
+  useEffect(() => {
+    if (!user?.id) return;
+    sb.rpc('is_platform_admin').then(({ data }) => setIsPlatformAdmin(Boolean(data)));
+  }, [sb, user?.id]);
   const choose = (m) => { setMode(m); try { localStorage.setItem(THEME_KEY, m); } catch (_) {} applyTheme(m); };
   const opts = [{ id: 'light', label: 'Chiaro', icon: Sun }, { id: 'dark', label: 'Scuro', icon: Moon }, { id: 'auto', label: 'Automatico', icon: Monitor }];
   return (
@@ -129,6 +134,11 @@ export function SettingsPanel({ sb, user, onSignOut, onBack }) {
         <InstallActions />
       </section>
       <ModerationPanel sb={sb} user={user} />
+      {isPlatformAdmin && <section className="panel">
+        <h3>Amministrazione piattaforma</h3>
+        <p className="muted">Gestisci partite, iscrizioni, pagamenti e commissioni di tutti i gruppi.</p>
+        <a className="primary admin-link" href="/admin.html">Apri area amministratori</a>
+      </section>}
       <section className="panel">
         <h3>Account</h3>
         <p className="muted">{user?.email}</p>
