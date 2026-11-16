@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createClient } from '@supabase/supabase-js';
-import { ArrowLeft, CalendarDays, Check, Clock3, CreditCard, HelpCircle, LogOut, RefreshCw, Search, ShieldCheck, Users, Volleyball, X } from 'lucide-react';
+import { ArrowLeft, CalendarDays, Check, Clock3, CreditCard, HelpCircle, LogOut, RefreshCw, Search, ShieldCheck, Users, Volleyball, X, UserPlus, UserMinus } from 'lucide-react';
 import './style.css';
 import './admin.css';
 import './extras.jsx';
@@ -23,6 +23,8 @@ function Admin() {
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState(null);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [admins, setAdmins] = useState([]);
+  const [adminEmail, setAdminEmail] = useState('');
 
   const load = useCallback(async () => {
     if (!sb) return;
@@ -30,6 +32,8 @@ function Admin() {
     if (error) { setData(null); setMessage(error.message); return; }
     setData(result);
     setMessage('');
+    const adminsResult = await sb.rpc('admin_list_platform_admins');
+    if (!adminsResult.error) setAdmins(adminsResult.data || []);
   }, []);
 
   useEffect(() => {
@@ -84,6 +88,20 @@ function Admin() {
     }, 'Partita aggiornata.');
   }
 
+  async function changeAdmin(event, action, targetEmail) {
+    event?.preventDefault();
+    const emailToChange = targetEmail || adminEmail.trim();
+    if (!emailToChange) return;
+    await run(async () => {
+      const { error } = await sb.rpc('admin_set_platform_admin', { p_email: emailToChange, p_enabled: action === 'add' });
+      if (error) throw error;
+      setAdminEmail('');
+      const { data: rows, error: listError } = await sb.rpc('admin_list_platform_admins');
+      if (listError) throw listError;
+      setAdmins(rows || []);
+    }, action === 'add' ? 'Amministratore autorizzato.' : 'Permesso amministrativo revocato.');
+  }
+
   const games = data?.games || [];
   const bookings = data?.bookings || [];
   const payments = data?.payments || [];
@@ -110,10 +128,11 @@ function Admin() {
       <article><RefreshCw/><small>Rimborsi simulati</small><strong>{euro(stats.refunds)}</strong></article>
     </section>
     <section className="panel admin-panel">
-      <div className="admin-toolbar"><div className="admin-tabs">{[['games','Partite'],['bookings','Iscrizioni'],['payments','Pagamenti']].map(([id,label])=><button key={id} className={tab===id?'selected':''} onClick={()=>setTab(id)}>{label}<span>{id==='games'?games.length:id==='bookings'?bookings.length:payments.length}</span></button>)}</div><label className="admin-search"><Search size={16}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Cerca giocatore, partita…"/></label></div>
+      <div className="admin-toolbar"><div className="admin-tabs">{[['games','Partite'],['bookings','Iscrizioni'],['payments','Pagamenti'],['admins','Amministratori']].map(([id,label])=><button key={id} className={tab===id?'selected':''} onClick={()=>setTab(id)}>{label}<span>{id==='games'?games.length:id==='bookings'?bookings.length:id==='payments'?payments.length:admins.length}</span></button>)}</div>{tab!=='admins'&&<label className="admin-search"><Search size={16}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Cerca giocatore, partita…"/></label>}</div>
       {tab==='games'&&<div className="admin-table-wrap"><table><thead><tr><th>Partita / gruppo</th><th>Data e luogo</th><th>Iscritti</th><th>Quota</th><th></th></tr></thead><tbody>{visibleGames.map(g=><tr key={g.id}><td><strong>{g.group_name}</strong><small>{g.city}</small></td><td>{date(g.starts_at)}<small>{g.venue}</small></td><td>{g.confirmed_count} confermati · {g.pending_count} in attesa</td><td>{euro(g.price_cents)}</td><td><button className="tiny" onClick={()=>setEditing(g)}>Modifica</button></td></tr>)}</tbody></table>{!visibleGames.length&&<p className="empty">Nessuna partita trovata.</p>}</div>}
       {tab==='bookings'&&<div className="admin-table-wrap"><table><thead><tr><th>Giocatore</th><th>Partita</th><th>Stato</th><th>Pagamento</th><th>Gestione</th></tr></thead><tbody>{visibleBookings.map(b=><tr key={b.id}><td><strong>{b.display_name||'Giocatore'}</strong><small>{b.email}</small></td><td>{b.group_name}<small>{date(b.game_date)} · {b.game_venue}</small></td><td><span className={`admin-state ${b.status}`}>{b.status}</span></td><td>{b.paid?'Registrato':'Da saldare'}</td><td className="admin-row-actions">{b.status==='pending'&&<><button className="tiny" onClick={()=>setBookingStatus(b.id,'confirmed')} disabled={busy}><Check size={14}/> Conferma</button><button className="tiny danger" onClick={()=>setBookingStatus(b.id,'rejected')} disabled={busy}><X size={14}/> Rifiuta</button></>}{b.status==='confirmed'&&<><button className="tiny" onClick={()=>togglePaid(b)} disabled={busy}>{b.paid?'Annulla registrazione':'Segna pagato'}</button><button className="tiny danger" onClick={()=>setBookingStatus(b.id,'cancelled')} disabled={busy}>Ritira</button></>}{b.status==='cancelled'&&<button className="tiny" onClick={()=>setBookingStatus(b.id,'confirmed')} disabled={busy}>Ripristina</button>}</td></tr>)}</tbody></table>{!visibleBookings.length&&<p className="empty">Nessuna iscrizione trovata.</p>}</div>}
       {tab==='payments'&&<div className="admin-table-wrap"><table><thead><tr><th>Data</th><th>Giocatore / partita</th><th>Operazione</th><th>Metodo</th><th>Quota</th><th>Commissione</th><th>Totale</th><th>Esito</th></tr></thead><tbody>{visiblePayments.map(p=><tr key={p.id}><td>{date(p.created_at)}</td><td><strong>{p.display_name}</strong><small>{p.email} · {p.group_name}</small></td><td>{p.event_type==='charge'?'Pagamento':'Rimborso / ritiro'}</td><td>{p.method}</td><td>{euro(p.quota_cents)}</td><td>{euro(p.fee_cents)}</td><td>{euro(p.total_cents)}</td><td><span className={`admin-state ${p.status}`}>{p.status}</span></td></tr>)}</tbody></table>{!visiblePayments.length&&<p className="empty">Nessuna operazione trovata.</p>}</div>}
+      {tab==='admins'&&<div className="admin-table-wrap admin-managers"><p className="muted">Autorizza un indirizzo già registrato a Supabase. Il nuovo amministratore potrà gestire partite, iscrizioni, pagamenti e altri amministratori.</p><form className="admin-add-form" onSubmit={e=>changeAdmin(e,'add')}><label htmlFor="admin-email">Email dell’amministratore</label><input id="admin-email" type="email" value={adminEmail} onChange={e=>setAdminEmail(e.target.value)} placeholder="nome@esempio.it" required/><button className="primary" disabled={busy}><UserPlus size={16}/> Autorizza email</button></form><h3>Amministratori autorizzati</h3><table><thead><tr><th>Email</th><th>Gestione</th></tr></thead><tbody>{admins.map(a=><tr key={a.user_id}><td><strong>{a.email}</strong>{a.user_id===session.user.id&&<small>Il tuo account</small>}</td><td><button className="tiny danger" disabled={busy||a.user_id===session.user.id} title={a.user_id===session.user.id?'Non puoi revocare il tuo stesso accesso qui':''} onClick={()=>changeAdmin(null,'remove',a.email)}><UserMinus size={14}/> Revoca accesso</button></td></tr>)}</tbody></table>{admins.length===0&&<p className="empty">Nessun amministratore trovato.</p>}<p className="admin-footnote">Per evitare di perdere l’accesso, non puoi revocare il tuo stesso account da questa schermata.</p></div>}
     </section>
     <p className="admin-footnote"><Clock3 size={14}/> Pagamenti e rimborsi sono simulati e registrati nel database. La commissione non viene restituita; oltre 24 ore viene rimborsata solo la quota, entro 24 ore la quota è trattenuta. Rimborso reale non attivo.</p>
     <a className="back" href="/">← Torna all’app</a>
