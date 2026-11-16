@@ -1,80 +1,42 @@
-# StaseraVolley — MVP 0.2
+# StaseraVolley — beta integrata
 
-Web app mobile-first React/Vite + Supabase, primo codice sorgente per test pilota. Non ancora pubblicata. Lingua italiana.
+Questa versione unisce il mockup StaseraVolley all’app React/Vite della beta. Le pagine per giocatori usano Supabase Auth e PostgreSQL: gruppi, partite, iscrizioni, profili e foto non sono salvati soltanto nel browser. È inclusa una dashboard amministrativa multi pagina (`/admin.html`) con permessi verificati dal database.
+
+## Requisiti
+
+- Node.js 20 o successivo
+- Un progetto Supabase con Email/Password abilitato
+- URL Supabase e chiave publishable/anon
+
+## Configurazione database
+
+Nel SQL Editor di Supabase esegui i file nell’ordine indicato:
+
+1. `supabase/schema.sql`
+2. `supabase/avatars.sql`
+3. `supabase/merge-mockup-migration.sql`
+
+Crea poi il tuo account amministratore dalla schermata di registrazione. In fondo a `merge-mockup-migration.sql` trovi il comando commentato: sostituisci l’indirizzo con l’email del tuo account ed eseguilo una volta nel SQL Editor. L’area admin si apre con l’accesso normale dell’app; la funzione SQL nega i dati agli account non autorizzati. Il vecchio PIN demo non è usato.
 
 ## Avvio locale
 
-1. Installa Node.js 20 o superiore.
-2. Crea un nuovo progetto su https://supabase.com.
-3. Apri **SQL Editor** e incolla l'intero file `supabase/schema.sql`. Eseguilo una sola volta su un progetto vuoto.
-4. In **Authentication → Providers → Email**, abilita l'accesso email. Durante il test scegli consapevolmente se richiedere conferma email; in produzione abilitala.
-5. Copia `.env.example` in `.env` e sostituisci `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` con URL e chiave **publishable/anon** dal progetto Supabase. Non inserire mai la chiave `service_role` nel frontend.
-6. Esegui `npm install`, quindi `npm run dev`.
-7. Apri l'indirizzo locale mostrato da Vite. Per test tra dispositivi pubblica la web app con un host HTTPS e configura gli URL autorizzati in Supabase Authentication.
-8. Registrati, crea un gruppo chiamato **VOLTAREN**, località **Costa di Mezzate**, palestra **Palestra comunale di Costa di Mezzate**, quota 5 €, 12 posti in campo, 0 o 2 posti a rotazione, programmazione settimanale al giovedì. L'ora effettiva non è stata specificata: impostala con gli organizzatori.
+1. Copia `.env.example` in `.env`.
+2. Imposta `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` con i valori del progetto.
+3. Esegui `npm install` e `npm run dev`.
+4. Apri l’indirizzo locale di Vite. L’app è su `/` e il pannello admin su `/admin.html`.
 
-## Funzionalità presenti
+Non inserire la chiave `service_role` nel frontend. Per il deploy configura le stesse due variabili come variabili di build dell’hosting e pubblica il contenuto generato da `npm run build`.
 
-- Registrazione e login email/password (Supabase Auth)
-- Profilo giocatore: ruolo, esperienza, città, presentazione, visibilità e disponibilità per società
-- Creazione gruppi da qualsiasi account, fondatore amministratore
-- Gruppi con storia, palestra e disponibilità tornei
-- Creazione partite singole o settimanali (serie di date), prezzo libero, posti e rotazione, approvazione facoltativa
-- Prenotazioni atomiche tramite funzioni SQL con lock su partita per impedire overbooking
-- Candidature, approvazione/rifiuto da amministratore, cancellazione fino a 12 ore per confermati
-- Elenco giocatori, scheda giocatore, inviti tra utenti e schermata attività
-- Registrazione manuale pagamento da parte dell'amministratore
-- Realtime su partite, prenotazioni e inviti (secondo permessi)
+## Funzioni incluse
 
-## Limiti intenzionali di questa prima iterazione
+- Guida dettagliata contestuale al punto interrogativo di ogni schermata.
+- Tema chiaro, scuro e automatico; app installabile come PWA.
+- Registrazione, profilo, caricamento foto con approvazione, gruppi, partite ricorrenti, inviti e candidatura con approvazione.
+- Prenotazione atomica con controllo dei posti lato database.
+- Pagamento Satispay/PayPal simulato, commissione demo del 5%, registrazione dei movimenti e gestione admin.
+- Disdetta almeno 24 ore prima: rimborso simulato della sola quota. Entro 24 ore la quota è trattenuta. La commissione non viene rimborsata.
+- Dashboard admin per vedere tutte le partite, le iscrizioni e il rendiconto dei pagamenti; può modificare partite, confermare/rifiutare/ritirare iscrizioni e registrare un pagamento manuale.
 
-- **Non sono inclusi Satispay, split, abbonamenti o incassi effettivi.** Il prezzo della partita è un dato informativo e `paid` è un segno manuale.
-- La UI utilizza una rappresentazione schematica dei posti, non una disposizione regolamentare dei giocatori. I posti a rotazione sono conteggiati ma non rappresentati con pallini separati.
-- La gestione dell'approvazione a meno di 12 ore è temporaneamente bloccata: occorre sviluppare accettazione esplicita del giocatore prima di confermare una candidatura tardiva.
-- La lista d'attesa, i ruoli di amministratore aggiuntivi, il trasferimento di proprietà, la modifica delle partite, il controllo delle collisioni tra orari e le notifiche push/email automatiche non sono ancora implementati.
-- Non esistono ancora upload immagini, fotografie palestra, rating verificati, profili enti, profili società verificati o valutazioni tecniche.
-- Le schermate non sono state sottoposte a test sistematici multiutente; il codice è uno **starter MVP**, non un prodotto production-ready.
-- La privacy e la moderazione richiedono ulteriori controlli: policy di visibilità, blocco utenti, gestione richieste GDPR, retention, termini d'uso, procedure per segnalazioni, protezione minori (test pilota consigliato solo 18+).
-- I nomi dei giocatori sono leggibili dagli iscritti confermati alla stessa partita e dagli amministratori; la visibilità dei profili pubblici dipende da `discoverable`. Va definita e verificata l'informativa.
-- I gruppi non possono ancora aggiungere autonomamente altri membri permanenti (gli inviti attuali sono per le singole partite).
+## Limiti
 
-## Sicurezza e verifiche prima del pilot
-
-1. Testare SQL/RLS con almeno 3 account distinti (amministratore, iscritto, estraneo).
-2. Simulare prenotazioni contemporanee sull'ultimo posto, cancellazioni vicino alla scadenza e tentativi di approvazione non autorizzati.
-3. Configurare protezioni antispam e limiti alle richieste di invito.
-4. Completare privacy policy, termini di servizio e informativa sulla palestra, con revisione professionale.
-5. Decidere la politica per partite annullate, quote già versate e giocatori assenti.
-6. Aggiungere monitoraggio errori, backup e un ambiente di test separato.
-
-## Note di architettura
-
-Frontend SPA Vite/React. Database PostgreSQL gestito da Supabase. RLS attivo su tutte le tabelle. Le mutazioni sensibili (`book_game`, `cancel_booking`, `decide_booking`, `mark_paid`, `invite_player`) sono funzioni SQL `security definer` con controlli espliciti. Nessuna chiave privata deve raggiungere il browser.
-
-## Prossimo sprint
-
-1. Test end-to-end e correzioni UX con 3 account.
-2. Gestione membri gruppo, inviti e lista d'attesa.
-3. Palestra condivisa tra gruppi, fotografie autorizzate, servizi e segnalazioni.
-4. Notifiche email reali e accettazione delle candidature tardive.
-5. Distribuzione su HTTPS con dominio di test.
-
-
-## App installabile (PWA), tema scuro, impostazioni
-
-- Banner "Scarica l'app" in cima a tutte le schermate (chiudibile; sparisce se l'app è già installata) con due pulsanti, Android e iPhone, che aprono la guida all'installazione. Su Android, se il browser lo consente, compare il pulsante "Installa ora".
-- Menu **Impostazioni** (ingranaggio in alto a destra): tema Chiaro / Scuro / Automatico, scorciatoia per scaricare l'app, account e logout. Il tema è salvato sul dispositivo.
-- `public/manifest.webmanifest`, `public/icons/`, `public/sw.js` (service worker minimo; Supabase non viene mai messo in cache, attivo solo in produzione), `src/pwa.js`, `src/extras.jsx`.
-- Dopo modifiche importanti a `sw.js`, incrementa `CACHE`.
-
-## iPhone: barra superiore
-- La barra con il logo è fissa in alto e tiene conto di notch/Dynamic Island (`env(safe-area-inset-*)`), perché la web app installata usa la status bar traslucida.
-- Se l'icona era già stata aggiunta alla Home, va rimossa e riaggiunta per applicare le nuove impostazioni.
-
-## Foto profilo con approvazione manuale (v0.4, gratuita)
-1. SQL Editor di Supabase: esegui `supabase/avatars.sql` (colonne, tabelle, funzioni, bucket `avatars`, permessi).
-2. Sempre nello SQL Editor, esegui la riga finale del file con la TUA email per diventare amministratore (chi approva le foto).
-3. Fai il deploy come al solito. Nessuna chiave a pagamento.
-
-Come funziona: il browser ridimensiona la foto, toglie i metadati (GPS), controlla nitidezza/luminosità e (se riesce a caricare il rilevatore gratuito MediaPipe) il numero di volti; poi la invia. La foto resta in attesa e la vedono solo il proprietario e gli amministratori finché un amministratore non la approva da Impostazioni, Moderazione foto. I controlli nel browser sono solo di aiuto; l'approvazione manuale è l'unico filtro affidabile. Le foto rifiutate vengono cancellate.
-Un'eventuale moderazione automatica a pagamento (modello di visione) potrà essere aggiunta in futuro come primo filtro, riusando le stesse funzioni.
+Satispay e PayPal non inviano pagamenti reali e il rimborso non restituisce denaro: il database registra soltanto la simulazione. Prima di usare la piattaforma con quote reali servono provider, server e procedure di rimborso effettive. La dashboard non usa segreti nel browser; le azioni admin passano da RPC con controllo del ruolo.
