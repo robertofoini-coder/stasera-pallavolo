@@ -5,7 +5,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        app: resolve(process.cwd(), 'index.html'),
+        demo: resolve(process.cwd(), 'index.html'),
+        app: resolve(process.cwd(), 'app.html'),
         admin: resolve(process.cwd(), 'admin.html'),
       },
     },
