@@ -40,3 +40,5 @@ Non inserire la chiave `service_role` nel frontend. Per il deploy configura le s
 ## Limiti
 
 Satispay e PayPal non inviano pagamenti reali e il rimborso non restituisce denaro: il database registra soltanto la simulazione. Prima di usare la piattaforma con quote reali servono provider, server e procedure di rimborso effettive. La dashboard non usa segreti nel browser; le azioni admin passano da RPC con controllo del ruolo.
+
+La home (/) apre l'app completa e responsive; non mostra una cornice da smartphone. /app.html reindirizza alla home.
