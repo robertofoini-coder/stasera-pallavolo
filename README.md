@@ -17,6 +17,7 @@ Nel SQL Editor di Supabase esegui i file nell’ordine indicato:
 3. `supabase/merge-mockup-migration.sql`
 4. `supabase/admin-management.sql`
 5. `supabase/20261117-live-mockup.sql`
+6. `supabase/20261117-court-seats.sql` — posti cliccabili e prenotazione del posto scelto, senza doppie assegnazioni.
 
 Se il database della beta è già operativo, esegui soltanto il quinto file: aggiunge conteggio dei posti, pubblicazione atomica delle serate ricorrenti, feedback e valutazioni. Non rieseguire lo schema iniziale sul database esistente. I dati e gli amministratori attuali restano validi.
 
