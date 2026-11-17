@@ -179,20 +179,27 @@ function showGame(game) {
   const date = new Date(game.starts_at);
   const end = new Date(date.getTime() + 2 * 60 * 60 * 1000);
   const timeFmt = value => new Intl.DateTimeFormat('it-IT', { hour: '2-digit', minute: '2-digit' }).format(value);
-  $('#detailTitle').textContent = `${group.name || 'Partita'} · Pallavolo`;
-  $('#detailTime').textContent = `${fmtDate(date)} · ${timeFmt(date)}–${timeFmt(end)}`;
+  $('#detailTitle').textContent = group.name || 'Partita di pallavolo';
+  $('#detailTime').textContent = `${timeFmt(date)} – ${timeFmt(end)}`;
+  let dateLabel=$('#detailDate');
+  if(!dateLabel){$('#detailTitle').insertAdjacentHTML('afterend','<p class="detail-date" id="detailDate"></p>');dateLabel=$('#detailDate');}
+  dateLabel.textContent=new Intl.DateTimeFormat('it-IT',{weekday:'long',day:'numeric',month:'long'}).format(date);
   $('#detailPlace').textContent = `${game.venue} · ${group.city || ''}`;
   const occupied = occupiedCount(game.id);
   const total = Number(game.court_spots || 0) + Number(game.rotation_spots || 0);
-  $('#playersCount').textContent = `${occupied} / ${total} giocatori`;
-  $('#courtLabel').textContent = `${Math.max(0,total-occupied)} posti disponibili · ${game.rotation_spots || 0} a rotazione`;
-  $('#courtFloor').innerHTML = Array.from({length:Math.min(12,game.court_spots)},(_,index)=>`<button class="court-player ${index<6?'p':'q'}${index%6+1} ${index<occupied?'occupied':'open'}" disabled aria-label="${index<occupied?'Posto occupato':'Posto libero'}">${index%6+1}</button>`).join('');
-  $('#reserveRoster').hidden = true;
+  $('#playersCount').textContent = `Giocatori già prenotati: ${occupied}`;
+  $('#courtLabel').textContent = `Il numero dei posti disponibili è: ${Math.max(0,total-occupied)}`;
+  const positions=[1,6,5,2,3,4],fieldCount=Math.min(12,Number(game.court_spots)),occupiedField=Math.min(fieldCount,occupied);
+  $('#courtFloor').innerHTML = Array.from({length:fieldCount},(_,index)=>`<span class="court-player ${index<6?'p':'q'}${index%6+1}${index>=6?' opponent':''} ${index<occupiedField?'occupied':'open'}" role="img" aria-label="Posizione ${positions[index%6]}: ${index<occupiedField?'occupata':'libera'}">${positions[index%6]}</span>`).join('')+'<i class="court-net" aria-hidden="true"></i>';
+  $('#court').classList.toggle('has-reserves',Number(game.rotation_spots)>0);
+  $('#reserveRoster').hidden = !game.rotation_spots;
+  $('#reserveRoster').innerHTML=Array.from({length:Number(game.rotation_spots)||0},(_,index)=>`<span class="avatar ${index<Math.max(0,occupied-fieldCount)?'':'empty'}" aria-label="Posto a rotazione ${index+1}"></span>`).join('');
   const confirmation = $('#details .confirmation');
-  if(confirmation) confirmation.textContent=game.approval_required?'Conferma richiesta all’organizzatore':'Conferma immediata dopo il pagamento simulato';
+  if(confirmation) confirmation.textContent=game.approval_required?'Conferma richiesta all’organizzatore':'✓ Conferma immediata';
   $('#positionPanel').innerHTML = `<strong>${game.approval_required ? 'Prenotazione con approvazione' : 'Posto disponibile'}</strong><p>${game.approval_required ? 'La quota si paga dopo la conferma della candidatura.' : 'La prenotazione e la quota demo vengono registrate insieme.'}</p>`;
-  $('#reserveSummary').hidden = true;
-  $('#playerRoster').innerHTML = Array.from({ length: Math.min(total, 12) }, (_, index) => `<span class="avatar ${index < occupied ? '' : 'empty'}" aria-hidden="true"></span>`).join('');
+  $('#reserveSummary').hidden = !game.rotation_spots;
+  $('#reserveSummary').textContent=`${game.rotation_spots||0} posti a rotazione`;
+  $('#playerRoster').innerHTML = Array.from({ length: Math.min(occupiedField,12) }, () => '<span class="player-avatar" aria-label="Giocatore prenotato"></span>').join('') || '<small class="roster-empty">Nessun giocatore ancora prenotato.</small>';
   const prior = bookings.find(row => row.game_id === game.id && ['pending', 'confirmed'].includes(row.status));
   const button = $('#book');
   button.textContent = prior ? (prior.status === 'pending' ? 'Candidatura inviata' : (prior.paid ? 'Posto confermato · pagato' : 'Completa pagamento demo')) : 'Prenota il tuo posto';
@@ -207,6 +214,18 @@ function showGame(game) {
     else openPayment(game);
   };
   openScreen('details');
+  if(prior?.status==='confirmed'||groupAdmin(game.group_id)) loadGamePlayers(game.id);
+}
+
+async function loadGamePlayers(gameId){
+  const {data,error}=await sb.rpc('app_game_players',{p_game:gameId});
+  if(error||selectedGame?.id!==gameId||!$('#details').classList.contains('active'))return;
+  if(!data?.length)return;
+  $('#playerRoster').innerHTML=data.slice(0,12).map(p=>`<button class="player-avatar" type="button" data-profile-id="${p.user_id}" aria-label="${escapeHtml(p.display_name||'Giocatore')}"></button>`).join('');
+  $('#playerRoster').querySelectorAll('[data-profile-id]').forEach(button=>button.onclick=()=>{
+    const player=profiles.find(p=>p.id===button.dataset.profileId),name=data.find(p=>p.user_id===button.dataset.profileId)?.display_name||'Giocatore';
+    const overlay=document.createElement('div');overlay.className='demo-overlay';overlay.innerHTML=`<article class="invite-card player-card"><button class="sheet-close" aria-label="Chiudi">×</button><span class="player-avatar detail-player-avatar" aria-hidden="true"></span><h2>${escapeHtml(name)}</h2><p>${escapeHtml(player?.role||'Giocatore')} · ${escapeHtml(player?.experience||'Pallavolo amatoriale')}</p>${player?.bio?`<p>${escapeHtml(player.bio)}</p>`:''}</article>`;document.body.append(overlay);overlay.querySelector('.sheet-close').onclick=()=>overlay.remove();
+  });
 }
 
 function openPayment(game, bookingId = null) {
@@ -347,6 +366,7 @@ function renderInvitations(){const root=$('#invitationList');if(!root)return;con
 function renderFeedbacks(){const root=$('#feedbackList');if(root)root.innerHTML=feedbacks.map(f=>`<article class="card form-card"><strong>${escapeHtml(f.area)}</strong><p>${escapeHtml(f.message)}</p><small>${escapeHtml(fmtDate(f.created_at))}</small></article>`).join('');}
 async function startRating(gameId){if(!requireLogin())return;try{const booking=bookings.find(b=>b.game_id===gameId);const game=booking?.games;if(!game)return;ratingGame=gameId;const people=check(await sb.rpc('app_game_players',{p_game:gameId}))||[];const saved=ratings.find(r=>r.game_id===gameId)?.scores||{};const metric=(key,label)=>`<label>${escapeHtml(label)}<select data-rating="${key}"><option value="">Non valuto</option>${[1,2,3,4,5].map(n=>`<option value="${n}" ${saved[key]===n?'selected':''}>${'★'.repeat(n)}</option>`).join('')}</select></label>`;$('#ratingGrid').innerHTML=`<article class="rating-section">${metric('venue','Il campo')}</article>`+people.filter(p=>p.user_id!==session.user.id).map(p=>`<article class="rating-section"><h2>${escapeHtml(p.display_name)}</h2>${metric(p.user_id+':reliability','Affidabilità')}${metric(p.user_id+':technique','Tecnica')}</article>`).join('');openScreen('matchRating');}catch(error){showError(error);}}
 function initInterface(){
+  $('#openFeedback').onclick=()=>openScreen('feedback');
   const theme=$('#themeSelect'),apply=()=>{const mode=theme.value;document.body.dataset.theme=mode==='dark'||mode==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';localStorage.setItem('staseravolley-theme',mode);};theme.value=localStorage.getItem('staseravolley-theme')||'auto';apply();theme.onchange=apply;matchMedia('(prefers-color-scheme: dark)').addEventListener('change',apply);
   $('#settingsButton').onclick=()=>openScreen('settings');$('#notificationsButton').onclick=()=>openScreen('notifications');$('#closeToast').onclick=()=>$('#toast').classList.remove('show');
   $('#locationPicker').onclick=()=>{const shown=$('#locationPicker').getAttribute('aria-expanded')!=='true';$('#locationPicker').setAttribute('aria-expanded',String(shown));$('#locationMenu').classList.toggle('show',shown);};
