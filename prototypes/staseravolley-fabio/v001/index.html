@@ -115,6 +115,34 @@ try{renderCourt();renderPositionPanel()}catch(error){console.error('Inizializzaz
 
 // Integrazione di Roberto: impostazioni, tutorial contestuale, foto e pagamenti demo.
 $('.bottom').insertAdjacentHTML('beforebegin','<section id="settings" class="screen"><h1 class="section-title">Impostazioni</h1><div class="card form-card"><strong>Aspetto</strong><p class="settings-note">Scegli come visualizzare StaseraVolley.</p><label for="themeSelect">Tema</label><select id="themeSelect"><option value="light">Chiaro</option><option value="dark">Scuro</option><option value="auto">Automatico</option></select></div><div class="card form-card" style="margin-top:14px"><strong>Area proprietari</strong><p class="settings-note">Cruscotto dimostrativo di partite e rendiconti.</p><button class="secondary-cta" id="adminLink">Apri pannello amministratori</button><p class="settings-note">Accesso demo locale; non è un sistema di autenticazione reale.</p></div></section>');
+// V001: preferenza lingua per le impostazioni; le altre schermate demo restano in italiano.
+const settingsLanguageMarkup='<div class="card form-card" style="margin-top:14px"><strong id="languageHeading">Lingua</strong><p class="settings-note" id="languageNote">Scegli la lingua delle impostazioni. Il resto del prototipo rimane in italiano.</p><label for="languageSelect" id="languageLabel">Lingua</label><select id="languageSelect" aria-label="Lingua"><option value="it">Italiano</option><option value="en">English</option></select></div>';
+$('#settings .form-card').insertAdjacentHTML('afterend',settingsLanguageMarkup);
+const languageSelect=$('#languageSelect');
+const languageStrings={
+  it:{heading:'Impostazioni',appearance:'Aspetto',appearanceNote:'Scegli come visualizzare StaseraVolley.',theme:'Tema',light:'Chiaro',dark:'Scuro',auto:'Automatico',language:'Lingua',languageNote:'Scegli la lingua delle impostazioni. Il resto del prototipo rimane in italiano.',owners:'Area proprietari',ownersNote:'Cruscotto dimostrativo di partite e rendiconti.',admin:'Apri pannello amministratori',adminNote:'Accesso demo locale; non è un sistema di autenticazione reale.'},
+  en:{heading:'Settings',appearance:'Appearance',appearanceNote:'Choose how StaseraVolley looks.',theme:'Theme',light:'Light',dark:'Dark',auto:'Automatic',language:'Language',languageNote:'Choose the settings language. The rest of this prototype remains in Italian.',owners:'Owner area',ownersNote:'Demo dashboard for matches and reports.',admin:'Open admin panel',adminNote:'Local demo access; this is not a real authentication system.'}
+};
+function applySettingsLanguage(lang){
+  const code=Object.prototype.hasOwnProperty.call(languageStrings,lang)?lang:'it';
+  const t=languageStrings[code], cards=$('#settings').querySelectorAll('.form-card');
+  $('#settings .section-title').textContent=t.heading;
+  cards[0].querySelector('strong').textContent=t.appearance;
+  cards[0].querySelector('p').textContent=t.appearanceNote;
+  cards[0].querySelector('label').textContent=t.theme;
+  ['light','dark','auto'].forEach((value,i)=>{themeSelect.options[i].textContent=t[value]});
+  $('#languageHeading').textContent=t.language;
+  $('#languageNote').textContent=t.languageNote;
+  $('#languageLabel').textContent=t.language;
+  cards[2].querySelector('strong').textContent=t.owners;
+  cards[2].querySelector('p').textContent=t.ownersNote;
+  $('#adminLink').textContent=t.admin;
+  cards[2].querySelectorAll('p')[1].textContent=t.adminNote;
+  languageSelect.value=code;
+  localStorage.setItem('staseravolley-language',code);
+}
+try{applySettingsLanguage(localStorage.getItem('staseravolley-language')||'it')}catch(error){console.warn('Preferenza lingua non disponibile',error);applySettingsLanguage('it')}
+languageSelect.addEventListener('change',()=>applySettingsLanguage(languageSelect.value));
 const themeSelect=$('#themeSelect');function applyTheme(mode){document.body.dataset.theme=mode==='dark'||(mode==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';themeSelect.value=mode;localStorage.setItem('staseravolley-theme',mode)}applyTheme(localStorage.getItem('staseravolley-theme')||'auto');themeSelect.onchange=()=>applyTheme(themeSelect.value);matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(themeSelect.value==='auto')applyTheme('auto')});$('#tourButton').insertAdjacentHTML('beforebegin','<button class="tour-button" id="settingsButton" aria-label="Impostazioni" title="Impostazioni">⚙</button>');$('#settingsButton').onclick=()=>open('settings');$('#adminLink').onclick=()=>{const code=prompt('Area amministratori demo. Inserisci il codice locale dimostrativo:');if(code==='2468')location.href='admin.html';else if(code!==null)toast('Codice non valido')};
 
 $('.profile-ball').id='profilePhotoButton';$('.profile-ball').setAttribute('role','button');$('.profile-ball').setAttribute('tabindex','0');$('.profile-ball img').id='profilePhoto';$('.profile-ball').insertAdjacentHTML('afterend','<input id="profilePhotoInput" type="file" accept="image/*" hidden>');const photo=$('#profilePhoto'),photoInput=$('#profilePhotoInput'),photoKey='staseravolley-photo';function setPhoto(src){photo.src=src||'profile-volleyball-transparent.png'}const storedPhoto=localStorage.getItem(photoKey);if(storedPhoto)setPhoto(storedPhoto);function pickPhoto(){photoInput.click()}$('#profilePhotoButton').onclick=pickPhoto;$('#profilePhotoButton').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickPhoto()}};photoInput.onchange=()=>{const file=photoInput.files[0];if(!file)return;if(!file.type.startsWith('image/')){toast('Seleziona un file immagine');return}const reader=new FileReader();reader.onload=()=>{try{localStorage.setItem(photoKey,reader.result);setPhoto(reader.result);toast('Foto profilo aggiornata')}catch(e){toast('Immagine troppo grande: scegli una foto più leggera')}};reader.readAsDataURL(file)};
