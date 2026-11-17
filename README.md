@@ -16,6 +16,9 @@ Nel SQL Editor di Supabase esegui i file nell’ordine indicato:
 2. `supabase/avatars.sql`
 3. `supabase/merge-mockup-migration.sql`
 4. `supabase/admin-management.sql`
+5. `supabase/20261117-live-mockup.sql`
+
+Se il database della beta è già operativo, esegui soltanto il quinto file: aggiunge conteggio dei posti, pubblicazione atomica delle serate ricorrenti, feedback e valutazioni. Non rieseguire lo schema iniziale sul database esistente. I dati e gli amministratori attuali restano validi.
 
 Crea poi il tuo account dalla schermata Profilo. In fondo a `merge-mockup-migration.sql` trovi il comando commentato per assegnare il primo amministratore: sostituisci l’indirizzo con l’email del tuo account ed eseguilo una volta nel SQL Editor. Dopo `admin-management.sql`, gli amministratori esistenti possono abilitare o revocare altri account già registrati dalla scheda Amministratori. Il vecchio PIN demo non è usato.
 
@@ -38,6 +41,9 @@ Non inserire la chiave `service_role` nel frontend. Per il deploy configura le s
 - Prenotazioni, pagamenti e rimborsi sono visibili sia nell’app sia nel pannello admin perché entrambi leggono le stesse tabelle Supabase.
 - Disdetta almeno 24 ore prima: rimborso simulato della sola quota. Entro 24 ore la quota è trattenuta. La commissione non viene rimborsata.
 - Dashboard admin per vedere tutte le partite, le iscrizioni e il rendiconto dei pagamenti; può modificare partite, confermare/rifiutare/ritirare iscrizioni e registrare un pagamento manuale.
+- Gruppi e serate ricorrenti con riepilogo delle date e festivi esclusi; inviti a utenti reali disponibili.
+- Feedback inviati agli amministratori e valutazioni delle partite concluse, con un voto aggiornabile per partecipante e partita.
+- App a schermo intero con la grafica del mockup aggiornato, senza cornice o selettore di telefono.
 
 ## Limiti
 

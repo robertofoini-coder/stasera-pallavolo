@@ -4,7 +4,8 @@ import { createClient } from '@supabase/supabase-js';
 import { ArrowLeft, CalendarDays, Check, Clock3, CreditCard, HelpCircle, LogOut, RefreshCw, Search, ShieldCheck, Users, Volleyball, X, UserPlus, UserMinus } from 'lucide-react';
 import './style.css';
 import './admin.css';
-import './extras.jsx';
+import { AdminPhotos } from './admin-photos.jsx';
+import './pwa.js';
 
 const url = import.meta.env.VITE_SUPABASE_URL;
 const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -25,6 +26,7 @@ function Admin() {
   const [helpOpen, setHelpOpen] = useState(false);
   const [admins, setAdmins] = useState([]);
   const [adminEmail, setAdminEmail] = useState('');
+  const [feedback,setFeedback] = useState([]);
 
   const load = useCallback(async () => {
     if (!sb) return;
@@ -34,6 +36,8 @@ function Admin() {
     setMessage('');
     const adminsResult = await sb.rpc('admin_list_platform_admins');
     if (!adminsResult.error) setAdmins(adminsResult.data || []);
+    const notes=await sb.from('feedback').select('*,profiles(display_name)').order('created_at',{ascending:false});
+    if(!notes.error)setFeedback(notes.data||[]);
   }, []);
 
   useEffect(() => {
@@ -135,6 +139,8 @@ function Admin() {
       {tab==='admins'&&<div className="admin-table-wrap admin-managers"><p className="muted">Autorizza un indirizzo già registrato a Supabase. Il nuovo amministratore potrà gestire partite, iscrizioni, pagamenti e altri amministratori.</p><form className="admin-add-form" onSubmit={e=>changeAdmin(e,'add')}><label htmlFor="admin-email">Email dell’amministratore</label><input id="admin-email" type="email" value={adminEmail} onChange={e=>setAdminEmail(e.target.value)} placeholder="nome@esempio.it" required/><button className="primary" disabled={busy}><UserPlus size={16}/> Autorizza email</button></form><h3>Amministratori autorizzati</h3><table><thead><tr><th>Email</th><th>Gestione</th></tr></thead><tbody>{admins.map(a=><tr key={a.user_id}><td><strong>{a.email}</strong>{a.user_id===session.user.id&&<small>Il tuo account</small>}</td><td><button className="tiny danger" disabled={busy||a.user_id===session.user.id} title={a.user_id===session.user.id?'Non puoi revocare il tuo stesso accesso qui':''} onClick={()=>changeAdmin(null,'remove',a.email)}><UserMinus size={14}/> Revoca accesso</button></td></tr>)}</tbody></table>{admins.length===0&&<p className="empty">Nessun amministratore trovato.</p>}<p className="admin-footnote">Per evitare di perdere l’accesso, non puoi revocare il tuo stesso account da questa schermata.</p></div>}
     </section>
     <p className="admin-footnote"><Clock3 size={14}/> Pagamenti e rimborsi sono simulati e registrati nel database. La commissione non viene restituita; oltre 24 ore viene rimborsata solo la quota, entro 24 ore la quota è trattenuta. Rimborso reale non attivo.</p>
+    <AdminPhotos sb={sb}/>
+    <section className="panel"><h2>Feedback ricevuti ({feedback.length})</h2>{feedback.map(f=><article key={f.id}><strong>{f.profiles?.display_name||'Giocatore'} · {f.area}</strong><p>{f.message}</p><small>{date(f.created_at)}</small></article>)}</section>
     <a className="back" href="/">← Torna all’app</a>
     {helpOpen&&<div className="admin-modal-backdrop" role="dialog" aria-modal="true"><section className="panel admin-edit admin-guide"><button className="close-edit" onClick={()=>setHelpOpen(false)} aria-label="Chiudi guida"><X/></button><span className="admin-eyebrow">GUIDA · {tab==='games'?'PARTITE':tab==='bookings'?'ISCRIZIONI':'PAGAMENTI'}</span><h2>{tab==='games'?'Gestione partite':tab==='bookings'?'Gestione iscrizioni':'Rendiconto pagamenti'}</h2>{tab==='games'?<><p>Consulta le serate di tutti i gruppi e il numero di giocatori confermati o in attesa. Premi “Modifica” per cambiare data, ora, palestra, quota e capienza. Usa la ricerca per filtrare per gruppo, città o luogo.</p><p>Le modifiche vengono salvate nel database e diventano subito disponibili nell’app.</p></>:tab==='bookings'?<><p>Le candidature in attesa possono essere confermate o rifiutate. Un’iscrizione confermata può essere ritirata o ripristinata. Il pulsante “Segna pagato” registra un pagamento manuale nel registro della quota.</p><p>Quando ritiri un iscritto pagato, il database applica la regola delle 24 ore e crea la relativa riga di rimborso o trattenuta. La commissione non viene restituita.</p></>:<><p>Ogni riga è un movimento salvato in Supabase: quota, commissione, totale, metodo e stato. Satispay e PayPal sono etichette della simulazione; non viene effettuato un incasso reale.</p><p>Il totale commissioni include quelle registrate sui pagamenti, che non vengono rimborsate. I rimborsi oltre le 24 ore riguardano soltanto la quota.</p></>}<button className="primary" onClick={()=>setHelpOpen(false)}>Ho capito</button></section></div>}
     {editing&&<div className="admin-modal-backdrop"><section className="panel admin-edit"><button className="close-edit" onClick={()=>setEditing(null)} aria-label="Chiudi"><X/></button><h2>Modifica partita</h2><p className="muted">{editing.group_name} · {editing.city}</p><form onSubmit={saveGame}><label>Data<input name="date" type="date" defaultValue={new Date(editing.starts_at).toISOString().slice(0,10)} required/></label><label>Ora<input name="time" type="time" defaultValue={new Date(editing.starts_at).toTimeString().slice(0,5)} required/></label><label>Palestra<input name="venue" defaultValue={editing.venue} required/></label><label>Quota (€)<input name="price" type="number" min="0" step="0.01" defaultValue={(editing.price_cents/100).toFixed(2)} required/></label><label>Posti in campo<input name="court" type="number" min="2" max="24" defaultValue={editing.court_spots}/></label><label>Posti a rotazione<input name="rotation" type="number" min="0" max="12" defaultValue={editing.rotation_spots}/></label><button className="primary" disabled={busy}>Salva modifiche</button></form></section></div>}

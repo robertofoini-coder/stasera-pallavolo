@@ -1,5 +1,5 @@
 // Service worker minimale StaseraVolley: shell offline, mai cache per le chiamate a Supabase.
-const CACHE = 'staseravolley-v2';
+const CACHE = 'staseravolley-v3-20261117';
 const SHELL = ['/', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
@@ -22,7 +22,7 @@ self.addEventListener('fetch', (e) => {
 
   // Navigazione: rete prima, shell in cache se offline.
   if (req.mode === 'navigate') {
-    e.respondWith(fetch(req).catch(() => caches.match('/')));
+    e.respondWith(fetch(req).catch(() => req.url.endsWith('/admin.html') ? Response.error() : caches.match('/')));
     return;
   }
   // Asset statici: cache prima, aggiornamento in background.
