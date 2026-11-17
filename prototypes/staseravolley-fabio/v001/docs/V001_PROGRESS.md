@@ -1,5 +1,17 @@
 # V001 — changes and verification, 18 November 2026
 
+## Organizer and group court update
+
+Organizer name/badge and Group Court/Participants tabs are included in V001.
+The group court shares the 12 regulation zones with match details. Additional
+capacity is shown as bench seats, up to 18 for capacity 30. Existing members
+without positions receive explicit demo assignments. Personal position changes,
+booking, cancellation/rebooking, persistence, invitations and IT/EN were checked
+in an isolated Edge context. Publication of this increment is to the two GitHub `Html` branches; the hosted
+public mockup remains a separate deployment.
+
+## Published baseline
+
 Branch `Html`, V001 only. V000 remains identical to baseline `eed6e08`.
 Plain HTML/CSS/JavaScript; no application build step or new runtime dependencies.
 
@@ -35,7 +47,7 @@ in tested paths. Additional English tests check language persistence, unchanged
 group name `Campo`, created-match selection in Explore, draft preservation, own
 photo on court/player card, tutorial and payment/refund labels.
 
-Harnesses: `tests/flows.mjs` and `tests/english.mjs`. Run with Node, Edge and
+Harnesses: `tests/flows.mjs` and `tests/english.mjs` and `tests/group-court.mjs`. Run with Node, Edge and
 Playwright. Set `PLAYWRIGHT_MODULE` to a file URL for an external Playwright
 installation if needed. Tests use a temporary loopback server, isolated contexts
 and local demo data. Screenshots go to the OS temporary directory. No live data,
@@ -44,8 +56,8 @@ real payments or invitations used.
 ## Limits
 
 Groups, organizer identity, payments, invites and admin PIN are local demos,
-not shared data or real authorization. Group matches retain their member-list
-flow; the twelve-zone court applies to the original court-based matches.
+not shared data or real authorization. Group matches now include both the member-list and interactive twelve-zone
+court with additional bench seats.
 No waitlist, real notification service or backend integration claimed.
 The original payment demo uses a simulated start timestamp for its 24h policy.
 No certification on physical iPhone/Android devices. Original fixed mockup clock

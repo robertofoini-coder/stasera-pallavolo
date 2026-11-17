@@ -1,3 +1,4 @@
+const volleyballCoordinates={p1:[17,13],p2:[50,13],p3:[83,13],p4:[17,35],p5:[50,35],p6:[83,35],q6:[17,64],q5:[50,64],q4:[83,64],q3:[17,85],q2:[50,85],q1:[83,85],r1:[27,95],r2:[73,95]};
 /* Explicit demo assignments per event; never infer real attendance from shared names. */
 // Temporary developer comparison shell: V000 is loaded unchanged, not rewritten.
 const versionTools=document.createElement('aside');versionTools.className='version-tools';I18n.attr(versionTools,'aria-label','Confronto versioni — sviluppo');
@@ -35,7 +36,7 @@ function refreshDetail(){const config=matchConfig[selected];const mine=ownBookin
  I18n.text($('#matchCapacity'),config.filled.length+' / '+(12+config.reserves)+' iscritti');$('#matchProgress').max=12+config.reserves;$('#matchProgress').value=config.filled.length;I18n.text($('#tab-people'),'Partecipanti ('+config.filled.length+')');
  // Rotation zones, viewed by each team facing the net:
  // front 4–3–2, back 5–6–1. The upper team is rotated 180 degrees.
- const coordinates={p1:[17,13],p2:[50,13],p3:[83,13],p4:[17,35],p5:[50,35],p6:[83,35],q6:[17,64],q5:[50,64],q4:[83,64],q3:[17,85],q2:[50,85],q1:[83,85],r1:[27,95],r2:[73,95]};
+ const coordinates=volleyballCoordinates;
  const slots=slotLayout.map(([slot])=>slot).concat(Array.from({length:config.reserves},(_,i)=>'r'+(i+1)));
  I18n.html($('#courtFloor'),slots.map(slot=>{const occupied=config.filled.includes(slot),person=detailPerson(slot),isMine=person?.mine,chosen=selectedPosition===slot;const label=person?.name||(occupied?'Partecipante demo':'Posto libero');const face=person?.photo?'<img src="'+htmlText(person.photo)+'" alt="">':occupied?person?htmlText(initials(person.name)):'?':'+';const [x,y]=coordinates[slot];return '<button type="button" class="court-player '+slot+' '+(slot.startsWith('q')?'team-own ':'')+(slot.startsWith('r')?'reserve ':'')+(occupied?'occupied ':'open selectable ')+(isMine?'your-position ':chosen?'chosen ':'')+'" style="left:'+x+'%;top:'+y+'%" '+(!occupied?'data-slot="'+slot+'"':'data-person="'+slot+'"')+' aria-label="'+htmlText(label+' · '+slotLabel(slot))+'"><span class="seat-number">'+htmlText(slotLabel(slot))+'</span><span class="seat-face">'+face+'</span><span class="seat-name">'+htmlText(isMine?label+' · Tu':label)+'</span></button>';}).join('')+'<span class="court-net" aria-hidden="true"></span>');
  $('#court').classList.toggle('has-reserves',config.reserves>0);I18n.text($('#courtLabel'),openSlots(config).length+' posti disponibili');
