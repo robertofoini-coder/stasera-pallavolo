@@ -52,6 +52,7 @@ function openScreen(id) {
   if (id === 'feedback') renderFeedbacks();
   if (id === 'notifications') renderInvitations();
   if (id === 'editProfile') fillProfileForm();
+  if (id === 'settings') renderAdminAccess();
   if (back) back.hidden = ['explore','bookings','profile','groups','feedback'].includes(id);
   window.scrollTo({top:0,behavior:'instant'});
 }
@@ -132,11 +133,13 @@ function renderDataState() {
   if (!session?.user) {
     container.innerHTML = '<div class="info">Accedi dal Profilo per caricare le partite pubblicate nel database e prenotare.</div>';
     $('#viewLabel').textContent = 'Accesso richiesto per caricare le partite';
+    renderMap([],'Accedi per visualizzare le palestre delle partite.');
     return;
   }
   if (!games.length) {
     container.innerHTML = '<div class="info">Nessuna partita futura disponibile nel database. Riprova più tardi.</div>';
     $('#viewLabel').textContent = 'Nessuna partita pubblicata';
+    renderMap([],'Nessuna palestra da visualizzare: non ci sono partite disponibili.');
     return;
   }
   const today = new Date();
@@ -170,7 +173,30 @@ function renderDataState() {
   });
   document.querySelectorAll('.map-pin').forEach(pin => { pin.hidden = true; });
   document.querySelectorAll('.map-pin').forEach(pin => pin.onclick = null);
-  $('#nearbyMap').innerHTML = '<div class="map-results"><strong>Apri il luogo della partita sulla mappa</strong>'+filtered.map(game=>`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(game.venue+' '+(getGroup(game)?.city||''))}" target="_blank" rel="noopener noreferrer">${escapeHtml(game.venue)} · ${escapeHtml(getGroup(game)?.city||'')}</a>`).join('')+'</div>';
+  renderMap(filtered);
+}
+
+function renderMap(filtered,message='Nessuna palestra corrisponde ai filtri selezionati.'){
+ const root=$('#nearbyMap');
+ if(!filtered.length){root.innerHTML=`<div class="map-empty">${escapeHtml(message)}</div>`;return;}
+ const venues=[...new Map(filtered.map(g=>[`${g.venue} · ${getGroup(g)?.city||''}`,g])).entries()];
+ root.innerHTML=`<div class="map-toolbar"><label for="mapVenue">Palestra sulla mappa</label><select id="mapVenue">${venues.map(([name],i)=>`<option value="${i}">${escapeHtml(name)}</option>`).join('')}</select></div><div class="map-canvas"><iframe id="venueMap" title="Mappa della palestra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><a id="mapDirections" class="map-directions" target="_blank" rel="noopener noreferrer">Apri mappa e indicazioni ↗</a>`;
+ const update=()=>{const [,game]=venues[Number($('#mapVenue').value)];const query=encodeURIComponent(`${game.venue}, ${getGroup(game)?.city||''}, Italia`);$('#venueMap').src=`https://maps.google.com/maps?q=${query}&output=embed`;$('#mapDirections').href=`https://www.google.com/maps/search/?api=1&query=${query}`;};
+ $('#mapVenue').onchange=update;update();
+}
+
+let adminAccessRequest=0;
+async function renderAdminAccess(){
+ const request=++adminAccessRequest,button=$('#adminPanelButton'),note=$('#adminAccessNote');
+ button.hidden=false;
+ if(!session?.user){note.textContent='Accedi con il tuo account per verificare i permessi.';button.disabled=false;button.textContent='Accedi per continuare →';button.onclick=()=>openScreen('profile');return;}
+ button.disabled=true;button.textContent='Verifica accesso…';
+ const userId=session.user.id;
+ const {data,error}=await sb.rpc('is_platform_admin');
+ if(request!==adminAccessRequest||session?.user.id!==userId)return;
+ if(error){note.textContent='Verifica dei permessi non riuscita. Riprova.';button.disabled=false;button.textContent='Riprova';button.onclick=renderAdminAccess;return;}
+ if(data!==true){note.textContent='Il tuo account non è abilitato come amministratore. Un amministratore può autorizzare la tua email.';button.hidden=true;return;}
+ note.textContent='Gestisci partite, iscrizioni, pagamenti e amministratori con il tuo account.';button.textContent='Apri pannello amministratore →';button.disabled=false;button.onclick=()=>{location.href='/admin.html';};
 }
 
 function showGame(game) {
@@ -260,7 +286,8 @@ async function loadGamePlayers(gameId){
   }).join('');
   $('#playerRoster').querySelectorAll('[data-profile-id]').forEach(button=>button.onclick=()=>{
     const player=people.find(p=>p.user_id===button.dataset.profileId),name=player?.display_name||'Giocatore';
-    $('#playerCard').innerHTML=`<article class="card player-page"><div class="player-avatar-large" aria-hidden="true"></div><span class="invite-kicker">SCHEDA GIOCATORE</span><h1>${escapeHtml(name)}</h1><p>${escapeHtml(player?.role||'Giocatore')} · ${escapeHtml(player?.experience||'Pallavolo amatoriale')}</p>${player?.bio?`<p>${escapeHtml(player.bio)}</p>`:''}</article>`;openScreen('playerCard');
+    const avatar=player?.avatar_status==='approved'&&player.avatar_path?sb.storage.from('avatars').getPublicUrl(player.avatar_path).data.publicUrl:null;
+    $('#playerCard').innerHTML=`<article class="card player-page"><div class="player-avatar-large${avatar?' has-photo':''}">${avatar?`<img class="player-card-photo" src="${escapeHtml(avatar)}" alt="Foto profilo di ${escapeHtml(name)}">`:''}</div><span class="invite-kicker">SCHEDA GIOCATORE</span><h1>${escapeHtml(name)}</h1><p>${escapeHtml(player?.role||'Giocatore')} · ${escapeHtml(player?.experience||'Pallavolo amatoriale')}</p>${player?.bio?`<p>${escapeHtml(player.bio)}</p>`:''}</article>`;openScreen('playerCard');
   });
 }
 
