@@ -257,4 +257,35 @@ function startMatchRating(){ratingDraft={};$('#ratingGrid').innerHTML='<article 
 $('#ratingBack').onclick=()=>open('bookings');const ratingBackBase=$('#back').onclick;$('#back').onclick=()=>{if($('.screen.active').id==='matchRating')open('bookings');else ratingBackBase()};
 const bookingsBeforeRatings=renderBookings;renderBookings=function(){bookingsBeforeRatings();let rate=$('#rateMatch');if(!rate){$('#bookingState').insertAdjacentHTML('beforeend','<p class="booking-section-label">Partita conclusa · Demo</p><article class="card booking-item"><strong>Voltaren · Misto</strong><small>Palestra Don Bosco · Campo e giocatori</small><button class="booking-action" id="rateMatch">Valuta partita e giocatori</button></article>');rate=$('#rateMatch')}rate.disabled=!!sentRatings;rate.textContent=sentRatings?'✓ Valutazioni inviate':'Valuta partita e giocatori';rate.onclick=startMatchRating};
 $('#matchRatingForm').onsubmit=event=>{event.preventDefault();if(sentRatings||!Object.keys(ratingDraft).length)return;sentRatings={matchId:'demo-past-voltaren',scores:{...ratingDraft},sentAt:new Date().toISOString()};localStorage.setItem('staseravolley-match-ratings-v1',JSON.stringify(sentRatings));renderBookings();open('bookings');toast('Grazie! Valutazioni del campo e dei giocatori inviate.')};renderBookings();
+
+/* V001: modifica partita, preservando partecipanti e inviti. */
+(function(){
+ let editId=null;
+ const form=$('#groupForm'),heading=form.querySelector('h1'),submit=form.querySelector('[type="submit"]');
+ const originalNew=$('#newGroup').onclick;
+ $('#newGroup').onclick=()=>{editId=null;heading.textContent='Crea una serata aperta';submit.textContent='Crea partita aperta';originalNew()};
+ const originalDetail=renderGroupDetail;
+ const owner=g=>g&&g.members.some(m=>m.id==='me')&&(g.ownerId==='me'||(!g.ownerId&&/^(group-|series-)/.test(g.id)));
+ renderGroupDetail=function(){
+   originalDetail();const g=activeGroup();if(!g)return;
+   const summary=$('#groupDetail .group-summary');
+   if(summary){const link=document.createElement('a');link.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(g.place);link.target='_blank';link.rel='noopener noreferrer';link.textContent='📍 Apri palestra sulla mappa';link.style.cssText='display:inline-block;margin:10px 0;color:var(--blue);font-weight:800';summary.after(link)}
+   $('#groupDetail').querySelectorAll('.group-participant').forEach((row,i)=>{const avatar=row.querySelector('.player-avatar'),member=g.members[i];if(avatar&&member){avatar.textContent=member.name.trim().split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase();avatar.style.cssText='display:grid;place-items:center;color:#fff;background:#1553a6;font-size:11px;font-weight:800'}});
+   if(!owner(g))return;
+   const button=document.createElement('button');button.type='button';button.className='secondary-cta';button.textContent='✎ Modifica partita';$('#duplicateGroup').before(button);
+   button.onclick=()=>{editId=g.id;heading.textContent='Modifica partita';submit.textContent='Salva modifiche';$('#groupName').value=g.name;$('#groupDate').value=g.date;$('#groupTime').value=g.time;$('#groupPlace').value=g.place;$('#groupCapacity').value=g.capacity;resetRecurrence();open('groupCreate')};
+ };
+ const originalSubmit=form.onsubmit;
+ form.onsubmit=e=>{
+   if(!editId){originalSubmit(e);return}
+   e.preventDefault();if(!form.reportValidity())return;
+   const g=demoGroups.find(x=>x.id===editId);if(!owner(g)){toast('Modifica riservata all’organizzatore');return}
+   const capacity=Number($('#groupCapacity').value),name=$('#groupName').value.trim(),place=$('#groupPlace').value.trim();
+   if(!Number.isInteger(capacity)||capacity<2||capacity>30||capacity<g.members.length){toast('Capienza non valida: '+g.members.length+' iscritti già confermati, massimo 30');return}
+   if(!name||!place||!$('#groupDate').value||!$('#groupTime').value)return;
+   if($('#groupRecurring').checked){toast('Modifica la singola partita senza attivare la ripetizione');return}
+   Object.assign(g,{name,place,capacity,date:$('#groupDate').value,time:$('#groupTime').value,ownerId:'me'});
+   saveGroups();activeGroupId=editId;editId=null;renderGroups();renderGroupDetail();open('groupDetail');toast('Partita aggiornata: partecipanti e inviti conservati');
+ };
+})();
 </script></body></html>
