@@ -1,0 +1,1 @@
+Verifica temporanea accesso in scrittura; da sostituire durante importazione.
