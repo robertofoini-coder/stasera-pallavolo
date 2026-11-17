@@ -324,9 +324,9 @@ $('#matchRatingForm').onsubmit=event=>{event.preventDefault();if(sentRatings||!O
     const phrases={'⌕ Cerca palestra o gruppo':'⌕ Search venue or group','Es. Luca':'e.g. Luca','Raccontaci cosa miglioreresti...':'Tell us what you would improve...'};
     el.placeholder=en?(phrases[original]||original):original;
    });
-   const note=$('#languageNote');if(note)note.textContent=en?'Choose your preferred language for the app.':'Scegli la lingua dell’app.';
+   const note=$('#languageNote');if(note){const next=en?'Choose your preferred language for the app.':'Scegli la lingua dell’app.';if(note.textContent!==next)note.textContent=next;}
    if(settings){settings.value=lang.value}
-   const link=$('#detailMapLink');if(link)link.textContent=en?'📍 Open venue in Google Maps ↗':'📍 Apri luogo su Google Maps ↗';
+   const link=$('#detailMapLink');if(link){const next=en?'📍 Open venue in Google Maps ↗':'📍 Apri luogo su Google Maps ↗';if(link.textContent!==next)link.textContent=next;}
   }finally{busy=false}
  }
  const stored=localStorage.getItem('staseravolley-language');lang.value=stored==='en'?'en':'it';
@@ -336,8 +336,7 @@ $('#matchRatingForm').onsubmit=event=>{event.preventDefault();if(sentRatings||!O
  open=function(id){originalOpen(id);translate()};
  const updateMap=()=>{const place=$('#detailPlace')?.textContent||'';const link=$('#detailMapLink');if(link)link.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(place.replace(/ · /g,', '))};
  document.querySelectorAll('#games .game,#nearbyMap .map-pin').forEach(el=>el.addEventListener('click',()=>{updateMap();translate()}));
- const observer=new MutationObserver(()=>{if(!busy)translate()});
- observer.observe(document.body,{childList:true,subtree:true,characterData:false});
+ /* Translate after screen navigation and on user language changes. */
  updateMap();translate();
 })();
 </script></body></html>
