@@ -1,0 +1,395 @@
+/* Central message catalog. Only declared render sinks and message bindings are updated.
+ * Stored roles/status codes and user-entered names are never translated in storage. */
+const I18n=(()=>{
+const catalog=Object.fromEntries(`
+Esplora|Explore
+Prenotazioni|Bookings
+Profilo|Profile
+Gruppi|Groups
+Impostazioni|Settings
+Lingua|Language
+Aspetto|Appearance
+Tema|Theme
+Chiaro|Light
+Scuro|Dark
+Automatico|Automatic
+Campo|Court
+Partecipanti|Participants
+Info|Info
+Informazioni|Information
+Dettaglio partita|Match details
+Il tuo posto|Your spot
+Squadra A|Team A
+Squadra B|Team B
+Riserva|Substitute
+Riserva 1|Substitute 1
+Riserva 2|Substitute 2
+Partecipante demo|Demo participant
+Libero|Libero
+Seleziona un posto sul campo|Select a spot on the court
+Prenota il tuo posto|Book your spot
+Prenota un posto|Book a spot
+✓ Posto confermato|✓ Spot confirmed
+✓ Conferma immediata|✓ Instant confirmation
+Accetta invito|Accept invitation
+Rifiuta invito|Decline invitation
+Invito rifiutato|Invitation declined
+Invito accettato! Ci vediamo in campo.|Invitation accepted! See you on court.
+Nuovo invito|New invitation
+NUOVO INVITO|NEW INVITATION
+Nessuna nuova notifica|No new notifications
+Il gruppo ti cerca per completare la squadra.|The group needs you to complete the team.
+Non ora|Not now
+Partecipo|Count me in
+Chiudi|Close
+Chiudi invito|Close invitation
+Chiudi messaggio|Close message
+Notifiche|Notifications
+Navigazione|Navigation
+Indietro|Back
+Lista|List
+Mappa|Map
+Mappa delle partite|Match map
+Ricerca partite|Match search
+Partite vicino a te|Matches near you
+⌕ Cerca palestra o gruppo|⌕ Search gym or group
+Cerca per palestra o nome del gruppo|Search by gym or group name
+Stasera|Tonight
+stasera|tonight
+Domani|Tomorrow
+domani|tomorrow
+Oggi|Today
+Questa settimana|This week
+questa settimana|this week
+nel giorno selezionato|on the selected day
+Scegli data|Choose date
+Scegli un giorno|Choose a day
+Scegli un giorno preciso|Choose an exact day
+Filtra per data|Filter by date
+Le tue prenotazioni|Your bookings
+In programma|Upcoming
+Partite in programma|Upcoming matches
+Partite passate|Past matches
+Nessuna partita in programma|No upcoming matches
+Nessuna partita prenotata|No matches booked
+Trova una partita|Find a match
+Trova una partita e blocca il tuo posto.|Find a match and reserve your spot.
+Puoi esplorare le partite e prenotare di nuovo quando vuoi.|Browse matches and book again whenever you want.
+Esplora le partite disponibili per prenotarne una.|Browse available matches to book one.
+Le partite completate appariranno qui.|Completed matches will appear here.
+Disdici prenotazione|Cancel booking
+Disdici il mio posto|Cancel my spot
+Conferma disdetta|Confirm cancellation
+Mantieni|Keep booking
+Vuoi disdire?|Cancel your booking?
+REGOLA RIMBORSO · 24 ORE|REFUND POLICY · 24 HOURS
+La quota della partita verrà rimborsata.|The match fee will be refunded.
+Mancano meno di 24 ore: la quota della partita viene trattenuta.|Less than 24 hours remain: the match fee is retained.
+Commissione non rimborsabile|Non-refundable commission
+Rimborso totale|Total refund
+Rimborso demo|Demo refund
+Disdetta senza rimborso|Cancellation without refund
+Disdetta|Cancelled
+Pagato|Paid
+Confermata|Confirmed
+Confermato|Confirmed
+Terminata|Finished
+Disdetta registrata: rimborso demo avviato|Cancellation recorded: demo refund initiated
+Disdetta registrata: quota trattenuta|Cancellation recorded: fee retained
+Rimborso della quota possibile fino a 24 ore prima. La commissione non viene mai rimborsata.|The match fee is refundable until 24 hours before the match. The commission is never refunded.
+Rimborso della quota fino a 24 ore prima; commissione non rimborsabile.|Match fee refundable until 24 hours before the match; commission non-refundable.
+PAGAMENTO DEMO|DEMO PAYMENT
+Conferma la quota|Confirm the fee
+Simulazione: nessun pagamento reale verrà effettuato.|Simulation: no real payment will be made.
+Quota partita|Match fee
+Commissione piattaforma (5%)|Platform commission (5%)
+La quota va all’organizzatore; la commissione è trattenuta dalla piattaforma.|The match fee goes to the organizer; the platform retains the commission.
+Totale|Total
+Simula pagamento|Simulate payment
+Pagamento|Payment
+Seleziona un posto libero sul campo e prosegui al pagamento simulato.|Select a free spot on the court and proceed to the simulated payment.
+Scegli una posizione prima di prenotare|Choose a position before booking
+Posizione|Position
+Scegli posizione|Choose position
+Posto liberato|Spot released
+Posto prenotato nel gruppo|Spot booked in the group
+Livello|Level
+Ruolo|Role
+LIVELLO|LEVEL
+RUOLO|ROLE
+PUNTI DI FORZA|STRENGTHS
+DISPONIBILITÀ SETTIMANALE|WEEKLY AVAILABILITY
+Principiante|Beginner
+Intermedio|Intermediate
+Avanzato|Advanced
+Schiacciatore|Outside hitter
+Schiacciatrice|Outside hitter
+Palleggiatore|Setter
+Palleggiatrice|Setter
+Centrale|Middle blocker
+Opposto|Opposite hitter
+Universale|All-rounder
+Attacco|Attack
+Ricezione|Reception
+Battuta|Serve
+Difesa|Defense
+Muro|Block
+Disponibilità|Availability
+Disponibile|Available
+Non disponibile|Unavailable
+Cambia disponibilità|Change availability
+Attiva disponibilità|Enable availability
+Disattiva disponibilità|Disable availability
+Segnalati come disponibile per farti invitare dai gruppi vicini.|Mark yourself as available to receive invitations from nearby groups.
+Disponibile: martedì e giovedì.|Available: Tuesday and Thursday.
+Le mie capacità|My skills
+Mi piace giocare veloce, con attenzione alla ricezione e allo spirito di squadra.|I enjoy fast play, with a focus on reception and team spirit.
+Cosa dicono gli altri|What others say
+18 voti|18 ratings
+Presenze rispettate|Attendance reliability
+Puntualità|Punctuality
+Tecnica|Technique
+Spirito di squadra|Team spirit
+Fair play|Fair play
+Modifica profilo|Edit profile
+Salva profilo|Save profile
+Profilo aggiornato|Profile updated
+Nome|Name
+Es. Luca|E.g. Alex
+Parla di te e delle tue capacità|Tell us about yourself and your skills
+Nessuna descrizione aggiunta.|No description added.
+Da definire|Not specified
+Nessun giorno selezionato.|No days selected.
+Sei visibile ai gruppi vicini|You are visible to nearby groups
+Hai nascosto la disponibilità|You have hidden your availability
+Foto profilo|Profile photo
+Foto profilo aggiornata|Profile photo updated
+Seleziona un file immagine|Select an image file
+Immagine troppo grande: scegli una foto più leggera|Image too large: choose a smaller photo
+SCHEDA GIOCATORE|PLAYER PROFILE
+Giocatore|Player
+Affidabile|Reliable
+Gioco di squadra|Teamwork
+Puntuale|Punctual
+Affidabilità|Reliability
+Scegli come visualizzare StaseraVolley.|Choose how StaseraVolley looks.
+Area proprietari|Owner area
+Area proprietari demo|Demo owner area
+Cruscotto dimostrativo di partite e rendiconti.|Demo dashboard for matches and reports.
+Apri pannello amministratori|Open admin dashboard
+Accesso demo locale; non è un sistema di autenticazione reale.|Local demo access; this is not a real authentication system.
+Area amministratori demo. Inserisci il codice locale dimostrativo:|Demo admin area. Enter the local demo code:
+Codice non valido|Invalid code
+Codice non valido.|Invalid code.
+Avvia guida demo|Start demo guide
+Salta|Skip
+Avanti|Next
+Inizia|Start
+Fine|Finish
+Guida completata|Guide completed
+Guida completata. Buona partita!|Guide completed. Enjoy your match!
+Trova partite vicino a te|Find matches near you
+Scegli la zona|Choose the area
+Scegli il comune in cui vuoi giocare.|Choose the town where you want to play.
+Apri il selettore e scegli il comune in cui vuoi giocare.|Open the selector and choose the town where you want to play.
+Cerca il tuo gruppo|Find your group
+Cerca una partita|Find a match
+Scrivi una palestra o il nome di un gruppo, come Smash & Fun.|Enter a gym or group name, such as Smash & Fun.
+Scrivi palestra o gruppo: l’elenco si aggiorna mentre digiti.|Enter a gym or group: the list updates as you type.
+Scegli quando giocare|Choose when to play
+Filtra per giorno|Filter by day
+Filtra le partite per stasera, domani, settimana o una data precisa.|Filter matches for tonight, tomorrow, this week or an exact date.
+Scegli stasera, domani, settimana o una data precisa.|Choose tonight, tomorrow, this week or an exact date.
+Prenota in un tocco|Book with a tap
+Apri una partita|Open a match
+Apri una partita per vedere tutti i dettagli e bloccare il tuo posto.|Open a match to see all details and reserve your spot.
+Tocca una scheda per controllare tutti i dettagli.|Tap a card to check all details.
+Controlla luogo e orario|Check venue and time
+Verifica prima palestra e orario della partita.|Check the gym and match time first.
+Guarda il campo|View the court
+Le posizioni mostrano i ruoli e i posti ancora liberi.|Positions show the zones and available spots.
+Scegli il posto|Choose your spot
+Scegli o conferma|Choose or confirm
+Tocca un pallino verde sul campo per abilitare la prenotazione.|Tap an available spot on the court to enable booking.
+Completa la prenotazione|Complete your booking
+Prosegui con la quota demo dopo avere scelto la posizione.|Proceed with the demo fee after choosing a position.
+Qui trovi stato della prenotazione e pagamento demo.|Find your booking and demo payment status here.
+Disdetta e rimborso|Cancellation and refund
+La quota è rimborsabile solo fino a 24 ore prima; la commissione resta trattenuta.|The match fee is refundable only until 24 hours before the match; the commission is retained.
+Il tuo profilo|Your profile
+Ruolo, livello e informazioni condivise con i gruppi.|Role, level and information shared with groups.
+Tocca il pallone per scegliere una foto dal dispositivo.|Tap the ball to choose a photo from your device.
+Attivala per ricevere inviti dai gruppi vicini.|Enable it to receive invitations from nearby groups.
+Modifica i dati|Edit your details
+Usa la matita per cambiare ruolo, livello e giorni disponibili.|Use the pencil to change your role, level and available days.
+Scegli chiaro, scuro o automatico.|Choose light, dark or automatic.
+Il cruscotto è una dimostrazione locale senza database reale.|The dashboard is a local demonstration with no real database.
++ Crea serata|+ Create match
+Crea una serata aperta|Create an open match
+Organizza una partita aperta, gestisci i posti e trova i giocatori mancanti. Permessi organizzatore attivi per questa demo.|Organize an open match, manage spots and find missing players. Demo organizer permissions are enabled.
+La partita sarà prenotabile fino al raggiungimento della capienza.|Bookings are open until capacity is reached.
+Nome del gruppo|Group name
+Es. Volley & Spritz|E.g. Volley & Spritz
+Data|Date
+Ora|Time
+Palestra o luogo|Gym or venue
+Posti totali (incluso te)|Total spots (including you)
+12 giocatori in campo; scegli 14 per includere due riserve. Gli altri iscritti potranno prenotare i posti restanti.|12 players on court; choose 14 to include two substitutes. Other members can book the remaining spots.
+Crea partita aperta|Create open match
+Annulla|Cancel
+Ripeti ogni settimana|Repeat weekly
+Fino al giorno (incluso)|Until (inclusive)
+Escludi i giorni festivi|Exclude public holidays
+Controllo festività nazionali italiane, Pasqua e Pasquetta. Verifica anche patrono e chiusure della palestra.|Checks Italian national holidays, Easter and Easter Monday. Also check local patron holidays and gym closures.
+Seleziona un intervallo valido.|Select a valid date range.
+Da creare|To be created
+Esclusa|Excluded
+Gruppo aperto · Serata|Open group · Match
+Crea la tua prima serata.|Create your first match.
+Partita aperta|Open match
+Partita completa|Match full
+Chi si è iscritto|Registered players
+Cerca tra i disponibili e invita|Find available players and invite
+Inviti in attesa:|Pending invitations:
+. I posti si occupano solo alla conferma.|. Spots are taken only after confirmation.
+← Tutti i gruppi|← All groups
+← Torna alla partita|← Back to match
+Invita un giocatore|Invite a player
+Giocatori demo disponibili per la serata ·|Available demo players for the match ·
+Cerca nome o ruolo|Search name or role
+Cerca giocatore o ruolo|Search player or role
+Invita|Invite
+Simula accettazione|Simulate acceptance
+Nessun giocatore trovato.|No players found.
+Serata creata e aperta alle prenotazioni|Match created and open for bookings
+Partita creata|Match created
+Duplica partita|Duplicate match
+Dettagli copiati: scegli la data della nuova partita|Details copied: choose the new match date
+Modifica partita|Edit match
+Salva modifiche|Save changes
+Puoi modificare solo le tue partite non ancora iniziate.|You can only edit your own matches before they start.
+La capienza deve comprendere tutti gli iscritti e non può superare 30.|Capacity must include every registered player and cannot exceed 30.
+Data, orario e palestra sono bloccati perché ci sono altri iscritti.|Date, time and gym are locked because other players have registered.
+Puoi aggiornare data, orario e palestra finché non ci sono altri iscritti.|You can update the date, time and gym until other players register.
+Iscritti e inviti vengono conservati. La modifica riguarda solo questa partita, non tutta la serie.|Players and invitations are preserved. Changes apply only to this match, not the whole series.
+Scegli una data e un orario futuri.|Choose a future date and time.
+Partita aggiornata. Iscritti e inviti conservati.|Match updated. Players and invitations preserved.
+La partita è iniziata: le modifiche sono bloccate.|The match has started: editing is locked.
+Valuta la partita|Rate the match
+Valuta partita e giocatori|Rate match and players
+Valuta Voltaren · Misto|Rate Voltaren · Mixed
+Partita conclusa · Demo|Completed match · Demo
+Partita conclusa · Palestra Don Bosco. Valuta solo le voci che conosci: quelle lasciate vuote non vengono conteggiate. Valutazioni demo salvate su questo dispositivo.|Match finished · Palestra Don Bosco. Rate only what you know: blank entries are not counted. Demo ratings are saved on this device.
+Il campo|The court
+Invia valutazioni|Submit ratings
+← Prenotazioni|← Bookings
+✓ Valutazioni inviate|✓ Ratings submitted
+Grazie! Valutazioni del campo e dei giocatori inviate.|Thank you! Court and player ratings submitted.
+Valutazione inviata. Grazie!|Rating submitted. Thank you!
+✓ Grazie per la tua valutazione!|✓ Thank you for your rating!
+Feedback|Feedback
+Aiutaci a migliorare|Help us improve
+Il tuo nome|Your name
+Il tuo commento|Your comment
+Raccontaci cosa miglioreresti...|Tell us what you would improve...
+Invia feedback|Submit feedback
+Area|Area
+Generale|General
+Scrivi un commento prima di inviarlo|Write a comment before submitting
+Nessun feedback ricevuto per ora.|No feedback received yet.
+Grazie! Feedback inviato.|Thank you! Feedback submitted.
+Anteprima dispositivo|Device preview
+Anteprima mockup|Mockup preview
+Cambia anteprima dispositivo|Change device preview
+La vista scelta dura solo per questa sessione.|The chosen view lasts for this session only.
+Versione|Version
+V001 · In sviluppo|V001 · In development
+V000 · Originale|V000 · Original
+V000 originale — confronto|V000 original — comparison
+Confronto versioni — sviluppo|Version comparison — development
+Confronto provvisorio · Demo locale|Temporary comparison · Local demo
+Demo locale · Le presenze senza profilo sono segnaposto, non persone identificate.|Local demo · Players without a profile are placeholders, not identified people.
+Capodanno|New Year's Day
+Epifania|Epiphany
+Festa della Liberazione|Liberation Day
+Festa del Lavoro|Labour Day
+Festa della Repubblica|Republic Day
+Ferragosto|Assumption Day
+Ognissanti|All Saints' Day
+Immacolata|Immaculate Conception
+Natale|Christmas Day
+Santo Stefano|Boxing Day
+Pasqua|Easter
+Pasquetta|Easter Monday
+San Francesco d’Assisi|Saint Francis of Assisi
+Lunedì|Monday
+Martedì|Tuesday
+Mercoledì|Wednesday
+Giovedì|Thursday
+Venerdì|Friday
+Sabato|Saturday
+Domenica|Sunday
+StaseraVolley · Area proprietari|StaseraVolley · Owner area
+StaseraVolley — Prototipo|StaseraVolley — Prototype
+AMMINISTRAZIONE · DEMO|ADMINISTRATION · DEMO
+Accesso proprietari|Owner access
+Codice locale|Local code
+Codice demo|Demo code
+Apri cruscotto|Open dashboard
+Torna all’app|Back to the app
+Partite, incassi simulati e commissioni|Matches, simulated payments and commissions
+Anteprima locale:|Local preview:
+questa pagina legge dati dimostrativi dal browser. Non è collegata a un database e il codice di accesso è solo un filtro d’interfaccia, non protegge dati reali.|this page reads demo data from the browser. It is not connected to a database and the access code is only an interface filter; it does not protect real data.
+Inserisci il codice demo locale per visualizzare il cruscotto. In produzione questa verifica dovrà avvenire sul server.|Enter the local demo code to view the dashboard. In production this check must happen on the server.
+Partite in corso|Current matches
+Quote incassate demo|Demo fees collected
+Commissioni trattenute|Commissions retained
+Rimborsi simulati|Simulated refunds
+Partita|Match
+Luogo|Venue
+Iscritti|Registered
+Quota|Fee
+Stato|Status
+In corso|In progress
+Rendiconto pagamenti|Payment report
+Metodo|Method
+Commissione|Commission
+Esito|Outcome
+Nessun pagamento simulato in questo browser.|No simulated payments in this browser.
+La quota è attribuita all’organizzatore e la commissione demo al 5% alla piattaforma. I rimborsi demo riportano soltanto la quota rimborsabile; la commissione resta trattenuta. Per un’area proprietari reale serviranno server, database, autenticazione e autorizzazioni lato backend.|The match fee goes to the organizer and the 5% demo commission to the platform. Demo refunds include only the refundable fee; commission is retained. A real owner area requires a server, database, authentication and backend authorization.
+Segnale|Signal
+Batteria|Battery
+Prototipo interattivo StaseraVolley|StaseraVolley interactive prototype
+`.trim().split('\n').map(line=>line.split('|')));
+const patterns=[
+ [/^(\d+) \/ (\d+) iscritti$/, '$1 / $2 registered'],[/^(\d+) iscritti su (\d+)$/, '$1 registered out of $2'],[/^(\d+) posti liberi$/, '$1 spots available'],[/^(\d+) posti da completare\.$/,'$1 spots to fill.'],[/^(\d+) posti disponibili$/,'$1 spots available'],[/^(\d+) posti$/,'$1 spots'],[/^(\d+) posto$/,'$1 spot'],[/^(\d+) riserve$/,'$1 substitutes'],[/^Partecipanti \((\d+)\)$/,'Participants ($1)'],[/^(\d+) partite disponibili$/,'$1 matches available'],[/^(\d+) di (\d+)$/,'$1 of $2'],[/^Posizione (\d+)$/,'Position $1'],[/^Scegli posizione (\d+)$/,'Choose position $1'],[/^Riserva (\d+)$/,'Substitute $1'],[/^Affidabilità di (.+)$/,'Reliability of $1'],[/^Tecnica di (.+)$/,'Technique of $1'],[/^(.+): (\d) su 5$/,'$1: $2 out of 5'],[/^Pagamento demo con (.+) completato$/,'Demo payment with $1 completed'],[/^Invito demo inviato a (.+)$/,'Demo invitation sent to $1'],[/^(.+) ha accettato: posto confermato$/,'$1 accepted: spot confirmed'],[/^(\d+) partite da creare(.*)$/,'$1 matches to create$2'],[/^(.+) · (\d+) festivi esclusi$/,'$1 · $2 holidays excluded'],[/^(\d+) partite create\. Festivi esclusi come da riepilogo\.$/,'$1 matches created. Holidays excluded as shown in the summary.'],[/^Ogni (.+) alla stessa ora\.$/,'Every $1 at the same time.'],[/^Disponibile: (.+)\.$/,'Available: $1.'],[/^Giocatori già prenotati: (\d+)$/,'Players already booked: $1'],[/^Il numero dei posti disponibili è: (\d+)$/,'Number of available spots: $1'],[/^(.+) · Tu$/,'$1 · You'],[/^Quota (rimborsata|trattenuta)$/,(m,v)=>v==='rimborsata'?'Fee refunded':'Fee retained'],[/^Totale (.+)$/,'Total $1'],[/^Partite vicino a (.+)$/,'Matches near $1']
+];
+Object.assign(catalog,{
+ 'Nessuna partita trovata':'No matches found','Posto libero':'Free spot','Iscritti e inviti vengono conservati. La modifica riguarda solo questa partita, non tutta la serie.':'Players and invitations are preserved. Changes apply only to this match, not the whole series.',
+ 'Data, orario e palestra sono bloccati perché ci sono altri iscritti. Iscritti e inviti vengono conservati. La modifica riguarda solo questa partita, non tutta la serie.':'Date, time and gym are locked because other players have registered. Players and invitations are preserved. Changes apply only to this match, not the whole series.',
+ 'Puoi aggiornare data, orario e palestra finché non ci sono altri iscritti. Iscritti e inviti vengono conservati. La modifica riguarda solo questa partita, non tutta la serie.':'You can update the date, time and gym until other players register. Players and invitations are preserved. Changes apply only to this match, not the whole series.',
+ 'Scegli una posizione libera':'Choose a free position','Campo completo · scegli una riserva':'Court full · choose a substitute','Come universale puoi scegliere liberamente tra le posizioni aperte.':'As an all-rounder you can choose any open position.','La partita è da 14: 12 in campo e una riserva per squadra.':'This match has 14 players: 12 on court and one substitute per team.','sono già occupate.':'are already occupied.','Il tuo posto è ora evidenziato sul campo.':'Your spot is now highlighted on the court.','Prenotazione completata':'Booking completed','Posto bloccato! Ci vediamo in campo.':'Spot reserved! See you on court.','Prenotazione disdetta':'Booking cancelled','Hai già prenotato questa partita':'You have already booked this match',
+ 'Hai accettato l’invito di Smash & Fun!':'You accepted the invitation from Smash & Fun!','Smash & Fun cerca un giocatore · 21:00':'Smash & Fun needs a player · 21:00','Bergamo · partite vicine':'Bergamo · nearby matches','Palestra Don Bosco · Campo e giocatori':'Palestra Don Bosco · Court and players','Mer 12 · Palestra Don Bosco':'Wed 12 · Palestra Don Bosco','Mercoledì sera · Misto':'Wednesday evening · Mixed','Partita libera · Misto':'Open match · Mixed','Giovedì sera · Livello intermedio':'Thursday evening · Intermediate level','Voltaren · Misto':'Voltaren · Mixed','Smash & Fun · Misto':'Smash & Fun · Mixed','Sab 15 · 20:12':'Sat 15 · 20:12','1 posto disponibile · Quota € 6':'1 spot available · Fee € 6','Quota da saldare in palestra: €':'Fee payable at the gym: €','Pallone da pallavolo':'Volleyball','Foto giocatore':'Player photo','Foto di':'Photo of','partite vicine':'nearby matches','Giocatore verificato':'Verified player','Tu':'You','Pos.':'Pos.','Partita conclusa':'Completed match','Modifica':'Edit','L':'M','G':'T','V':'F','D':'S'
+});
+patterns.unshift([/^(\d+) partite da creare · (\d+) festivi esclusi$/,'$1 matches to create · $2 holidays excluded'],[/^(.+): (\d) su 5$/,(m,label,n)=>translate(label)+': '+n+' out of 5'],[/^Ogni (.+) alla stessa ora\.$/,(m,day)=>'Every '+translate(day)+' at the same time.'],[/^(.+) — Queste date saranno escluse\.$/,'$1 — These dates will be excluded.'],[/^(.+) — Attenzione: queste date saranno create su un festivo\.$/,'$1 — Warning: these dates fall on public holidays.']);
+for(const [it,en]of Object.entries({...catalog}))if(/^(Lunedì|Martedì|Mercoledì|Giovedì|Venerdì|Sabato|Domenica)$/.test(it))catalog[it.toLowerCase()]=en;
+Object.assign(catalog,{'Gioca di squadra':'Play as a team','Scegli dove giocare':'Choose where to play','Posto confermato:':'Spot confirmed:','Posto consigliato: posizione':'Recommended spot: position','Giocatori già prenotati:':'Players already booked:','Il numero dei posti disponibili è:':'Number of available spots:','rimborsata':'refunded','trattenuta':'retained','Affidabilità di':'Reliability of','Tecnica di':'Technique of'});
+patterns.unshift([/^Inviti in attesa: (\d+)\. I posti si occupano solo alla conferma\.$/,'Pending invitations: $1. Spots are taken only after confirmation.'],[/^Disponibile: (.+)\.$/,(m,days)=>'Available: '+days.split(', ').map(day=>translate(day)).join(', ')+'.'],[/^(\d+) partite disponibili (.+)$/,(m,n,day)=>n+' matches available '+translate(day)],[/^Apri scheda di (.+)$/,'Open profile of $1'],[/^Foto profilo di (.+)$/,'Profile photo of $1'],[/^Posto confermato: (.+)$/,(m,spot)=>'Spot confirmed: '+translate(spot)],[/^Posto consigliato: posizione (\d+)$/,'Recommended spot: position $1'],[/^posizione (\d+)$/,'position $1']);
+let language=localStorage.getItem('staseravolley-v001-language')==='en'?'en':'it';
+const texts=new Map(),attrs=new Map();
+const protectedIds=new Set(['detailTitle','detailPlace','playerCardName','profileBio']);
+const isProtected=node=>protectedIds.has(node.id)||node.matches('#profile h1')||node.closest('[data-no-i18n],.brand');
+function translate(raw){const s=String(raw??''),trim=s.trim();if(language==='it'||!trim)return s;let out=catalog[trim];if(out===undefined){for(const [re,replacement]of patterns)if(re.test(trim)){out=trim.replace(re,replacement);break;}}
+ if(out===undefined){const parts=trim.split(/( · | — |: )/);if(parts.length>1)out=parts.map(part=>part.trim()&&part!==trim?translate(part):part).join('');}
+ return out===undefined?s:s.slice(0,s.indexOf(trim))+out+s.slice(s.indexOf(trim)+trim.length);
+}
+function text(node,value){if(!node)return value;const raw=String(value??'');texts.set(node,raw);node.textContent=isProtected(node)?raw:translate(raw);return value;}
+function attr(node,name,value){if(!node)return value;const key=name;let bindings=attrs.get(node);if(!bindings)attrs.set(node,bindings=new Map());bindings.set(key,String(value));node.setAttribute(key,translate(value));return value;}
+function prepareHTML(raw){const template=document.createElement('template');template.innerHTML=raw;const walk=document.createTreeWalker(template.content,NodeFilter.SHOW_TEXT);const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);for(const node of nodes){if(node.parentElement?.closest('[data-no-i18n],.brand,script,style'))continue;const value=node.textContent;if(!value.trim())continue;if(node.parentElement&&node.parentElement.childNodes.length===1){node.parentElement.dataset.i18nMessage=value;node.textContent=translate(value);continue;}const span=document.createElement('span');span.dataset.i18nMessage=value;span.textContent=translate(value);node.replaceWith(span);}for(const node of template.content.querySelectorAll('[aria-label],[title],[placeholder],img[alt]'))for(const name of ['aria-label','title','placeholder','alt'])if(node.hasAttribute(name)){node.setAttribute('data-i18n-'+name,node.getAttribute(name));node.setAttribute(name,translate(node.getAttribute(name)));}return template.innerHTML;}
+function html(node,value){texts.delete(node);node.removeAttribute('data-i18n-message');node.innerHTML=prepareHTML(value);return value;}
+function insert(node,position,value){node.insertAdjacentHTML(position,prepareHTML(value));}
+function apply(root=document){for(const node of root.querySelectorAll('[data-i18n-message]')){if(node.closest('[data-no-i18n],.brand')||texts.has(node))continue;node.textContent=translate(node.dataset.i18nMessage);}for(const name of ['aria-label','title','placeholder','alt'])for(const node of root.querySelectorAll('[data-i18n-'+name+']'))node.setAttribute(name,translate(node.getAttribute('data-i18n-'+name)));}
+function setLanguage(value){language=value==='en'?'en':'it';localStorage.setItem('staseravolley-v001-language',language);document.documentElement.lang=language;apply();for(const[node,raw]of texts){if(!node.isConnected){texts.delete(node);continue;}node.textContent=isProtected(node)?raw:translate(raw);}for(const[node,bindings]of attrs){if(!node.isConnected){attrs.delete(node);continue;}for(const[name,raw]of bindings)node.setAttribute(name,translate(raw));}document.dispatchEvent(new CustomEvent('languagechange'));}
+document.documentElement.lang=language;
+return {text,attr,html,insert,apply,setLanguage,t:translate,locale:()=>language==='en'?'en-GB':'it-IT',get language(){return language;}};
+})();

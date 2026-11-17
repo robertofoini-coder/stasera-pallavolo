@@ -1,0 +1,49 @@
+/* Explicit demo assignments per event; never infer real attendance from shared names. */
+// Temporary developer comparison shell: V000 is loaded unchanged, not rewritten.
+const versionTools=document.createElement('aside');versionTools.className='version-tools';I18n.attr(versionTools,'aria-label','Confronto versioni — sviluppo');
+I18n.html(versionTools,'<label for="prototypeVersion">Versione</label><select id="prototypeVersion"><option value="v001">V001 · In sviluppo</option><option value="v000">V000 · Originale</option></select><small>Confronto provvisorio · Demo locale</small>');
+const versionFrame=document.createElement('iframe');versionFrame.className='version-comparison';I18n.attr(versionFrame,'title','V000 originale — confronto');versionFrame.hidden=true;
+document.body.prepend(versionTools);document.body.append(versionFrame);
+function selectPrototypeVersion(value){const original=value==='v000';document.body.classList.toggle('view-original',original);versionFrame.hidden=!original;if(original&&!versionFrame.hasAttribute('src'))versionFrame.src='../v000/index.html';versionTools.querySelector('select').value=original?'v000':'v001';const url=new URL(location.href);if(original)url.searchParams.set('compare','v000');else url.searchParams.delete('compare');history.replaceState(null,'',url);}
+versionTools.querySelector('select').onchange=e=>selectPrototypeVersion(e.target.value);
+selectPrototypeVersion(new URL(location.href).searchParams.get('compare'));
+const eventPlayers = matchConfig.map((config,eventIndex) => Object.fromEntries(config.filled.map((slot,index) => {
+ const demo=rosterPlayers[(index+eventIndex*3)%rosterPlayers.length];
+ return [slot,{name:demo[0],role:demo[1],photo:null,demo:true}];
+})));
+const detailRoot = document.getElementById('details');
+I18n.insert(detailRoot,'afterbegin','<h1 class="detail-heading">Dettaglio partita</h1><article class="match-summary"></article>');
+const summary = detailRoot.querySelector('.match-summary');
+summary.append($('#detailTitle'), $('#detailTime').parentElement, $('#detailPlace').parentElement);
+I18n.insert(summary,'beforeend','<p class="match-capacity" id="matchCapacity"></p><progress class="match-progress" id="matchProgress"></progress>');
+const oldPlace = $('#detailPlace'), placeLink = document.createElement('a');
+placeLink.id='detailPlace'; placeLink.target='_blank';placeLink.rel='noopener noreferrer';placeLink.className=oldPlace.className;I18n.text(placeLink,oldPlace.textContent);oldPlace.replaceWith(placeLink);
+I18n.insert(summary,'afterend','<div class="match-tabs" role="tablist" aria-label="Dettaglio partita"><button id="tab-court" role="tab" aria-controls="courtPanel" aria-selected="true">Campo</button><button id="tab-people" role="tab" aria-controls="peoplePanel" aria-selected="false">Partecipanti</button><button id="tab-info" role="tab" aria-controls="infoPanel" aria-selected="false">Info</button></div><div id="courtPanel" role="tabpanel" aria-labelledby="tab-court"></div><div id="peoplePanel" role="tabpanel" aria-labelledby="tab-people" hidden><div class="participant-list"></div></div><div id="infoPanel" role="tabpanel" aria-labelledby="tab-info" class="info" hidden><h2>Informazioni</h2><p>Seleziona un posto libero sul campo e prosegui al pagamento simulato.</p><p>Rimborso della quota fino a 24 ore prima; commissione non rimborsabile.</p></div>');
+$('#courtPanel').append($('#court'));
+I18n.insert($('#courtPanel'),'beforeend','<div class="court-legend"><span>Il tuo posto</span><span>Squadra A</span><span>Squadra B</span></div>');
+const oldRoster = $('#playerRoster').parentElement;oldRoster.hidden=true;
+I18n.insert(detailRoot,'beforeend','<p class="match-demo">Demo locale · Le presenze senza profilo sono segnaposto, non persone identificate.</p>');
+function selectDetailTab(index){detailRoot.querySelectorAll('[role=tab]').forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;document.getElementById(tab.getAttribute('aria-controls')).hidden=i!==index;});}
+detailRoot.querySelectorAll('[role=tab]').forEach((tab,i)=>{tab.onclick=()=>selectDetailTab(i);tab.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3;selectDetailTab(next);detailRoot.querySelectorAll('[role=tab]')[next].focus();}};});
+function initials(name){return name.split(/\s+/).filter(Boolean).slice(0,2).map(n=>n[0]).join('').toUpperCase();}
+function ownBooking(index){const booking=JSON.parse(localStorage.getItem('staseravolley-v001-booking')||'null');return booking?.status==='Pagato' && booking.game===games[index][0]?booking:null;}
+function detailPerson(slot){const mine=ownBooking(selected);return mine?.position===slot?{name:$('#editName').value||'Tu',photo:localStorage.getItem('staseravolley-v001-photo'),mine:true}:eventPlayers[selected][slot];}
+function showDetailPerson(slot){const person=detailPerson(slot);I18n.text($('#playerCardName'),person?.name||'Partecipante demo');I18n.text($('#playerCardRole'),(slot.startsWith('p')?'Squadra B':'Squadra A')+' · Posizione '+slotLabel(slot)+(person?.demo?' · Demo':''));I18n.text($('#playerCardRating'),'—');let avatar=$('#detailPlayerAvatar');if(!avatar){avatar=document.createElement('div');avatar.id='detailPlayerAvatar';avatar.className='participant-initials';$('#playerCardName').before(avatar);}I18n.html(avatar,person?.photo?'<img src="'+htmlText(person.photo)+'" alt="Foto di '+htmlText(person.name)+'">':htmlText(initials(person?.name||'Demo')));open('playerCard');}
+function refreshDetail(){const config=matchConfig[selected];const mine=ownBooking(selected);if(mine&&!config.filled.includes(mine.position))config.filled.push(mine.position);booked=!!mine;if(mine)selectedPosition=mine.position;
+ const card=document.querySelector('#games [data-game="'+selected+'"]');I18n.text($('#detailTitle'),card?.querySelector('.group-name')?.textContent||games[selected][0]);I18n.text($('#detailTime'),(card?.dataset.date==='domani'?'Domani':'Oggi')+' · '+games[selected][1]);
+ I18n.text(placeLink,games[selected][2]);placeLink.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(games[selected][2]);
+ I18n.text($('#matchCapacity'),config.filled.length+' / '+(12+config.reserves)+' iscritti');$('#matchProgress').max=12+config.reserves;$('#matchProgress').value=config.filled.length;I18n.text($('#tab-people'),'Partecipanti ('+config.filled.length+')');
+ // Rotation zones, viewed by each team facing the net:
+ // front 4–3–2, back 5–6–1. The upper team is rotated 180 degrees.
+ const coordinates={p1:[17,13],p2:[50,13],p3:[83,13],p4:[17,35],p5:[50,35],p6:[83,35],q6:[17,64],q5:[50,64],q4:[83,64],q3:[17,85],q2:[50,85],q1:[83,85],r1:[27,95],r2:[73,95]};
+ const slots=slotLayout.map(([slot])=>slot).concat(Array.from({length:config.reserves},(_,i)=>'r'+(i+1)));
+ I18n.html($('#courtFloor'),slots.map(slot=>{const occupied=config.filled.includes(slot),person=detailPerson(slot),isMine=person?.mine,chosen=selectedPosition===slot;const label=person?.name||(occupied?'Partecipante demo':'Posto libero');const face=person?.photo?'<img src="'+htmlText(person.photo)+'" alt="">':occupied?person?htmlText(initials(person.name)):'?':'+';const [x,y]=coordinates[slot];return '<button type="button" class="court-player '+slot+' '+(slot.startsWith('q')?'team-own ':'')+(slot.startsWith('r')?'reserve ':'')+(occupied?'occupied ':'open selectable ')+(isMine?'your-position ':chosen?'chosen ':'')+'" style="left:'+x+'%;top:'+y+'%" '+(!occupied?'data-slot="'+slot+'"':'data-person="'+slot+'"')+' aria-label="'+htmlText(label+' · '+slotLabel(slot))+'"><span class="seat-number">'+htmlText(slotLabel(slot))+'</span><span class="seat-face">'+face+'</span><span class="seat-name">'+htmlText(isMine?label+' · Tu':label)+'</span></button>';}).join('')+'<span class="court-net" aria-hidden="true"></span>');
+ $('#court').classList.toggle('has-reserves',config.reserves>0);I18n.text($('#courtLabel'),openSlots(config).length+' posti disponibili');
+ $('#courtFloor').querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>{selectedPosition=b.dataset.slot;renderCourt();renderPositionPanel();const cta=$('#book');if(!cta.disabled){cta.classList.remove('booking-ready');void cta.offsetWidth;cta.classList.add('booking-ready');cta.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});cta.focus({preventScroll:true});}});$('#courtFloor').querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>showDetailPerson(b.dataset.person));
+ I18n.html($('#peoplePanel .participant-list'),config.filled.map(slot=>{const person=detailPerson(slot);return '<button class="participant-row" data-person="'+slot+'"><span class="participant-initials">'+(person?.photo?'<img src="'+htmlText(person.photo)+'" alt="">':person?htmlText(initials(person.name)):'?')+'</span><span>'+htmlText(person?.name||'Partecipante demo')+'<small>'+(slot.startsWith('p')?'Squadra B':slot.startsWith('q')?'Squadra A':'Riserva')+' · '+htmlText(slotLabel(slot))+' · Confermato</small></span></button>';}).join(''));$('#peoplePanel').querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>showDetailPerson(b.dataset.person));
+}
+const originalCourtRenderer=renderCourt;
+renderCourt=function(){originalCourtRenderer();refreshDetail();};
+const originalMatchOpener=openMatch;
+openMatch=function(index){originalMatchOpener(index);selectDetailTab(0);renderPositionPanel();window.scrollTo(0,0);};
+refreshDetail();renderPositionPanel();
