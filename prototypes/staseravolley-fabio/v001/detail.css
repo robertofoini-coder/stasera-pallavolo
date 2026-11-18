@@ -16,3 +16,7 @@ body{padding-top:64px!important}.version-tools{position:fixed;inset:0 0 auto;min
 #groupDetail .group-detail-grid>article:first-child{padding:16px}#groupDetail .group-detail-grid>article:first-child h1{font-size:24px;margin:10px 0}#groupDetail .group-organizer{margin:10px 0;padding:9px 12px}#groupDetail .group-management .cta{margin-top:0}#groupDetail .group-court-view .match-tabs{margin-top:0}
 
 #groupDetail .group-bench-seat .seat-number{position:static;display:inline-block;width:auto;height:auto;background:#1753a3;border:0;border-radius:8px;padding:2px 6px;font-size:11px;color:white}#groupDetail .group-bench-seat{position:relative}
+
+.game .explore-organizer{font-size:11px;white-space:normal;line-height:1.3;color:var(--muted)}.participant-row .organizer-badge{display:block!important;width:max-content;margin-top:5px}#detailOrganizer{font-size:14px}#groupDetail .organizer-only{padding:12px;border-bottom:1px solid var(--line)}
+
+.event-organizer{padding:10px 12px;background:#e8f1ff;border-radius:12px;color:#17416c}body[data-theme=dark] .event-organizer{background:#243e60;color:#b5d6ff}

@@ -62,3 +62,11 @@ No waitlist, real notification service or backend integration claimed.
 The original payment demo uses a simulated start timestamp for its 24h policy.
 No certification on physical iPhone/Android devices. Original fixed mockup clock
 and device frame remain. Preview deployment is separate from public production.
+
+## Organizer visibility in Explore
+
+Explore cards, match summary and the existing participant row now identify the
+organizer. Original sample matches use explicit demo organizer metadata referring
+to an existing demo participant; no attendee is added or counted twice. Group
+organizers who withdraw remain listed as organizers, marked as not registered,
+without occupying a court slot or increasing the attendance count.
