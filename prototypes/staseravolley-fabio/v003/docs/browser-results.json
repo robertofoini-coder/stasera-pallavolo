@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18T21:37:41.500Z",
+  "at": "2026-11-18T21:41:54.769Z",
   "browser": "Microsoft Edge headless",
   "results": [
     {
@@ -8,7 +8,7 @@
       "width": 390
     },
     {
-      "name": "Explore event opens group before booking without changing data",
+      "name": "Explore event opens selected match directly on Info without booking",
       "status": "passed",
       "width": 390
     },

@@ -54,7 +54,7 @@ document.addEventListener('click',e=>{const target=e.target.closest('[data-actio
  case 'chat-emoji':{const input=$('#chatText');input.value=(input.value+target.dataset.emoji).slice(0,2000);ui.chatDraft=input.value;input.focus();break;}
  case 'open-group':if(memberOf(s,settings.actorId,id)||canManage(s,settings.actorId,id))perform('READ_GROUP_NEWS',{groupId:id});go('group',{groupId:id});break;
  case 'group-requests':go('requests',{requestGroup:id});break;
- case 'open-event':{const event=s.matches[id];if(event)go('group',{groupId:event.groupId,eventId:id});break;}
+ case 'open-event':if(s.matches[id])go('match',{matchId:id,matchTab:'info'});break;
  case 'open-match':openMatch(id);break;
  case 'open-profile':go('profile',{profileId:id});break;
  case 'seat-profile':go('profile',{profileId:person});break;

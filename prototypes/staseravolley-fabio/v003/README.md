@@ -86,3 +86,7 @@ La campanella apre/chiude Notifiche: il secondo tocco torna alla pagina e alla p
 Nuova chat usa fumetto e matita. Impostazioni, Richieste e Notifiche hanno una freccia senza testo con etichetta accessibile e possono essere richiuse premendo di nuovo il relativo pulsante in alto. La schermata Esplora le serate offre elenco/mappa con filtri condivisi, loghi e raggruppamento per località. Con zoom ravvicinato appaiono orario, quota e posti; il tocco segue lo stesso percorso dell’elenco. Le coordinate rimangono indicative della località, non palestre inventate.
 
 Le notifiche non lette hanno fondo azzurro tenue, bordo e punto blu più visibili. Nel profilo sono presenti medie, stelle, affidabilità, tecnica e distribuzione dei voti realmente ricevuti nelle valutazioni delle partite concluse; nessun voto demo casuale viene inventato. In assenza di valutazioni si mostra lo stato vuoto. Test dedicato: tests/polish.mjs. Questa consegna modifica e pubblica esclusivamente V003; V002 resta invariata.
+
+## Apertura delle serate da Esplora — V003
+
+Toccando una serata nell’elenco, nel popup della mappa o nelle schede a zoom ravvicinato si apre direttamente il dettaglio della partita selezionata, con la scheda Info attiva. Non si passa dal cartellino del gruppo e non viene creata alcuna prenotazione. Il gruppo rimane accessibile dal collegamento dedicato e dalla directory. Questa regola sostituisce il precedente percorso Esplora → gruppo → partita soltanto nella V003.
