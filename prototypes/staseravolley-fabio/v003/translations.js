@@ -521,6 +521,11 @@ paymentExempt|L’organizzatore non paga la quota della propria serata.|Organize
 
 goBack|← Indietro|← Back
 
+exploreEvenings|Esplora le serate|Explore matches
+receivedRatings|Valutazioni ricevute|Received ratings
+ratingCount|{n} valutazioni|{n} reviews
+noReceivedRatings|Ancora nessuna valutazione ricevuta. I punteggi compariranno dopo le serate giocate.|No reviews received yet. Scores will appear after completed matches.
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();
