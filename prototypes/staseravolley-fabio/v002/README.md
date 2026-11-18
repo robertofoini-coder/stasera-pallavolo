@@ -1,6 +1,6 @@
 # StaseraVolley V002 — prototipo locale
 
-Sviluppo isolato da V001, senza framework, backend o deployment. Tutti i dati, i permessi, le richieste, le notifiche e i pagamenti sono simulati nello stesso browser. Non è un sistema multiutente sicuro e non comunica con Supabase.
+Sviluppo isolato da V001, senza framework o backend, pubblicato come prototipo statico su Vercel. Tutti i dati, i permessi, le richieste, le notifiche e i pagamenti sono simulati nello stesso browser. Non è un sistema multiutente sicuro e non comunica con Supabase.
 
 ## Avvio
 
@@ -16,7 +16,7 @@ Aprire http://127.0.0.1:4192/v002/ sul computer che esegue il server. Non aprire
 
 1. In Gruppi cercare Brescia o filtrare BS. I sei gruppi sono distinti, inclusi Bagher & Spritz e Volley & Spritz. Elenco e mappa condividono gli stessi filtri.
 2. Aprire Brescia Volley Friends, distinguere i 14 membri permanenti dai partecipanti alla serata, poi aprire la partita: 12 giocatori in campo, 2 riserve confermate, 2 riserve libere.
-3. Con Giocatore Demo selezionare R3 e inviare la richiesta. Senza selezione compare il popup richiesto, senza creare prenotazioni.
+3. Con Giocatore Demo richiedere prima l’ingresso nel gruppo e farlo approvare da Anna Fontana usando il selettore demo. Tornare al Giocatore Demo, selezionare R3 e inviare la richiesta di prenotazione. Senza selezione compare il popup richiesto, senza creare prenotazioni.
 4. Selezionare Anna Fontana nel menu Personaggio demo: campanella e Gestione richieste consentono di accettare o rifiutare la richiesta. Tornare a Giocatore Demo per pagare dopo la conferma.
 5. Leonessa Volley Club permette inizialmente prenotazioni immediate. Gli organizzatori possono cambiare separatamente le regole per adesioni e prenotazioni. La modifica non conclude richieste pregresse.
 6. Per il rendiconto scegliere Amministratore Demo, aprire Impostazioni e il pannello demo con codice 2468. Questo codice non è una protezione reale. In questa modalità è configurabile anche la durata dei blocchi temporanei.
@@ -39,8 +39,8 @@ La disponibilità deriva da prenotazioni confermate e blocchi temporanei non sca
 
 ## Verifiche eseguite
 
-- 24 test di modello/rendering: `node --test tests/core.test.mjs`.
-- 14 verifiche browser Edge: `node tests/browser.mjs` (incluso inventario versioni).
+- 28 test di modello/rendering: `node --test tests/core.test.mjs`.
+- 17 verifiche browser Edge: `node tests/browser.mjs` (incluso inventario versioni).
 - 4 verifiche robuste: `node tests/robustness.mjs` (quota esaurita, dati corrotti, upload/rimozione e isolamento V001).
 - Verifica dei 40 asset e associazioni: `node tests/avatars.mjs`.
 - Controllo perimetro/hash: `node tools/verify-scope.mjs`.
@@ -55,5 +55,14 @@ I test browser richiedono Playwright e Microsoft Edge. Se Playwright non è inst
 - Verifiche responsive eseguite con Edge Chromium; non eseguiti test su dispositivi iOS/Android fisici o Safari/WebKit.
 - Il cambio anno/date mantiene prossime serate demo future senza duplicarle a ogni caricamento. Le vecchie serate e lo storico rimangono consultabili; gli orari sono Europe/Rome.
 
-Nessun commit, push, merge o deployment effettuato. V000 e V001 verificate con inventario e SHA-256 nel report `docs/final-verification.json`.
+La pubblicazione e la sincronizzazione sui branch Html sono state autorizzate successivamente alla fase locale. V000 e V001 restano invariate. Il report source-baseline.json registra l’inventario originale; i report final-verification.json precedenti descrivono lo stato al momento della loro esecuzione.
+
+
+## Aggiornamento accessi e grafica
+
+Le prenotazioni nuove richiedono appartenenza attiva al gruppo; una richiesta di adesione in attesa non è sufficiente. Se l’organizzatore imposta ingresso automatico, l’adesione viene approvata immediatamente; se imposta approvazione, va attesa la sua decisione. Questo sostituisce la precedente regola che consentiva prenotazioni ai non membri. Le prenotazioni già confermate rimangono conservate.
+
+Alla creazione di ogni serata, incluse ricorrenze e duplicazioni, l’organizzatore riceve automaticamente un posto confermato nella posizione 1–6 scelta nel proprio profilo, senza richieste a sé stesso. Le due squadre hanno ciascuna quella posizione: viene usata la prima disponibile. Sulle vecchie serate si conserva ogni posto occupato; se la posizione richiesta è indisponibile o la capienza è piena si mostra un avviso invece di spostare persone. Una disdetta intenzionale dell’organizzatore non viene annullata alla riapertura.
+
+Sei loghi SVG di fantasia identificano i gruppi demo. Dal cartellino l’organizzatore può caricare o rimuovere il logo (PNG/JPEG/WebP, ottimizzato localmente). La foto dell’attore corrente compare nella navigazione Profilo, gli orari sono compatti su smartphone e il nome della palestra è il collegamento Maps.
 

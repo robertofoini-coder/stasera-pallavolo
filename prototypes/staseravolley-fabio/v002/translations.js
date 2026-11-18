@@ -47,7 +47,7 @@ openMap|Apri ricerca della località|Open location search
 mapPrecision|Posizione indicativa del comune; nessun indirizzo verificato per gli impianti demo.|Approximate town location; no verified address for demo gyms.
 members|Membri permanenti|Permanent members
 membersCount|{n} membri del gruppo|{n} group members
-membersVsPlayers|Essere membro del gruppo non significa essere prenotato a una partita. Puoi prenotare anche senza essere membro.|Group membership is separate from match registration. You can book without being a member.
+membersVsPlayers|I membri appartengono al gruppo. Per prenotare una singola serata devi prima essere un membro approvato.|Members belong to the group. You must be an approved member before booking an individual match.
 accessRules|Regole di adesione|Membership rules
 join|Entra nel gruppo|Join group
 joinRequest|Richiedi ingresso|Request membership
@@ -81,7 +81,7 @@ memberManual|Ingresso soggetto ad approvazione|Membership requires approval
 bookingApproval|Approvazione prenotazioni|Booking approval
 bookingAuto|Prenotazione immediata|Immediate booking
 bookingManual|Prenotazione soggetta ad approvazione|Booking requires approval
-independentRules|Le due impostazioni sono indipendenti. Anche i non membri possono prenotare. Le richieste già concluse non cambiano.|The two settings are independent. Nonmembers can book too. Completed requests remain unchanged.
+independentRules|Ingresso nel gruppo e conferma della prenotazione hanno impostazioni separate. Per prenotare occorre prima essere membri approvati. Le richieste concluse non cambiano.|Group membership and booking confirmation have separate settings. Booking requires approved membership first. Completed requests remain unchanged.
 saveAccess|Salva gestione accessi|Save access settings
 matchDetails|Dettaglio partita|Match details
 court|Campo|Court
@@ -320,6 +320,19 @@ easterMonday|Pasquetta|Easter Monday
 francis|San Francesco d’Assisi|Saint Francis of Assisi
 downloadData|Esporta dati demo V002|Export V002 demo data
 noRealVenue|Palestra demo: nessun indirizzo reale dichiarato.|Demo gym: no real address is claimed.
+joinFirst|Prima entra nel gruppo|Join the group first
+membershipRequired|Per prenotare devi essere un membro approvato del gruppo.|You must be an approved group member before booking.
+membershipWaiting|Richiesta inviata|Request sent
+membershipWaitingHint|L’organizzatore deve approvare il tuo ingresso. Dopo potrai scegliere il posto e prenotare.|The organizer needs to approve your membership. Then you can select a seat and book.
+stepDiscover|Scopri il gruppo|Discover the group
+stepJoin|Entra nel gruppo|Join the group
+stepBook|Scegli e prenota|Choose and book
+uploadGroupLogo|Carica logo del gruppo|Upload group logo
+removeGroupLogo|Rimuovi logo|Remove logo
+courtPosition|Posizione preferita in campo|Preferred court position
+organizerPositionHint|Quando organizzi una serata, il tuo posto viene confermato automaticamente in questa posizione.|When you organize a match, your seat is automatically confirmed in this position.
+organizerNoSeat|Il posto preferito dell’organizzatore non è disponibile. Nessun giocatore esistente è stato spostato.|The organizer's preferred position is unavailable. No existing player has been moved.
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();
