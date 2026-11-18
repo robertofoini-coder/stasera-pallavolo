@@ -1,7 +1,12 @@
 {
-  "at": "2026-11-18T16:05:32.204Z",
+  "at": "2026-11-18T18:39:53.384Z",
   "browser": "Microsoft Edge headless",
   "results": [
+    {
+      "name": "Explore event opens group before booking without changing data",
+      "status": "passed",
+      "width": 390
+    },
     {
       "name": "directory alphabetical six groups search province map",
       "status": "passed",

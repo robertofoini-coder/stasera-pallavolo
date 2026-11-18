@@ -35,6 +35,7 @@ async function uploadPhoto(file){try{if(!file||!['image/png','image/jpeg','image
 document.addEventListener('click',e=>{const target=e.target.closest('[data-action]');if(!target||target.disabled)return;const {action,id,view,value,slot,person,accept}=target.dataset;switch(action){
  case 'nav':go(view);break;
  case 'open-group':go('group',{groupId:id});break;
+ case 'open-event':{const event=s.matches[id];if(event)go('group',{groupId:event.groupId,eventId:id});break;}
  case 'open-match':openMatch(id);break;
  case 'open-profile':go('profile',{profileId:id});break;
  case 'seat-profile':go('profile',{profileId:person});break;
