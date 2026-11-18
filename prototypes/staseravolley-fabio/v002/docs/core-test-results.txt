@@ -1,0 +1,31 @@
+✔ six groups, 28 distinct Brescia profiles, 14/16 bookings with 12 field + 2 bench (15.0972ms)
+✔ seeds stable; reopening does not duplicate matches; future seeded evenings roll once (7.0434ms)
+✔ no seat, occupied seat, invalid seat and duplicate booking rejected without mutation (5.877ms)
+✔ nonmember can book; members and game attendance stay independent (3.3165ms)
+✔ pending booking holds seat and counts in capacity; expires at min(24h,start) (5.217ms)
+✔ acceptance, authorization and double decision are consistent (3.9955ms)
+✔ rejection releases the seat and allows a new booking (4.5831ms)
+✔ expiry on reopening frees holds; repeated reconciliation does not repeat history/notifications (4.0331ms)
+✔ hold expires at match start even if TTL is longer; expiry without background timers (6.9152ms)
+✔ independent access settings; membership approval is never required for booking (15.7468ms)
+✔ settings are not retroactive; membership decisions do not book seats (3.5442ms)
+✔ payments only for confirmed bookings; cancellation/refunds keep commission (5.6927ms)
+✔ late cancellation refunds zero; pending cancellation releases hold; capacity never exceeded (7.4094ms)
+✔ match edits preserve bookings and notify, block shrinking an occupied bench (4.1172ms)
+✔ group creation, recurrence and independent attendance, duplicate fields without members (3.9437ms)
+✔ notification reads are isolated, admin authorized, prototype hold configuration validated (3.9127ms)
+✔ storage dedicated to V002, no migration from V001 (0.0351ms)
+✔ 30-player capacity with distinct field and reserve slots, no overbooking (17.4712ms)
+✔ rejected and expired requests can never be paid (9.1096ms)
+✔ hold configuration never changes existing deadlines; expired notices are emitted once (4.7191ms)
+✔ date and profile validation reject invalid canonical values (4.4199ms)
+✔ ratings cover actual past participants, accept partial scores and reject repeat submission (3.7393ms)
+✔ rendering every view is read-only and both catalogs cover all rendered messages (13.8115ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 212.5862

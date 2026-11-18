@@ -1,0 +1,259 @@
+{
+  "generator": "Built-in ImageGen",
+  "purpose": "Fictional adult demo portraits; no real identities",
+  "size": "256 x 256 JPEG",
+  "assets": [
+    {
+      "personId": "bs-friends-01",
+      "src": "assets/avatars/bs-friends-01.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 12767,
+      "sha256": "af5b1f189bc9abe2b97c6c5010545a99ab765fe9ffda56d71f50493dc9b0d670"
+    },
+    {
+      "personId": "bs-leonessa-01",
+      "src": "assets/avatars/bs-leonessa-01.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11237,
+      "sha256": "f1935150cae707c9f5957f4da1de07e1ff55e4ea8a0cb574ea0dbb29086403de"
+    },
+    {
+      "personId": "bs-friends-02",
+      "src": "assets/avatars/bs-friends-02.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11280,
+      "sha256": "7d123a42462fd12d8b0b85d0465306fcd9c9c92b138bf29eacfd5e7a657db27d"
+    },
+    {
+      "personId": "bs-leonessa-02",
+      "src": "assets/avatars/bs-leonessa-02.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11029,
+      "sha256": "bee954f8f41995358063ce27f0b3d44f943b4d916f4fa8a474eee1cd880f9f4e"
+    },
+    {
+      "personId": "bs-friends-03",
+      "src": "assets/avatars/bs-friends-03.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11676,
+      "sha256": "bc747f89b23b31f09b6f1d0f2db2572a1fbe290559019615c0946835db2aa8b0"
+    },
+    {
+      "personId": "bs-leonessa-03",
+      "src": "assets/avatars/bs-leonessa-03.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 14365,
+      "sha256": "11f1c7bb374de89d753dca2f333288db847a94daf570c895fa9abec7f311d2a7"
+    },
+    {
+      "personId": "bs-friends-04",
+      "src": "assets/avatars/bs-friends-04.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10758,
+      "sha256": "d532700d42bd120d9cf34b7e3f13c5c9be235f4cca77e82a5e4f469f1c91c54f"
+    },
+    {
+      "personId": "bs-leonessa-04",
+      "src": "assets/avatars/bs-leonessa-04.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 9801,
+      "sha256": "64d12d610000c735f50662f531f2a10f8ac06b8f3b413fc32bbeb66a70ffd2bb"
+    },
+    {
+      "personId": "bs-friends-05",
+      "src": "assets/avatars/bs-friends-05.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10583,
+      "sha256": "7e3dc21fb3f707d23b97b5cbe514ed3669f8349d7ac3ff6468e61fbecd482797"
+    },
+    {
+      "personId": "bs-leonessa-05",
+      "src": "assets/avatars/bs-leonessa-05.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11686,
+      "sha256": "b25e009f90f026f8d9ffbdd6338abd7e5763615933bdec7e2a678c8aebfda8bf"
+    },
+    {
+      "personId": "bs-friends-06",
+      "src": "assets/avatars/bs-friends-06.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 9583,
+      "sha256": "f6998af21bc382d2c76bfb4a34abf525cdeab9cdf3f77142840e76671b8bafff"
+    },
+    {
+      "personId": "bs-leonessa-06",
+      "src": "assets/avatars/bs-leonessa-06.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 9898,
+      "sha256": "771c10e5cebf634914fab35c17b3b88c5d8398a69a9a004bc834708351e11bd7"
+    },
+    {
+      "personId": "bs-friends-07",
+      "src": "assets/avatars/bs-friends-07.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11782,
+      "sha256": "60869ac5aa0f2e9f9f166f87bbf13fa68a2a67cd510b6b543e55cd608fe5451d"
+    },
+    {
+      "personId": "bs-leonessa-07",
+      "src": "assets/avatars/bs-leonessa-07.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10368,
+      "sha256": "69f045d3d0a008c238f9d21bd27bb206138b5a62deab80023a70e3e27e9737e9"
+    },
+    {
+      "personId": "bs-friends-08",
+      "src": "assets/avatars/bs-friends-08.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10775,
+      "sha256": "5e2794816974a3626a0dd7b49d06518c6f641ca83c1eecc68110fdf932bc02f4"
+    },
+    {
+      "personId": "bs-leonessa-08",
+      "src": "assets/avatars/bs-leonessa-08.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10669,
+      "sha256": "09e81646dece27d38e63cc6e4cda215a4a3e824bdbb8e63f5287705ff25659f9"
+    },
+    {
+      "personId": "bs-friends-09",
+      "src": "assets/avatars/bs-friends-09.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11769,
+      "sha256": "5ddc7d2acafffb8ebd6c268b1701b370c416992fcb5d01c27d0dac0f62023cec"
+    },
+    {
+      "personId": "bs-leonessa-09",
+      "src": "assets/avatars/bs-leonessa-09.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10653,
+      "sha256": "35b21418d3803931327694a2f3610b69d87a73d1dd35b08726f7d7bc321290f6"
+    },
+    {
+      "personId": "bs-friends-10",
+      "src": "assets/avatars/bs-friends-10.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10107,
+      "sha256": "e52b1c0ee458164b4f457acb68d878b24f68b7200498ec6e39bffef1aec353a0"
+    },
+    {
+      "personId": "bs-leonessa-10",
+      "src": "assets/avatars/bs-leonessa-10.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10287,
+      "sha256": "7da37ee3e5090f027a0538daf5d51342c3c2ee1aa0bb9a5db77e5c6001f51150"
+    },
+    {
+      "personId": "bs-friends-11",
+      "src": "assets/avatars/bs-friends-11.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11712,
+      "sha256": "3510de2e9814c6523ab3e06a0e5ec17afb208b85af91068b6c72c89d88efd7e0"
+    },
+    {
+      "personId": "bs-leonessa-11",
+      "src": "assets/avatars/bs-leonessa-11.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11540,
+      "sha256": "3edfdc3fe5836224403efcf7c2ed3142b27974ef574dd46e16737933714ce2e2"
+    },
+    {
+      "personId": "bs-friends-12",
+      "src": "assets/avatars/bs-friends-12.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11156,
+      "sha256": "a00b083b1eed4c38b09bde70e35b6fd58c1b91743f686a8a93c594755fa9e57c"
+    },
+    {
+      "personId": "bs-leonessa-12",
+      "src": "assets/avatars/bs-leonessa-12.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10364,
+      "sha256": "63524dd696d69a6ba0996962c74f02e8e9c96cdf06cd8724650156b093104f14"
+    },
+    {
+      "personId": "bs-friends-13",
+      "src": "assets/avatars/bs-friends-13.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11143,
+      "sha256": "0deaa4b55779aee0c3cbd62109d9bba1c5c23dcf2ee0b1908b42210ab3d3d810"
+    },
+    {
+      "personId": "bs-leonessa-13",
+      "src": "assets/avatars/bs-leonessa-13.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11088,
+      "sha256": "67d3e7f42ffd78b233bbc68b04b240ab17c9e8be713ae0c8d4db04759a34a1ca"
+    },
+    {
+      "personId": "bs-friends-14",
+      "src": "assets/avatars/bs-friends-14.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 10106,
+      "sha256": "a162b430c27b6c7d972cb39bbd1bb81d04afcd3342985e9de83bd1f35b53490c"
+    },
+    {
+      "personId": "bs-leonessa-14",
+      "src": "assets/avatars/bs-leonessa-14.jpg",
+      "status": "generated",
+      "artificial": true,
+      "adult": true,
+      "bytes": 11083,
+      "sha256": "3ca563226b1ebc5e4d4b3d3419834f4736eca75aac8bf979104f0a9e1200a99e"
+    }
+  ]
+}

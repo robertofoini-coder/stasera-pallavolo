@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-18T15:47:38.339Z",
+  "browser": "Microsoft Edge headless",
+  "results": [
+    {
+      "name": "directory alphabetical six groups search province map",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "Brescia info seats popup exact no booking",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "pending hold notifications acceptance payment refund admin",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "request rejection expiry reopening and cancellation release",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "membership independent approvals filters and history",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "create group access flags recurrence duplicate edit",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "profile availability invite ratings language version dialog keyboard",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "responsive-390-light",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "responsive-390-dark",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "responsive-820-light",
+      "status": "passed",
+      "width": 820
+    },
+    {
+      "name": "responsive-820-dark",
+      "status": "passed",
+      "width": 820
+    },
+    {
+      "name": "responsive-1440-light",
+      "status": "passed",
+      "width": 1440
+    },
+    {
+      "name": "responsive-1440-dark",
+      "status": "passed",
+      "width": 1440
+    },
+    {
+      "name": "V000/V001 file inventory hashes unchanged",
+      "status": "passed"
+    }
+  ]
+}
