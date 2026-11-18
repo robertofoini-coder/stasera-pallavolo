@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18T19:22:06.161Z",
+  "at": "2026-11-18T19:35:03.628Z",
   "browser": "Microsoft Edge headless",
   "results": [
     {
@@ -49,6 +49,11 @@
     },
     {
       "name": "organizer preferred position group logos compact times profile photo and venue links",
+      "status": "passed",
+      "width": 390
+    },
+    {
+      "name": "Explore uses group logos and persistent payment reminder follows confirmed unpaid bookings",
       "status": "passed",
       "width": 390
     },

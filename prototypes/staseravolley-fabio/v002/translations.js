@@ -333,6 +333,12 @@ courtPosition|Posizione preferita in campo|Preferred court position
 organizerPositionHint|Quando organizzi una serata, il tuo posto viene confermato automaticamente in questa posizione.|When you organize a match, your seat is automatically confirmed in this position.
 organizerNoSeat|Il posto preferito dell’organizzatore non è disponibile. Nessun giocatore esistente è stato spostato.|The organizer's preferred position is unavailable. No existing player has been moved.
 
+paymentDueTitle|Prenotazione confermata: quota da pagare|Booking confirmed: payment due
+paymentDueHint|Completa il pagamento simulato della quota.|Complete the simulated fee payment.
+paymentsDueCount|Hai {n} quote da pagare.|You have {n} unpaid match fees.
+payNow|Paga ora|Pay now
+viewDueBookings|Vedi prenotazioni|View bookings
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();
