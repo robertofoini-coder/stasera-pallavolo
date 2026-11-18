@@ -519,6 +519,8 @@ mapMissing|Località non trovate:|Locations not found:
 status_exempt|Esente: organizzatore della serata|Exempt: match organizer
 paymentExempt|L’organizzatore non paga la quota della propria serata.|Organizers do not pay a fee for their own matches.
 
+goBack|← Indietro|← Back
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();

@@ -257,3 +257,5 @@ La directory usa Leaflet 1.9.4 locale e cartografia OpenStreetMap via HTTPS, con
 ## Quota dell’organizzatore
 
 L’organizzatore è esente nelle proprie serate: il posto è confermato, la sua quota è zero e lo stato è Esente, senza pagamento né promemoria. Nelle serate organizzate da altri paga come gli altri membri. Le quote delle altre persone non cambiano. Le prenotazioni future dell’organizzatore ancora non pagate vengono aggiornate automaticamente; pagamenti e rendiconti già registrati vengono conservati.
+
+La campanella apre/chiude Notifiche: il secondo tocco torna alla pagina e alla posizione di scorrimento precedenti. È presente anche il comando Indietro nella schermata.
