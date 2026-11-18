@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-18T21:09:19.741Z",
+  "results": [
+    {
+      "name": "one group save includes image and switches; cancellation leaves the saved group intact",
+      "passed": true
+    },
+    {
+      "name": "profile photo and availability remain drafts until the single save",
+      "passed": true
+    },
+    {
+      "name": "dismiss payment opening alert, retain payable notification and red bell even after mark read",
+      "passed": true
+    },
+    {
+      "name": "contextual spotlight has detailed steps, next/back, Escape and restored focus",
+      "passed": true
+    },
+    {
+      "name": "version change popup lists actual selected-version differences",
+      "passed": true
+    },
+    {
+      "name": "group deletion requires confirmation and does not revive seeded future games",
+      "passed": true
+    }
+  ]
+}

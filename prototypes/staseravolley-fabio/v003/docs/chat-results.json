@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-18T21:07:38.631Z",
+  "results": [
+    {
+      "name": "send receive reply unread read receipts persistence and responsive chat",
+      "passed": true
+    },
+    {
+      "name": "plain text XSS escaping, multiline, English, dark theme and spotlight",
+      "passed": true
+    },
+    {
+      "name": "V003 state and settings never import or modify V002 storage",
+      "passed": true
+    }
+  ]
+}

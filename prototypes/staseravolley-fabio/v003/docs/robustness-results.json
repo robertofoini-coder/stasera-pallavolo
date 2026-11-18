@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-18T21:09:21.854Z",
+  "results": [
+    {
+      "name": "quota failure rolls back without false booking",
+      "status": "passed"
+    },
+    {
+      "name": "corrupt V002 is not silently reset; explicit reset leaves V001 intact",
+      "status": "passed"
+    },
+    {
+      "name": "uploaded photo and removal remain local and persist",
+      "status": "passed"
+    },
+    {
+      "name": "frozen previous-version storage is not imported into current settings/profile",
+      "status": "passed"
+    }
+  ]
+}

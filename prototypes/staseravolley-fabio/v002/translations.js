@@ -339,6 +339,134 @@ paymentsDueCount|Hai {n} quote da pagare.|You have {n} unpaid match fees.
 payNow|Paga ora|Pay now
 viewDueBookings|Vedi prenotazioni|View bookings
 
+close|Chiudi|Close
+pendingSaveHint|Le modifiche saranno applicate con Salva.|Changes will be applied when you save.
+singleSaveHint|Apri Modifica per cambiare foto, disponibilità e dati, poi usa un unico Salva.|Open Edit to change your photo, availability and details, then save once.
+editGroup|Modifica gruppo|Edit group
+deleteGroup|Elimina gruppo|Delete group
+groupDeleted|Gruppo eliminato e serate future annullate.|Group deleted and future matches cancelled.
+notice_groupDeleted|Gruppo eliminato: serata annullata|Group deleted: match cancelled
+history_groupDeleted|Gruppo eliminato|Group deleted
+status_groupDeleted|Gruppo eliminato|Group deleted
+deleteGroupConfirm|Eliminare il gruppo? Non sarà più visibile. Le serate future e le richieste saranno annullate. Le quote pagate saranno rimborsate integralmente, esclusa la commissione demo. Storico e rendiconti saranno conservati.|Delete this group? It will disappear from the directory. Future matches and requests will be cancelled. Paid match fees will be refunded, excluding the demo commission. History and ledgers will be retained.
+versionSelected|Stai visualizzando {version}. Queste sono le differenze tra le versioni selezionate.|You are viewing {version}. These are the differences between the selected versions.
+release001a|Dettaglio con campo interattivo, posizioni regolamentari e riserve.|Match details with interactive court, regulation positions and reserves.
+release001b|Organizzatori riconoscibili, modifica serate e prenotazioni ripetibili.|Identifiable organizers, editable matches and rebooking after cancellation.
+release001c|Temi, profili, IT/EN e confronto versioni.|Themes, profiles, IT/EN and version comparison.
+release002a|Directory di sei gruppi, cartellini, ricerca e mappa schematica.|Six-group directory, group cards, search and schematic map.
+release002b|40 volti artificiali, loghi dei gruppi e posizione automatica dell’organizzatore.|40 artificial portraits, group logos and automatic organizer placement.
+release002c|Ingresso nel gruppo prima della prenotazione, approvazioni e scadenze.|Group membership before booking, approvals and expiry.
+release002d|Pagamenti demo, rimborsi, avviso chiudibile e campanella rossa fino al saldo.|Demo payments, refunds, dismissible alert and red bell until paid.
+release002e|Guida con focus, interruttori e modifiche di foto/dati con un solo Salva.|Spotlight tutorial, switches and photo/detail editing with one Save.
+release002f|Modifica completa e cancellazione dei gruppi, con conservazione dei rendiconti.|Full group editing and deletion while retaining financial history.
+release003a|Messaggi diretti tra personaggi demo, chat e contatore non letti.|Direct messages between demo characters, chats and unread counter.
+release003b|Esperimento locale con storage V003 separato. Nessuna messaggistica reale tra dispositivi.|Local experiment with isolated V003 storage. No real cross-device messaging.
+tourClose|Chiudi guida|Close guide
+tourPrevious|Indietro|Back
+tourNext|Avanti|Next
+tourFinish|Fine|Finish
+tourSearchTitle|Cerca la tua serata|Search for a match
+tourSearchText|Scrivi il nome del gruppo, della palestra o della città. I risultati si aggiornano subito.|Type a group, gym or city name. Results update immediately.
+tourDatesTitle|Scegli quando giocare|Choose when to play
+tourDatesText|Filtra oggi, domani, settimana o una data precisa senza cambiare la posizione delle palestre.|Filter today, tomorrow, this week or an exact date without changing event locations.
+tourEventTitle|Prima conosci il gruppo|Discover the group first
+tourEventText|La scheda mostra logo, organizzatore, quota e disponibilità. Aprila per conoscere il gruppo e poi scegliere la serata.|The card shows its logo, organizer, fee and availability. Open it to discover the group, then choose its match.
+tourNavTitle|Muoviti nell’app|Navigate the app
+tourNavText|Esplora cerca le serate, Prenotazioni gestisce i tuoi posti, Gruppi raccoglie i gruppi e Profilo contiene i tuoi dati.|Explore finds matches, Bookings manages your seats, Groups lists groups and Profile contains your details.
+tourBellTitle|Pagamenti sempre recuperabili|Payments stay accessible
+tourBellText|Puoi chiudere l’avviso iniziale: la quota resta nelle Notifiche e la campanella rimane rossa fino al pagamento simulato.|Dismiss the opening alert if needed: the fee remains in Notifications and the bell stays red until simulated payment.
+tourGroupSearchTitle|Trova un gruppo|Find a group
+tourGroupSearchText|Cerca per nome, palestra, città o provincia. L’elenco è alfabetico.|Search by name, gym, city or province. Results are alphabetical.
+tourProvinceTitle|Filtra la provincia|Filter the province
+tourProvinceText|Scegli Bergamo, Brescia o tutte le province disponibili.|Choose Bergamo, Brescia or all available provinces.
+tourMapTitle|Elenco e mappa|List and map
+tourMapText|Le due viste mostrano gli stessi risultati. La mappa è uno schema locale, non una cartografia reale.|Both views show matching results. The map is a local diagram, not real cartography.
+tourDirectoryTitle|Apri il cartellino|Open a group card
+tourDirectoryText|Leggi storia, palestra, organizzatore, membri e prossime serate prima di entrare nel gruppo.|Read its story, venue, organizer, members and upcoming matches before joining.
+tourCreateTitle|Crea il tuo gruppo|Create your group
+tourCreateText|Inserisci un logo, i dati del gruppo e scegli separatamente le approvazioni di ingresso e prenotazione.|Add a logo and group details, then choose membership and booking approval separately.
+tourGroupInfoTitle|Informazioni del gruppo|Group information
+tourGroupInfoText|Controlla luogo e giornata abituali. Tocca il nome della palestra per aprire la ricerca Maps pertinente.|Check the usual venue and day. Tap the venue name to open its Maps search.
+tourJoinTitle|Entra prima di prenotare|Join before booking
+tourJoinText|Richiedi l’ingresso. Se serve l’approvazione, attendi l’organizzatore: la richiesta di adesione non prenota un posto.|Request membership. If approval is required, wait for the organizer: joining does not book a seat.
+tourMembersTitle|Membri e giocatori sono distinti|Members and players are distinct
+tourMembersText|Queste persone appartengono al gruppo. Le presenze della singola serata sono nel dettaglio della partita.|These people belong to the group. Attendance for each match appears in its details.
+tourManageTitle|Gestisci con un unico Salva|Manage with one Save
+tourManageText|L’organizzatore può modificare logo, descrizione, orari e accessi nello stesso modulo o eliminare il gruppo con conferma.|The organizer can edit its logo, details, times and access in one form, or delete it with confirmation.
+tourEveningsTitle|Scegli una serata|Choose a match
+tourEveningsText|Ogni partita ha data, palestra, prezzo e posti propri. Aprila per selezionare il tuo posto.|Each match has its own date, venue, price and availability. Open one to select a seat.
+tourMatchTitle|Controlla i dettagli|Check match details
+tourMatchText|Verifica la serata, l’organizzatore, la palestra cliccabile e il numero di iscritti.|Check the match, organizer, linked venue and attendance count.
+tourTabsTitle|Campo, Partecipanti e Info|Court, Participants and Info
+tourTabsText|Campo permette di scegliere il posto, Partecipanti apre i profili e Info descrive quota, ritrovo e riscaldamento.|Court lets you choose a seat, Participants opens profiles, and Info explains fee, meeting and warm-up.
+tourFieldTitle|Scegli una posizione libera|Choose a free position
+tourFieldText|Ogni squadra ha sei posizioni. Tocca un posto libero; quelli occupati mostrano il profilo. Il tuo posto viene evidenziato.|Each team has six positions. Tap a free seat; occupied seats open profiles. Your seat is highlighted.
+tourReservesTitle|Prenota anche come riserva|Reserve seats are available too
+tourReservesText|Le riserve sono separate dal campo. Seleziona esplicitamente un posto riserva libero prima di prenotare.|Reserves are separate from the court. Explicitly select a free reserve seat before booking.
+tourBookTitle|Conferma il posto|Confirm your seat
+tourBookText|Dopo la selezione il pulsante viene evidenziato. Con approvazione, il posto è bloccato fino alla decisione o scadenza. Si paga solo dopo la conferma.|After selection the button is highlighted. With approval, the seat is held until decision or expiry. Payment follows confirmation only.
+tourBookingsTitle|Controlla stato e quota|Check status and payment
+tourBookingsText|Qui trovi posto, approvazione, pagamento e disdetta. Il rimborso della quota richiede almeno 24 ore; la commissione non viene restituita.|Find your seat, approval, payment and cancellation here. Fee refunds require at least 24 hours; commission is retained.
+tourProfileTitle|Il tuo cartellino personale|Your player profile
+tourProfileText|Foto, nome, ruolo e disponibilità ti rappresentano nel gruppo, sul campo e nelle liste.|Your photo, name, role and availability identify you in groups, on court and in lists.
+tourPhotoTitle|Foto e logo con la matita|Use the pencil for images
+tourPhotoText|Premi l’immagine o il riquadro vuoto con la matita, scegli un file e controlla l’anteprima. La modifica si applica soltanto con Salva.|Press the image or empty pencil tile, select a file and preview it. Changes apply only when saved.
+tourAvailabilityTitle|Mostra quando sei disponibile|Set your availability
+tourAvailabilityText|Apri Modifica e usa l’interruttore di disponibilità e quelli dei giorni. Salva per applicare tutto insieme.|Open Edit and use the availability and weekday switches. Save to apply everything together.
+tourEditTitle|Modifica senza salvataggi separati|Edit without separate saves
+tourEditText|Tutti i dati e la fotografia si modificano nello stesso modulo. Annulla conserva i dati salvati in precedenza.|Edit all details and your photo in one form. Cancel keeps previously saved data.
+tourProfileNameTitle|Scegli il nome visualizzato|Choose a display name
+tourProfileNameText|Questo nome viene usato sul campo, nelle richieste e tra i membri.|This name is used on court, in requests and among members.
+tourPositionTitle|La posizione dell’organizzatore|Organizer court position
+tourPositionText|Scegli una posizione da 1 a 6. Quando crei una serata vieni inserito automaticamente, senza richieste a te stesso.|Choose a position from 1 to 6. Creating a match adds you automatically without a request to yourself.
+tourSwitchesTitle|Interruttori accesi o spenti|On/off switches
+tourSwitchesText|Verde significa attivo. Le modifiche restano in anteprima fino al pulsante Salva.|Green means on. Changes remain in draft until Save.
+tourDaysTitle|Giorni e punti di forza|Days and strengths
+tourDaysText|Attiva solo le opzioni che ti rappresentano; puoi scegliere più giorni e caratteristiche.|Turn on the options that describe you; multiple days and strengths are allowed.
+tourSaveTitle|Un solo Salva|One Save
+tourSaveText|Questo pulsante applica insieme immagine, dati e selezioni. Se annulli o cambi pagina, il salvataggio non viene eseguito.|This applies the image, details and selections together. Cancelling or leaving does not save.
+tourGroupNameTitle|Identifica il gruppo|Identify your group
+tourGroupNameText|Scegli un nome riconoscibile e completa località e descrizione.|Choose a recognizable name and complete location and description.
+tourVenueTitle|La palestra della serata|Match venue
+tourVenueText|Inserisci il luogo effettivo senza confonderlo con la tua località di ricerca.|Enter the actual venue, independently of your search location.
+tourHoursTitle|Orari compatti|Compact time controls
+tourHoursText|Imposta inizio e fine del gioco. Il ritrovo e i 30 minuti di riscaldamento vengono calcolati prima dell’inizio.|Set play start and end. Meeting and the 30-minute warm-up are calculated before play starts.
+tourAccessTitle|Due approvazioni distinte|Two separate approvals
+tourAccessText|Un interruttore controlla l’ingresso nel gruppo, l’altro la conferma delle prenotazioni. Per prenotare devi essere già membro approvato.|One switch controls group membership, the other booking confirmation. Booking requires approved membership first.
+tourDateTitle|Scegli una data futura|Choose a future date
+tourDateText|Le partite possono essere create solo per il futuro.|Matches can be created only for future dates.
+tourCapacityTitle|Campo e riserve|Court and reserve capacity
+tourCapacityText|Imposta fino a 30 posti. I primi 12 sono sul campo; gli altri sono riserve. Una modifica non può eliminare posti occupati.|Set up to 30 seats. Twelve are on court, the rest are reserves. Edits cannot remove occupied seats.
+tourRecurrenceTitle|Ripeti la serata|Repeat the match
+tourRecurrenceText|Attiva la ricorrenza settimanale e scegli la fine della serie; puoi escludere le festività. Ogni serata rimane distinta.|Turn on weekly recurrence and choose its end; holidays can be excluded. Every match stays distinct.
+tourThemeTitle|Scegli il tema|Choose a theme
+tourThemeText|Chiaro, scuro o automatico in base al dispositivo.|Light, dark or automatic based on your device.
+tourLanguageTitle|Italiano o inglese|Italian or English
+tourLanguageText|La lingua si cambia solo qui. La scelta aggiorna subito l’app e viene salvata nella versione corrente.|Change language only here. It updates the app immediately and persists for this version.
+tourSettingsTitle|Impostazioni del prototipo|Prototype settings
+tourSettingsText|Anteprima dispositivo, esportazione e ripristino sono locali. Il pannello admin demo non è autenticazione reale.|Device preview, export and reset are local. The demo admin panel is not real authentication.
+tourRequestsTitle|Accetta o rifiuta|Accept or reject
+tourRequestsText|Solo organizzatore e amministratore possono decidere. Una richiesta gestita non può ricevere una seconda decisione.|Only organizers and admins can decide. Completed requests cannot receive a second decision.
+tourFiltersTitle|Trova una richiesta|Find a request
+tourFiltersText|Filtra per gruppo, tipo e stato per distinguere adesioni e prenotazioni.|Filter by group, type and status to distinguish membership from booking requests.
+tourHistoryTitle|Decisioni conservate|Decisions are retained
+tourHistoryText|Lo storico conserva esito, autore e data, senza confonderli con richieste ancora aperte.|History retains the result, author and date, separately from pending requests.
+tourPaymentTitle|Una quota ancora da pagare|A fee is still due
+tourPaymentText|La quota confermata resta qui anche se chiudi l’avviso. Apri il pagamento simulato; dopo il saldo la campanella smette di segnalarla.|Confirmed unpaid fees stay here after dismissing the alert. Open simulated payment; the bell clears after payment.
+tourNoticesTitle|Le notifiche del tuo personaggio|Notifications for your character
+tourNoticesText|Leggere una notifica non paga una quota. Il rosso dei pagamenti resta fino al saldo effettivo della simulazione.|Reading a notification does not pay a fee. Payment red remains until the simulated payment is completed.
+tourAdminTitle|Rendiconto dimostrativo|Demo ledger
+tourAdminText|Controlla quote, commissioni e rimborsi. Tutti i dati e i permessi sono simulati nello stesso browser.|Check fees, commissions and refunds. All data and permissions are simulated in this browser.
+tourInvitesTitle|Invita un giocatore|Invite a player
+tourInvitesText|Gli inviti non sostituiscono l’approvazione del gruppo e non prenotano automaticamente.|Invitations do not replace membership approval and do not book automatically.
+tourRatingsTitle|Valuta la serata conclusa|Rate a completed match
+tourRatingsText|Puoi valutare la struttura e i partecipanti effettivi una sola volta.|Rate the venue and actual participants once.
+cropTitle|Scegli il ritaglio|Choose the crop
+cropHint|Trascina l’immagine oppure regola zoom e posizione. Conferma il ritaglio, poi Salva per applicarlo.|Drag the image or adjust zoom and position. Confirm the crop, then Save to apply it.
+cropConfirm|Conferma ritaglio|Confirm crop
+groupManagement|Gestione gruppo|Group management
+groupRequestsHint|Gestisci adesioni e prenotazioni di questo gruppo.|Manage membership and booking requests for this group.
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();

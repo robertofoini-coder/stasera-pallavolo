@@ -14,11 +14,21 @@ Prototipo interattivo HTML, CSS e JavaScript per gruppi e partite amatoriali di 
 
 Lo stesso codice V002 viene sincronizzato nei due repository. V000 e V001 non vengono modificate. Il selettore superiore permette il confronto con le versioni precedenti, con un popup informativo. L'applicazione principale alla radice rimane separata dal prototipo.
 
-## Novità dell'ultimo aggiornamento
+## Ultimo aggiornamento
+
+- Avviso di pagamento visibile all’apertura e chiudibile; la quota resta nelle Notifiche. La campanella è rossa finché ci sono quote confermate da saldare, anche dopo «segna come lette».
+- Tutorial contestuale con spotlight, spiegazione per elemento, Avanti/Indietro, progressione, Escape e ripristino del focus.
+- Popup del selettore versioni con gli interventi effettivi tra le due versioni selezionate.
+- Foto e logo con matita, anteprima nel modulo e **un unico Salva**, compresi dati e interruttori. Annulla non applica le bozze.
+- Modifica completa del gruppo e cancellazione confermata: gruppo nascosto, serate future annullate, richieste chiuse e quote demo rimborsate (commissione trattenuta), mantenendo storico e rendiconto.
+- Selettori on/off accessibili per disponibilità, giorni, caratteristiche, approvazioni e opzioni di ricorrenza.
+- Pubblicazione autorizzata sui branch Html dei due repository e su Vercel; la V003 demo è separata.
+
+## Funzioni della versione precedente e loro evoluzione
 
 1. Ogni scheda evento in Esplora mostra il logo del proprio gruppo al posto del pallone, usando la stessa associazione del cartellino e della directory. Un logo caricato dall'organizzatore si aggiorna anche sulle relative serate; senza logo vengono usate le iniziali.
-2. Un promemoria fisso sopra la navigazione segnala le quote ancora da pagare dopo una prenotazione immediata o l'accettazione dell'organizzatore.
-3. Il promemoria resta disponibile cambiando schermata, scorrendo e riaprendo il prototipo. Mostra la prossima quota dovuta, il totale comprensivo di commissione e, quando necessario, il numero delle quote aperte.
+2. Un avviso chiudibile sopra la navigazione segnala le quote ancora da pagare dopo una prenotazione immediata o l'accettazione dell'organizzatore.
+3. L’avviso può essere chiuso per la sessione corrente; riappare alla riapertura. La quota resta nelle Notifiche e mantiene la campanella rossa fino al saldo. Mostra la prossima quota dovuta, il totale comprensivo di commissione e, quando necessario, il numero delle quote aperte.
 4. **Paga ora** apre il pagamento simulato della prenotazione indicata. Con più quote, un collegamento apre anche Prenotazioni. Dopo il pagamento resta visibile soltanto se esistono altre quote da saldare.
 5. Non vengono richiesti pagamenti per richieste in attesa, rifiutate o scadute, prenotazioni annullate, partite passate o serate gratuite.
 
@@ -136,7 +146,7 @@ Il pagamento è consentito solo per una prenotazione confermata e una partita fu
 - Esempio: quota €8 + commissione €0,40 = totale €8,40.
 - Nessuna transazione reale o collegamento ai gestori di pagamento.
 - Divieto di doppio pagamento.
-- Promemoria fisso per le quote confermate non saldate, indipendente dalla schermata corrente.
+- Avviso chiudibile per le quote confermate non saldate e richiamo persistente nelle Notifiche.
 - Pagamento e disdetta aggiornano immediatamente il promemoria e il rendiconto.
 
 Per una disdetta almeno 24 ore prima dell'inizio viene rimborsata la quota, mai la commissione. Nelle ultime 24 ore il rimborso demo è zero. Il rendiconto distingue addebiti, commissioni e rimborsi. Non è contabilità fiscale o un sistema finanziario produttivo.
@@ -229,3 +239,13 @@ I report aggiornati sono in `docs/core-test-results.txt`, `docs/browser-results.
 
 La pubblicazione su GitHub/Vercel è stata autorizzata separatamente dalla fase iniziale locale. V000, V001, main e il sito principale non vengono sostituiti dallo sviluppo della V002.
 
+
+## Verifica nuova iterazione locale
+
+Eseguire anche `node tests/next-ux.mjs`. I sei scenari coprono Salva unico, immagini in bozza, avviso chiudibile/campanella, tutorial, confronto versioni e cancellazione gruppo. La logica comprende 31 test; sono disponibili anche 18 verifiche browser generali e 4 controlli robusti. `experience.js` gestisce quote dovute e confronto versioni; `tour.js` contiene la guida contestuale.
+
+## Sezioni del gruppo, ritaglio e profilo
+
+Il cartellino separa Gestione gruppo (Modifica/Elimina), Gestione richieste e Prossime serate attive con Crea serata. Le immagini vengono prima aperte in un ritaglio quadrato: trascinamento, zoom e posizione X/Y, Annulla o Conferma ritaglio; solo il Salva del modulo applica la foto o il logo. La foto del profilo è modificabile soltanto entrando in Modifica profilo. Gli interruttori hanno righe alternate in colori soft e sezioni dedicate per ridurre gli errori. Test specifico: `node tests/crop-layout.mjs`.
+
+V003 pubblicata separatamente: https://stasera-pallavolo.vercel.app/mockup/v003/ . Le chat non sono presenti in V002.
