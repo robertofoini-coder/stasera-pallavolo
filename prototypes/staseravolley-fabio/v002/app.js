@@ -1,4 +1,4 @@
-import {createSeed} from './data.js';
+import {createSeed,upgradeDemoPhotos} from './data.js';
 import {transition,reconcile,STATE_KEY,SETTINGS_KEY,canManage,myBooking} from './core.js';
 import {translator,missingKeys} from './translations.js';
 import {buildViews,h} from './views.js';
@@ -15,7 +15,7 @@ function validateState(value){return value?.schemaVersion===1&&['profiles','grou
 function store(next){localStorage.setItem(STATE_KEY,JSON.stringify(next));s=next;}
 function saveSettings(){localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings));}
 function setTheme(){document.body.dataset.preview=settings.preview||'auto';document.body.dataset.theme=settings.theme==='dark'||settings.theme==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
-function load(){try{const raw=localStorage.getItem(STATE_KEY);s=raw?JSON.parse(raw):createSeed();if(!validateState(s))throw Error('invalidStorage');for(const asset of avatarManifest){const profile=s.profiles[asset.personId];if(profile?.photo===asset.src.replace('.jpg','.webp'))profile.photo=asset.src;}const stored=localStorage.getItem(SETTINGS_KEY);if(stored){const value=JSON.parse(stored);settings={...defaults,language:value.language==='en'?'en':'it',theme:['light','dark','auto'].includes(value.theme)?value.theme:'auto',preview:['auto','mobile','tablet','desktop'].includes(value.preview)?value.preview:'auto',actorId:s.profiles[value.actorId]?value.actorId:'demo-you'};}store(reconcile(s));saveSettings();t=translator(settings.language);setTheme();}catch(e){fatal=true;}}
+function load(){try{const raw=localStorage.getItem(STATE_KEY);s=raw?JSON.parse(raw):createSeed();if(!validateState(s))throw Error('invalidStorage');upgradeDemoPhotos(s,avatarManifest);for(const asset of avatarManifest){const profile=s.profiles[asset.personId];if(profile?.photo===asset.src.replace('.jpg','.webp'))profile.photo=asset.src;}const stored=localStorage.getItem(SETTINGS_KEY);if(stored){const value=JSON.parse(stored);settings={...defaults,language:value.language==='en'?'en':'it',theme:['light','dark','auto'].includes(value.theme)?value.theme:'auto',preview:['auto','mobile','tablet','desktop'].includes(value.preview)?value.preview:'auto',actorId:s.profiles[value.actorId]?value.actorId:'demo-you'};}store(reconcile(s));saveSettings();t=translator(settings.language);setTheme();}catch(e){fatal=true;}}
 function syncTime(){if(!s||fatal)return;const updated=reconcile(s);if(updated!==s){try{store(updated);render();}catch{showMessage('storageError');}}}
 function perform(action,p={}){try{const persisted=JSON.parse(localStorage.getItem(STATE_KEY)||'null');if(persisted&&persisted.revision!==s.revision){if(!validateState(persisted))throw Error('invalidStorage');store(reconcile(persisted));render();showMessage('conflict');return false;}const current=reconcile(s);if(current!==s)store(current);const next=transition(s,settings.actorId,action,p);store(next);render();return true;}catch(e){render();showMessage(typeof e.code==='string'?e.code:(['invalidStorage'].includes(e.message)?e.message:'storageError'));return false;}}
 function toast(key){clearTimeout(toastTimer);$('#toastText').textContent=t(key);$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,3400);}
@@ -88,4 +88,5 @@ window.addEventListener('focus',syncTime);document.addEventListener('visibilityc
 load();render();
 // Read-only diagnostics used by the local QA suite; no production APIs exist.
 globalThis.SV002={getState:()=>structuredClone(s),getSettings:()=>({...settings}),missingTranslations:()=>[...missingKeys],keys:{state:STATE_KEY,settings:SETTINGS_KEY}};
+
 

@@ -29,7 +29,7 @@ Aprire http://127.0.0.1:4192/v002/ sul computer che esegue il server. Non aprire
 - `core.js`: transizioni validate, autorizzazioni locali, prenotazioni, scadenze, notifiche, pagamenti e storico.
 - `data.js`, `dates.js`: dati demo con identificativi stabili, date Europe/Rome, ricorrenze e festività.
 - `views.js`, `translations.js`: viste senza mutazioni e cataloghi IT/EN centralizzati.
-- `assets/avatars/`, `avatar-manifest.js`: 28 ritratti locali di adulti inesistenti generati con ImageGen, JPEG 256×256, associazioni stabili e fallback con iniziali.
+- `assets/avatars/`, `avatar-manifest.js`: 40 ritratti locali di adulti inesistenti generati con ImageGen, JPEG 256×256, associazioni stabili e fallback con iniziali.
 - `tests/`, `tools/`: verifiche, server locale e ottimizzazione asset.
 - `docs/`: risultati, screenshot, inventario SHA-256 e snapshot inattivi della base V001 per confronto. I documenti V001 copiati descrivono la versione precedente, non la V002.
 
@@ -39,10 +39,10 @@ La disponibilità deriva da prenotazioni confermate e blocchi temporanei non sca
 
 ## Verifiche eseguite
 
-- 23 test di modello/rendering: `node --test tests/core.test.mjs`.
+- 24 test di modello/rendering: `node --test tests/core.test.mjs`.
 - 14 verifiche browser Edge: `node tests/browser.mjs` (incluso inventario versioni).
 - 4 verifiche robuste: `node tests/robustness.mjs` (quota esaurita, dati corrotti, upload/rimozione e isolamento V001).
-- Verifica dei 28 asset e associazioni: `node tests/avatars.mjs`.
+- Verifica dei 40 asset e associazioni: `node tests/avatars.mjs`.
 - Controllo perimetro/hash: `node tools/verify-scope.mjs`.
 
 I test browser richiedono Playwright e Microsoft Edge. Se Playwright non è installato localmente, indicare il suo modulo con la variabile `PLAYWRIGHT_MODULE`. Nessuna dipendenza è stata installata nel repository. I report JSON e gli screenshot alle larghezze 390/820/1440, nei due temi, sono in `docs/`. Gli screenshot full-page mostrano la barra inferiore fissa all'altezza del viewport iniziale, come durante lo scorrimento.
@@ -56,3 +56,4 @@ I test browser richiedono Playwright e Microsoft Edge. Se Playwright non è inst
 - Il cambio anno/date mantiene prossime serate demo future senza duplicarle a ogni caricamento. Le vecchie serate e lo storico rimangono consultabili; gli orari sono Europe/Rome.
 
 Nessun commit, push, merge o deployment effettuato. V000 e V001 verificate con inventario e SHA-256 nel report `docs/final-verification.json`.
+

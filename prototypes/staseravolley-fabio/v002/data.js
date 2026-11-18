@@ -19,9 +19,15 @@ export function addSeedMatch(s,g,now){const date=nextDate(g.weekday,g.start,now)
 export function createSeed(now=Date.now()){
  const s={schemaVersion:1,revision:0,seq:100,config:{holdHours:24},authorizedAdmins:['demo-admin'],profiles:{},groups:{},memberships:{},matches:{},bookings:{},requests:{},notifications:{},history:[],payments:{},invitations:{},ratings:{}};
  const profile=(id,name,i,city,photo=null)=>({id,name,city,photo,demo:true,adult:true,role:ROLES[i%ROLES.length],level:i%2?'intermediate':'beginner',bioKey:'demoBio',bio:'',strengths:['attack','reception'],days:[2,4],available:true});
- bgNames.forEach((name,i)=>{const id=`bg-${String(i+1).padStart(2,'0')}`;s.profiles[id]=profile(id,name,i,'Bergamo');});
+ bgNames.forEach((name,i)=>{const id=`bg-${String(i+1).padStart(2,'0')}`;s.profiles[id]={...profile(id,name,i,'Bergamo',`assets/avatars/${id}.jpg`),avatarSeedV2:true};});
  for(const [prefix,names] of [['bs-friends',friends],['bs-leonessa',leonessa]])names.forEach((name,i)=>{const id=`${prefix}-${String(i+1).padStart(2,'0')}`;s.profiles[id]=profile(id,name,i,'Brescia',`assets/avatars/${id}.jpg`);});
  s.profiles['demo-you']=profile('demo-you','Giocatore Demo',0,'Bergamo');s.profiles['demo-admin']=profile('demo-admin','Amministratore Demo',5,'Bergamo');
  for(const seed of GROUP_SEEDS){const g={...seed,demo:true,storyKey:seed.id.startsWith('bs-')?'bresciaStory':'bergamoStory',description:'',history:'',adminIds:[],createdAt:new Date(now).toISOString()};s.groups[g.id]=g;for(const personId of seedPeople(g.id))s.memberships[`${g.id}:${personId}`]={groupId:g.id,personId,status:'active',role:personId===g.ownerId?'organizer':'member'};addSeedMatch(s,g,now);}
  const pastDate=addDays(dateKey(now),-2),past={id:'demo-past-voltaren',groupId:'bg-voltaren',date:pastDate,venue:s.groups['bg-voltaren'].venue,city:'Bergamo',...times(pastDate,'20:30','22:30'),priceCents:700,capacity:12,status:'finished',seeded:false};s.matches[past.id]=past;s.bookings['demo-past-you']={id:'demo-past-you',personId:'demo-you',matchId:past.id,slot:'p1',status:'confirmed',priceCents:700,paymentStatus:'unpaid',requestId:null,createdAt:past.startsAt};['bg-01','bg-02','bg-03'].forEach((personId,i)=>{const bid='demo-past-'+personId;s.bookings[bid]={id:bid,personId,matchId:past.id,slot:FIELD[i+1],status:'confirmed',priceCents:700,paymentStatus:'unpaid',requestId:null,createdAt:past.startsAt};});return s;
+}
+// One-time upgrade of existing V002 demo profiles only. User uploads and
+// intentional removals after the upgrade survive every subsequent reload.
+export function upgradeDemoPhotos(state,manifest){
+ for(const asset of manifest){const p=state.profiles[asset.personId];if(!p?.demo||!asset.personId.startsWith('bg-')||p.avatarSeedV2||asset.status!=='generated')continue;if(!p.photo)p.photo=asset.src;p.avatarSeedV2=true;}
+ return state;
 }

@@ -251,5 +251,113 @@ export const avatarManifest=[
     "adult": true,
     "bytes": 11083,
     "sha256": "3ca563226b1ebc5e4d4b3d3419834f4736eca75aac8bf979104f0a9e1200a99e"
+  },
+  {
+    "personId": "bg-01",
+    "src": "assets/avatars/bg-01.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10920,
+    "sha256": "75906842cb25a05a0ee760c9f012c8090b35d186d8784a9f1cc9b6b4608d4980"
+  },
+  {
+    "personId": "bg-02",
+    "src": "assets/avatars/bg-02.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 12745,
+    "sha256": "e49afe7d8f2adcdb996c9a017c4bd36e0fc81df66311cbcbc39016256ea262bc"
+  },
+  {
+    "personId": "bg-03",
+    "src": "assets/avatars/bg-03.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10290,
+    "sha256": "786ffb6cdbac9c942e9df37914f660e6af7036a72311525f95d0fa1e725369c3"
+  },
+  {
+    "personId": "bg-04",
+    "src": "assets/avatars/bg-04.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 11928,
+    "sha256": "6d0fbe37d49893a00260e78b404077f0e089dd49aa998bf7ca1da7dc9068e6b5"
+  },
+  {
+    "personId": "bg-05",
+    "src": "assets/avatars/bg-05.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10662,
+    "sha256": "dcdf447e2693530b6056bd41025c12e07528f59bdb3509a8efa135c273096541"
+  },
+  {
+    "personId": "bg-06",
+    "src": "assets/avatars/bg-06.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 11755,
+    "sha256": "f77ce0b66f8b6555e707c374faf4c25ecd8123277bedee5200f01c50500ba087"
+  },
+  {
+    "personId": "bg-07",
+    "src": "assets/avatars/bg-07.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10789,
+    "sha256": "60f4eaf2cea7d6cb52b475c9e5d22320e74edf7946ba59e1dd2bbb55586823bd"
+  },
+  {
+    "personId": "bg-08",
+    "src": "assets/avatars/bg-08.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10697,
+    "sha256": "c5c0ab60e1033a0ee03e90e75dd9ad7a9de3dca1d886db6f80cb7ef19bd38805"
+  },
+  {
+    "personId": "bg-09",
+    "src": "assets/avatars/bg-09.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 10751,
+    "sha256": "8cb32d07bcf95afffb4c7d1d8d4efe88f6fc774882d841bdea06e61475d3fecf"
+  },
+  {
+    "personId": "bg-10",
+    "src": "assets/avatars/bg-10.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 11467,
+    "sha256": "14c3aa3212a4292029a669468351986508ff84faf704a959d782402cee482b45"
+  },
+  {
+    "personId": "bg-11",
+    "src": "assets/avatars/bg-11.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 12407,
+    "sha256": "4dd8be0989458acd7c5add6223169b2105c56dd2397617c681b28db447a8dd2e"
+  },
+  {
+    "personId": "bg-12",
+    "src": "assets/avatars/bg-12.jpg",
+    "status": "generated",
+    "artificial": true,
+    "adult": true,
+    "bytes": 11445,
+    "sha256": "c461fbc05a38f05062e0a46040bf56b4cd292e30e8f5a7ba4de0d4fb5c326bb4"
   }
 ];

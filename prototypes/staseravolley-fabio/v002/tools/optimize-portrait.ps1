@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][string]$Source,[Parameter(Mandatory=$true)][ValidatePattern('^bs-(friends|leonessa)-\d{2}$')][string]$Id)
+param([Parameter(Mandatory=$true)][string]$Source,[Parameter(Mandatory=$true)][ValidatePattern('^(bs-(friends|leonessa)|bg)-\d{2}$')][string]$Id)
 Add-Type -AssemblyName System.Drawing
 $targetRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\assets\avatars'))
 $target=[IO.Path]::GetFullPath((Join-Path $targetRoot ($Id+'.jpg')))
