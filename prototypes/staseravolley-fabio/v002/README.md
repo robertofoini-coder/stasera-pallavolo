@@ -249,3 +249,11 @@ Eseguire anche `node tests/next-ux.mjs`. I sei scenari coprono Salva unico, imma
 Il cartellino separa Gestione gruppo (Modifica/Elimina), Gestione richieste e Prossime serate attive con Crea serata. Le immagini vengono prima aperte in un ritaglio quadrato: trascinamento, zoom e posizione X/Y, Annulla o Conferma ritaglio; solo il Salva del modulo applica la foto o il logo. La foto del profilo è modificabile soltanto entrando in Modifica profilo. Gli interruttori hanno righe alternate in colori soft e sezioni dedicate per ridurre gli errori. Test specifico: `node tests/crop-layout.mjs`.
 
 V003 pubblicata separatamente: https://stasera-pallavolo.vercel.app/mockup/v003/ . Le chat non sono presenti in V002.
+
+## Mappa geografica
+
+La directory usa Leaflet 1.9.4 locale e cartografia OpenStreetMap via HTTPS, con attribuzione visibile, trascinamento, zoom e punti raggruppati per località. Filtri e ricerca coincidono con l’elenco. Le coordinate sono centri delle località verificati con Nominatim, non indirizzi inventati delle palestre; il popup lo dichiara e apre i gruppi associati. Le nuove località vengono cercate con richieste serializzate e risultati memorizzati per la sessione. Serve connessione per la cartografia: in caso di problemi l’elenco rimane disponibile. Nessun servizio a pagamento. Licenza Leaflet in assets/leaflet/LICENSE. Questa sezione sostituisce la precedente descrizione della mappa schematica.
+
+## Quota dell’organizzatore
+
+L’organizzatore è esente nelle proprie serate: il posto è confermato, la sua quota è zero e lo stato è Esente, senza pagamento né promemoria. Nelle serate organizzate da altri paga come gli altri membri. Le quote delle altre persone non cambiano. Le prenotazioni future dell’organizzatore ancora non pagate vengono aggiornate automaticamente; pagamenti e rendiconti già registrati vengono conservati.

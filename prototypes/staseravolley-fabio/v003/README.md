@@ -66,3 +66,15 @@ Il selettore emoji include 3.963 sequenze fully-qualified (varianti incluse), ca
 La bacheca del gruppo è riservata ai membri. L’organizzatore o amministratore autorizzato può pubblicare messaggi; ogni altro membro attivo riceve una notifica con collegamento alla bacheca. Aprirla marca come lette soltanto le relative notifiche. I non membri non vedono i messaggi.
 
 Sono inclusi tutti gli accorgimenti V002: sezioni del gruppo separate, immagini con ritaglio confermato, modifica foto soltanto dal modulo Profilo e interruttori su righe alternate soft. Test: tests/social.mjs, tests/chat.mjs, tests/crop-layout.mjs oltre alle verifiche base.
+
+## Navigazione Messaggi con icone
+
+L’ingresso in Messaggi e il ritorno dalla chat aprono sempre Conversazioni, con ricerca azzerata. Se non esistono chat, l’elenco è vuoto. I contatti dei gruppi comuni si aprono solo con l’icona di composizione. Conversazioni, Nuova chat, Archiviate e Indietro usano icone SVG con titolo ed etichetta accessibile IT/EN. Test dedicato: tests/inbox.mjs.
+
+## Mappa geografica
+
+La directory usa Leaflet 1.9.4 locale e cartografia OpenStreetMap via HTTPS, con attribuzione visibile, trascinamento, zoom e punti raggruppati per località. Filtri e ricerca coincidono con l’elenco. Le coordinate sono centri delle località verificati con Nominatim, non indirizzi inventati delle palestre; il popup lo dichiara e apre i gruppi associati. Le nuove località vengono cercate con richieste serializzate e risultati memorizzati per la sessione. Serve connessione per la cartografia: in caso di problemi l’elenco rimane disponibile. Nessun servizio a pagamento. Licenza Leaflet in assets/leaflet/LICENSE. Questa sezione sostituisce la precedente descrizione della mappa schematica.
+
+## Quota dell’organizzatore
+
+L’organizzatore è esente nelle proprie serate: il posto è confermato, la sua quota è zero e lo stato è Esente, senza pagamento né promemoria. Nelle serate organizzate da altri paga come gli altri membri. Le quote delle altre persone non cambiano. Le prenotazioni future dell’organizzatore ancora non pagate vengono aggiornate automaticamente; pagamenti e rendiconti già registrati vengono conservati.

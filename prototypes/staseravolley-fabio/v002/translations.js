@@ -467,6 +467,13 @@ cropConfirm|Conferma ritaglio|Confirm crop
 groupManagement|Gestione gruppo|Group management
 groupRequestsHint|Gestisci adesioni e prenotazioni di questo gruppo.|Manage membership and booking requests for this group.
 
+mapCityPrecision|Punti riferiti alla località: non sono indirizzi verificati delle palestre. Tocca un punto per aprire i gruppi.|Markers indicate the locality, not verified gym addresses. Tap a marker to open its groups.
+mapNetworkError|Cartografia non disponibile: controlla la connessione. I gruppi restano consultabili nell’elenco.|Map tiles unavailable: check your connection. Groups remain available in the list.
+mapMissing|Località non trovate:|Locations not found:
+
+status_exempt|Esente: organizzatore della serata|Exempt: match organizer
+paymentExempt|L’organizzatore non paga la quota della propria serata.|Organizers do not pay a fee for their own matches.
+
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();
