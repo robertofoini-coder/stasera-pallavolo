@@ -90,3 +90,19 @@ Le notifiche non lette hanno fondo azzurro tenue, bordo e punto blu più visibil
 ## Apertura delle serate da Esplora — V003
 
 Toccando una serata nell’elenco, nel popup della mappa o nelle schede a zoom ravvicinato si apre direttamente il dettaglio della partita selezionata, con la scheda Info attiva. Non si passa dal cartellino del gruppo e non viene creata alcuna prenotazione. Il gruppo rimane accessibile dal collegamento dedicato e dalla directory. Questa regola sostituisce il precedente percorso Esplora → gruppo → partita soltanto nella V003.
+
+## Ricerca di serate vicine e ordinamento
+
+Esplora presenta una ricerca principale per paese/città: Invio o il pulsante di ricerca individua la località; con più risultati si sceglie il riferimento corretto. Il filtro separato per gruppo/palestra continua a funzionare. La mia posizione richiede il consenso nativo del browser, senza attivare il GPS all’apertura. Permessi negati, connessione assente e località non trovate hanno messaggi dedicati e non inventano coordinate. Il riferimento resta in memoria nella sessione e può essere rimosso; la posizione non viene salvata nel profilo.
+
+Ordinamenti: data crescente, distanza dal più vicino, quota crescente e maggior numero di posti liberi. Data e identificativo garantiscono ordinamento stabile a parità di valore. La ricerca geografica attiva automaticamente la distanza. I chilometri sono indicativi, in linea d’aria rispetto alla località della serata: non sono itinerari stradali né precisione fittizia per palestre demo. Località senza coordinate rimangono in fondo con distanza non disponibile. Elenco e mappa mantengono gli stessi filtri; sulla mappa appare anche il riferimento scelto.
+
+## I miei gruppi e ricerca separata
+
+La voce Gruppi apre I miei gruppi: soltanto appartenenze attive/approvate e gruppi organizzati dal personaggio. Le richieste in attesa sono mostrate in un blocco distinto. Cerca altri gruppi apre la directory dedicata con ricerca, filtri e mappa; l’ingresso approvato aggiunge automaticamente il gruppo alla pagina personale.
+
+Test: tests/discovery.mjs e tests/discovery-unit.mjs, oltre alle verifiche generali. Le nuove modifiche riguardano soltanto V003.
+
+## Nuova chat senza rubrica iniziale
+
+Cerca giocatore compare esclusivamente in Nuova chat. La schermata non mostra utenti prima della ricerca (almeno 2 caratteri) e non ripropone conversazioni già avviate. I risultati sono limitati ai membri approvati di gruppi comuni; le chat esistenti si aprono da Conversazioni o Archiviate.

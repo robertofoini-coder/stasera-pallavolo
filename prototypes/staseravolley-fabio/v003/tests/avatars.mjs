@@ -16,7 +16,7 @@ try {
  await p.locator('img').evaluateAll(async imgs=>{await Promise.all(imgs.map(img=>img.decode()));});
  assert.equal(await p.locator('img').evaluateAll(imgs=>imgs.every(i=>i.naturalWidth===256&&i.naturalHeight===256)),true);
  await p.screenshot({path:path.join(root,'docs/avatars-contact-sheet.png'),fullPage:true});
- await p.goto(base);await p.locator('#mainNav [data-view=groups]').click();await p.locator('.group-item[data-id=bs-friends]').click();assert.equal(await p.locator('img[src*="bs-friends-"]').count(),14);
+ await p.goto(base);await p.locator('#mainNav [data-view=groups]').click();await p.locator('[data-action=browse-groups]').click();await p.locator('.group-item[data-id=bs-friends]').click();assert.equal(await p.locator('img[src*="bs-friends-"]').count(),14);
  await p.locator('.upcoming-section [data-action=open-match]').first().click();assert.equal(await p.locator('.court img').count(),12);
  console.log('PASS 40 distinct optimized local portraits; stable profile/member/court associations; 256px dimensions');
  await fs.writeFile(path.join(root,'docs/avatar-test-results.json'),JSON.stringify({passed:true,portraits:40,uniqueHashes:hashes.size,dimensions:'256x256',at:new Date().toISOString()},null,2));

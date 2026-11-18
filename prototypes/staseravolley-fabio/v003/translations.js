@@ -19,7 +19,7 @@ cancel|Annulla|Cancel
 save|Salva modifiche|Save changes
 yes|Conferma|Confirm
 search|Cerca|Search
-searchMatches|Cerca palestra, gruppo o località|Search gym, group or location
+searchMatches|Filtra per gruppo o palestra|Filter by group or gym
 searchGroups|Cerca nome, palestra, città o provincia|Search name, gym, city or province
 province|Provincia|Province
 allProvinces|Tutte le province|All provinces
@@ -525,6 +525,33 @@ exploreEvenings|Esplora le serate|Explore matches
 receivedRatings|Valutazioni ricevute|Received ratings
 ratingCount|{n} valutazioni|{n} reviews
 noReceivedRatings|Ancora nessuna valutazione ricevuta. I punteggi compariranno dopo le serate giocate.|No reviews received yet. Scores will appear after completed matches.
+
+playWhere|Dove vuoi giocare?|Where do you want to play?
+searchTown|Cerca un paese o una città|Search for a town or city
+myPosition|La mia posizione|My location
+findingLocation|Ricerca della posizione…|Finding location…
+searchOrigin|Distanze da|Distances from
+clearOrigin|Rimuovi|Clear
+sortBy|Ordina per|Sort by
+sort_date|Data: prima le prossime serate|Date: upcoming matches first
+sort_distance|Distanza: dal più vicino|Distance: nearest first
+sort_price|Prezzo: dal più economico|Price: lowest first
+sort_places|Posti liberi: prima più disponibilità|Free seats: most available first
+distanceUnavailable|Distanza non disponibile|Distance unavailable
+distanceHint|Distanza indicativa in linea d’aria dalla località della serata, non distanza stradale dalla palestra.|Approximate straight-line distance to the match locality, not road distance to its gym.
+gpsAccuracy|Precisione dispositivo circa {n} m|Device accuracy about {n} m
+townNotFound|Località non trovata. Prova il nome completo e la provincia.|Town not found. Try its full name and province.
+locationLookupError|Impossibile recuperare la posizione. Controlla la connessione o cerca un paese manualmente.|Could not retrieve the location. Check your connection or search for a town manually.
+locationDenied|Posizione non autorizzata. Puoi consentirla dal browser oppure cercare un paese manualmente.|Location permission denied. Allow it in your browser or search for a town manually.
+locationUnsupported|Questo browser non supporta la posizione. Cerca un paese manualmente.|This browser does not support location. Search for a town manually.
+
+myGroups|I miei gruppi|My groups
+browseGroups|Cerca altri gruppi|Find other groups
+allGroups|Cerca gruppi|Find groups
+noJoinedGroups|Non fai ancora parte di un gruppo. Cerca un gruppo e richiedi l’ingresso.|You have not joined any groups yet. Find a group and request membership.
+pendingMemberships|Adesioni in attesa|Pending memberships
+
+searchContactHint|Cerca un membro di un tuo gruppo per iniziare una nuova chat (almeno 2 caratteri). Le chat già avviate sono in Conversazioni.|Search for a member of one of your groups to start a new chat (at least 2 characters). Existing chats are in Conversations.
 
 `;
 export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}

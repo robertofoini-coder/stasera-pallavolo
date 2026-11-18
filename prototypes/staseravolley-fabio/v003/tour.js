@@ -1,6 +1,6 @@
-const steps={messages:[['tourChat','#chatSearch'],['tourChat','.conversation-row']],chat:[['tourChat','.chat-heading'],['tourChat','.message-stream'],['tourChat','#chatText'],['tourChat','.emoji-row']],
+const steps={groups:[['tourMembers','.my-groups-list'],['tourDirectory','[data-action=browse-groups]'],['tourCreate','[data-action=create-group]']],messages:[['tourChat','#chatSearch'],['tourChat','.conversation-row']],chat:[['tourChat','.chat-heading'],['tourChat','.message-stream'],['tourChat','#chatText'],['tourChat','.emoji-row']],
  explore:[['tourSearch','#exploreSearch'],['tourDates','.date-filters'],['tourEvent','.match-card'],['tourNav','#mainNav'],['tourBell','#notificationsButton']],
- groups:[['tourGroupSearch','#groupSearch'],['tourProvince','#groupProvince'],['tourMap','.match-tabs'],['tourDirectory','.group-item'],['tourCreate','[data-action=create-group]']],
+ groupDirectory:[['tourGroupSearch','#groupSearch'],['tourProvince','#groupProvince'],['tourMap','.match-tabs'],['tourDirectory','.group-item'],['tourCreate','[data-action=create-group]']],
  group:[['tourGroupInfo','.group-hero'],['tourJoin','.membership-gate'],['tourMembers','.person-row'],['tourManage','[data-action=edit-group]'],['tourEvenings','.upcoming-section']],
  match:[['tourMatch','.match-summary'],['tourTabs','.match-tabs'],['tourField','.court'],['tourReserves','.reserve-list'],['tourJoin','.membership-gate'],['tourBook','.booking-actions'],['tourBell','#notificationsButton']],
  bookings:[['tourBookings','.booking-item'],['tourBell','#notificationsButton'],['tourNav','#mainNav']],
