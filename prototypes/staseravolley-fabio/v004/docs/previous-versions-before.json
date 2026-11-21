@@ -1,0 +1,1234 @@
+[
+  {
+    "path": "prototypes/staseravolley-fabio/v000/admin.html",
+    "sha256": "3e1549e769f26f27c315d12eac477305b3aa790d4883adc855d23437164fe828"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/AGENTS.md",
+    "sha256": "e58a31acc3755b3d511a2ed933a6652f4d0423262198ad97472c4ad23bc2c672"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/docs/PROTOTYPE_SUMMARY.md",
+    "sha256": "08aee775ff4cb5cc537f783838d30080df187c26d2614eaf2b6bb0605dab39c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/docs/TECHNICAL_BRIEF.md",
+    "sha256": "f59e18a326d2a26ae3108352c5e2099c6a7a5f0b968f4ddcd940119c21fbb50b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/index.html",
+    "sha256": "b4e4d1deb40bca741fd5c4c2faac4d8e44a2435554e1f489d4aaf37cdf804936"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/LICENSE",
+    "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/profile-avatar.jpg",
+    "sha256": "bb578016c141dd4dd1c05780983b50c35d6186206d73fa5d9941e04518364a32"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/profile-volleyball-transparent.png",
+    "sha256": "9e0d517a4b660cd870e64cacabfab22c1184e56a4d5c0c748b1bf9fc8a6f92fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v000/toolbar-volleyball-transparent.png",
+    "sha256": "8938406f5387d98c3df3c3f1186f487a350b245670e7da31f5dc9108e65384e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/admin.html",
+    "sha256": "386add6afb1c764ad39d5d7197cce6e6ec338724f17e104b48709c5ff5428bb8"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/AGENTS.md",
+    "sha256": "e58a31acc3755b3d511a2ed933a6652f4d0423262198ad97472c4ad23bc2c672"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/detail.css",
+    "sha256": "aedc1f717fe9124eadc4a855f14f700f7c228eb6cbd2ade4a5eaa73d8824f337"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/detail.js",
+    "sha256": "948a23896e5dca694e9c66efe61f76a8f5435c481c7243abd55e4b54dd745236"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/docs/PROTOTYPE_SUMMARY.md",
+    "sha256": "08aee775ff4cb5cc537f783838d30080df187c26d2614eaf2b6bb0605dab39c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/docs/TECHNICAL_BRIEF.md",
+    "sha256": "f59e18a326d2a26ae3108352c5e2099c6a7a5f0b968f4ddcd940119c21fbb50b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/docs/V001_PROGRESS.md",
+    "sha256": "ed86e409504fa4beb15687fab153fa7eddfa55265ced11233560514c867bc21b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/group-court.js",
+    "sha256": "f438a900f9dece2f2391650c548e39a5b377eb2818487a3027cf0dbf1b402cf3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/groups.js",
+    "sha256": "a2328706ef9dca729962cc808f6273d6aa6cef6ede91a2a814c2df5798893c45"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/i18n.js",
+    "sha256": "a89885415eebc2c856dace3c84078f9e4a0428d7d77aaef87f56ca85c33bfb5e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/index.html",
+    "sha256": "2cfd67e537c73a9946b63ad1d14519a9d1eb8aad8899b3b9899b07f1e0197f71"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/language-settings.js",
+    "sha256": "dfe40981a4993c9d8b0c1507541c516a1c203e39d70fb377bcb0fd3f170e96e6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/LICENSE",
+    "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/profile-avatar.jpg",
+    "sha256": "bb578016c141dd4dd1c05780983b50c35d6186206d73fa5d9941e04518364a32"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/profile-volleyball-transparent.png",
+    "sha256": "9e0d517a4b660cd870e64cacabfab22c1184e56a4d5c0c748b1bf9fc8a6f92fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/tests/english.mjs",
+    "sha256": "2ff400d526e7205af850ee936648775c5466cc0650b5790a22ae7ad46fd3b4b3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/tests/flows.mjs",
+    "sha256": "56b347acd3927023e52596986a230524c998cdc6b0a8c070377e59453984d8fa"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/tests/group-court.mjs",
+    "sha256": "9b0975cb988a0afbf155a737a55bdfdc6d596376dc7ab27ef78195744830e5fb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/toolbar-volleyball-transparent.png",
+    "sha256": "8938406f5387d98c3df3c3f1186f487a350b245670e7da31f5dc9108e65384e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v001/version-notes.js",
+    "sha256": "6ebeca7324f463d015486d74245e7a662047a4ad134b4d6d5f0c72f911b87deb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/admin.html",
+    "sha256": "dde849eeaa211e0a4b5b93d6012545120ba0514b3be345da50a9ba220936f895"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/AGENTS.md",
+    "sha256": "e58a31acc3755b3d511a2ed933a6652f4d0423262198ad97472c4ad23bc2c672"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/app.css",
+    "sha256": "4ded68b056783b8270c5004a82b7c70343ceb269be961c02f853b743d0cf56fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/app.js",
+    "sha256": "2263a83f6ab4175c780a79302eadc478eec04fecb14c20b494f7fba3a50e6146"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-01.jpg",
+    "sha256": "75906842cb25a05a0ee760c9f012c8090b35d186d8784a9f1cc9b6b4608d4980"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-02.jpg",
+    "sha256": "e49afe7d8f2adcdb996c9a017c4bd36e0fc81df66311cbcbc39016256ea262bc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-03.jpg",
+    "sha256": "786ffb6cdbac9c942e9df37914f660e6af7036a72311525f95d0fa1e725369c3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-04.jpg",
+    "sha256": "6d0fbe37d49893a00260e78b404077f0e089dd49aa998bf7ca1da7dc9068e6b5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-05.jpg",
+    "sha256": "dcdf447e2693530b6056bd41025c12e07528f59bdb3509a8efa135c273096541"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-06.jpg",
+    "sha256": "f77ce0b66f8b6555e707c374faf4c25ecd8123277bedee5200f01c50500ba087"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-07.jpg",
+    "sha256": "60f4eaf2cea7d6cb52b475c9e5d22320e74edf7946ba59e1dd2bbb55586823bd"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-08.jpg",
+    "sha256": "c5c0ab60e1033a0ee03e90e75dd9ad7a9de3dca1d886db6f80cb7ef19bd38805"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-09.jpg",
+    "sha256": "8cb32d07bcf95afffb4c7d1d8d4efe88f6fc774882d841bdea06e61475d3fecf"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-10.jpg",
+    "sha256": "14c3aa3212a4292029a669468351986508ff84faf704a959d782402cee482b45"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-11.jpg",
+    "sha256": "4dd8be0989458acd7c5add6223169b2105c56dd2397617c681b28db447a8dd2e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bg-12.jpg",
+    "sha256": "c461fbc05a38f05062e0a46040bf56b4cd292e30e8f5a7ba4de0d4fb5c326bb4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-01.jpg",
+    "sha256": "af5b1f189bc9abe2b97c6c5010545a99ab765fe9ffda56d71f50493dc9b0d670"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-02.jpg",
+    "sha256": "7d123a42462fd12d8b0b85d0465306fcd9c9c92b138bf29eacfd5e7a657db27d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-03.jpg",
+    "sha256": "bc747f89b23b31f09b6f1d0f2db2572a1fbe290559019615c0946835db2aa8b0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-04.jpg",
+    "sha256": "d532700d42bd120d9cf34b7e3f13c5c9be235f4cca77e82a5e4f469f1c91c54f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-05.jpg",
+    "sha256": "7e3dc21fb3f707d23b97b5cbe514ed3669f8349d7ac3ff6468e61fbecd482797"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-06.jpg",
+    "sha256": "f6998af21bc382d2c76bfb4a34abf525cdeab9cdf3f77142840e76671b8bafff"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-07.jpg",
+    "sha256": "60869ac5aa0f2e9f9f166f87bbf13fa68a2a67cd510b6b543e55cd608fe5451d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-08.jpg",
+    "sha256": "5e2794816974a3626a0dd7b49d06518c6f641ca83c1eecc68110fdf932bc02f4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-09.jpg",
+    "sha256": "5ddc7d2acafffb8ebd6c268b1701b370c416992fcb5d01c27d0dac0f62023cec"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-10.jpg",
+    "sha256": "e52b1c0ee458164b4f457acb68d878b24f68b7200498ec6e39bffef1aec353a0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-11.jpg",
+    "sha256": "3510de2e9814c6523ab3e06a0e5ec17afb208b85af91068b6c72c89d88efd7e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-12.jpg",
+    "sha256": "a00b083b1eed4c38b09bde70e35b6fd58c1b91743f686a8a93c594755fa9e57c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-13.jpg",
+    "sha256": "0deaa4b55779aee0c3cbd62109d9bba1c5c23dcf2ee0b1908b42210ab3d3d810"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-friends-14.jpg",
+    "sha256": "a162b430c27b6c7d972cb39bbd1bb81d04afcd3342985e9de83bd1f35b53490c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-01.jpg",
+    "sha256": "f1935150cae707c9f5957f4da1de07e1ff55e4ea8a0cb574ea0dbb29086403de"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-02.jpg",
+    "sha256": "bee954f8f41995358063ce27f0b3d44f943b4d916f4fa8a474eee1cd880f9f4e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-03.jpg",
+    "sha256": "11f1c7bb374de89d753dca2f333288db847a94daf570c895fa9abec7f311d2a7"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-04.jpg",
+    "sha256": "64d12d610000c735f50662f531f2a10f8ac06b8f3b413fc32bbeb66a70ffd2bb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-05.jpg",
+    "sha256": "b25e009f90f026f8d9ffbdd6338abd7e5763615933bdec7e2a678c8aebfda8bf"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-06.jpg",
+    "sha256": "771c10e5cebf634914fab35c17b3b88c5d8398a69a9a004bc834708351e11bd7"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-07.jpg",
+    "sha256": "69f045d3d0a008c238f9d21bd27bb206138b5a62deab80023a70e3e27e9737e9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-08.jpg",
+    "sha256": "09e81646dece27d38e63cc6e4cda215a4a3e824bdbb8e63f5287705ff25659f9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-09.jpg",
+    "sha256": "35b21418d3803931327694a2f3610b69d87a73d1dd35b08726f7d7bc321290f6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-10.jpg",
+    "sha256": "7da37ee3e5090f027a0538daf5d51342c3c2ee1aa0bb9a5db77e5c6001f51150"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-11.jpg",
+    "sha256": "3edfdc3fe5836224403efcf7c2ed3142b27974ef574dd46e16737933714ce2e2"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-12.jpg",
+    "sha256": "63524dd696d69a6ba0996962c74f02e8e9c96cdf06cd8724650156b093104f14"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-13.jpg",
+    "sha256": "67d3e7f42ffd78b233bbc68b04b240ab17c9e8be713ae0c8d4db04759a34a1ca"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/avatars/bs-leonessa-14.jpg",
+    "sha256": "3ca563226b1ebc5e4d4b3d3419834f4736eca75aac8bf979104f0a9e1200a99e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bg-bagher.svg",
+    "sha256": "d6670da4686f963a733788e4d993ffb934f82b0db7f95b221e43942dfbbb87cc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bg-smash.svg",
+    "sha256": "a45ac7de92a3a527d50bcf32cbbb0b17470a26f26c004a61f2b14d5224e2866e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bg-volley-spritz.svg",
+    "sha256": "da060dda6040a527929864596f38feeb9270587df5d9c3761448e581d86cf72b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bg-voltaren.svg",
+    "sha256": "9984b2a2e8440608625877d7f62ed7bb86699931faaf2ff6d2792a3e61fe8780"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bs-friends.svg",
+    "sha256": "f110e0bcb53f05c89b491bcd5e39f928f230483081ed8ffbd9bd2621e7dd74a5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/groups/bs-leonessa.svg",
+    "sha256": "452af79ef246d3d3d8bdf6e4c263e634454a65b75295d9cdeea7aeba7ba14313"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/leaflet/leaflet.css",
+    "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/leaflet/leaflet.js",
+    "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/assets/leaflet/LICENSE",
+    "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/avatar-manifest.js",
+    "sha256": "687a00157489ac7caf2efe26c77d600773c264d7d739113ef0625f59a636f489"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/core.js",
+    "sha256": "e19e49ed5702a6299bdcdfc6afd84aa28580f75e096bbb57f6957f08146e5f8b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/crop.js",
+    "sha256": "d00a4134a93b35880d2b03be1d50fe1fe5d3d5683b94ccaa0f9be1220bac8a6b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/data.js",
+    "sha256": "ae52ddaee321577b65bebc1eec920d618ef207a5216c2c6dd6a21220ba3d9ed5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/dates.js",
+    "sha256": "0bcc72e9de972fe1936bd4d0c9416337cfa2835ed259dcdabd2820d058ee6bde"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/avatar-manifest.json",
+    "sha256": "153fc39f2826a0b1dbe6d463ca306b2d28d2a6a646fbefcb894571e778dd210e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/avatar-test-results.json",
+    "sha256": "52b68a786eb6727375f5d064b88df8760f2c61720efc5a030a3cc5171d89f314"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/avatars-contact-sheet.png",
+    "sha256": "24e28d92a55a956d2544e432007654c677cf62e84751fbce72023bcd22ae923f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/browser-results.json",
+    "sha256": "a9a443b44eb58d9fbbcfc60bfab16e007cdc0b924ac86d12255978ebf661b66b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/copied-v001.html.txt",
+    "sha256": "1cdacd376843f069f32229db5113265c4608e8684e2842834bf291895d73c507"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/copy-desktop.png",
+    "sha256": "4a3a2abae49ac7b30a298397971eb65ff8ab99f4505f51db17aed19f4fc50645"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/copy-mobile.png",
+    "sha256": "5212fc6de50b2e97e0e5e7d093bbc6d91f40b2ddf3fd4a4eb2838fe16a6eb54d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/core-test-results.txt",
+    "sha256": "fea1b62f6e174dc82c1a785d783f40cab9bd5477815fb4c1272108f7ef645caf"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/crop-layout-results.json",
+    "sha256": "4c6817b1edd47c430fad9915cc8c1ffb42c5de4b590064b2c4230c5871e3e15c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/failure-create-group-access-flags-recurrence-duplicate-edit.png",
+    "sha256": "454bdc1d89af3d3edd7d5bc5cd026a22b346adaf7137af1995f0e110366609c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/failure-pending-hold-notifications-acceptance-payment-refund-admin.png",
+    "sha256": "19c3c5158efe458ad7316f2ea091bd649b1d670d0b74d19648691b0036423aff"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/final-verification.json",
+    "sha256": "81044b0d0ab3cc228143665e73704c4e1646226f79bc08d76e12403b66fcdf53"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/geographic-map-mobile.png",
+    "sha256": "616d807a17be145b053e0e6dcd5e914dd92db1104679e1c1e47da39b1294b0cb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/map-results.json",
+    "sha256": "831fb8aa7f5ccf4f459659954a456c460bae24aa26e06005b0e7189b28ae6b07"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/next-tour-mobile.png",
+    "sha256": "7ade8649edb5b2e1b66eee9a9ee2ff9a1fe6b01e87712ac56cd180702fc029c9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/next-ux-results.json",
+    "sha256": "4a92e6d2babaa67bac05efc259b07add785920df2a29f5697dd6dcad911b6bc4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/PROTOTYPE_SUMMARY.md",
+    "sha256": "08aee775ff4cb5cc537f783838d30080df187c26d2614eaf2b6bb0605dab39c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/robustness-results.json",
+    "sha256": "d788c87a00ea47798eb97d54d5e456f3dad5a91cbf6cb7d217242fd4c142fde7"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/smoke-mobile.png",
+    "sha256": "d46cb9388fd637c54cd20c5d12d9598fb1cb345926bef447d34d89e1942201a9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/source-baseline.json",
+    "sha256": "f0b54f8be81c0067381c4a65751b5c33be2785df7cec1a6d145d91fc9ba88326"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/TECHNICAL_BRIEF.md",
+    "sha256": "f59e18a326d2a26ae3108352c5e2099c6a7a5f0b968f4ddcd940119c21fbb50b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/base.css.txt",
+    "sha256": "d94ecfc897d2e3fb8e92e4cc841335419563c6eb71d3e78636080063a0fbe2b6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/copy-check.mjs.txt",
+    "sha256": "f5b40bef0b7c31045427b79b71d8242cda130d8ae062f612981dbee7c61eb820"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/detail.css.txt",
+    "sha256": "aedc1f717fe9124eadc4a855f14f700f7c228eb6cbd2ade4a5eaa73d8824f337"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/detail.js.txt",
+    "sha256": "64b96596293315219e9a281d5aa1e17cea7c145535bccd0d82930d039b6c8a2a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/english.mjs.txt",
+    "sha256": "661a440dc2d6e928f521314a0ba94185857d6877f61769edadf497e04f92ccba"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/flows.mjs.txt",
+    "sha256": "819d42a078a7a9f2c60e430d51beeb72948eacd0fad7fb7e25c9ec4db56f614a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/group-court.js.txt",
+    "sha256": "e98e22f8d416abfac4d4c4db430d2fa430d9fc64fc8dc42ece818c9b527feba6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/group-court.mjs.txt",
+    "sha256": "9b0975cb988a0afbf155a737a55bdfdc6d596376dc7ab27ef78195744830e5fb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/groups.js.txt",
+    "sha256": "a2328706ef9dca729962cc808f6273d6aa6cef6ede91a2a814c2df5798893c45"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/i18n.js.txt",
+    "sha256": "e39f5b7007d127277b6d7882402172c50dce35a684f68339e9dc90c9189825fd"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/language-settings.js.txt",
+    "sha256": "dfe40981a4993c9d8b0c1507541c516a1c203e39d70fb377bcb0fd3f170e96e6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/profile-avatar.jpg",
+    "sha256": "bb578016c141dd4dd1c05780983b50c35d6186206d73fa5d9941e04518364a32"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v001-reference/version-notes.js.txt",
+    "sha256": "6ebeca7324f463d015486d74245e7a662047a4ad134b4d6d5f0c72f911b87deb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/V001_PROGRESS.md",
+    "sha256": "ed86e409504fa4beb15687fab153fa7eddfa55265ced11233560514c867bc21b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-1440-dark.png",
+    "sha256": "800f28fd68afb195491aef4e585fdd795a48cd1b6e3eb5a02aa6f1df8a627354"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-1440-light.png",
+    "sha256": "c1a492bd2a5878a1976409d8235740e099ff1418be8b35885851187b02a9bd0b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-390-dark.png",
+    "sha256": "20bda1f2a5d5fb322e67d9d7a35bfa43f5cbd1a1d29a823aea00307209e90a3c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-390-light.png",
+    "sha256": "2f24d26ffe21a94a84aa8a28e635c8f24db323819dc7473f5c5790260204d0d6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-820-dark.png",
+    "sha256": "d5322c6fcc4dce5a48dd89e0e5e5880dab2bdbeb07572681c922d91523e949da"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-820-light.png",
+    "sha256": "0a1133e7dda4e446fc161e60ac8ac838549d87274c85624edf650d63b69dd803"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-membership-mobile.png",
+    "sha256": "3f05612d89e9f8838422f9a33f84415e3ff65bdba6330515c0f2847ef0f428f3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-payment-reminder-mobile.png",
+    "sha256": "2515330003c31034cc39063ee85e03709bc74598a54dd194ea7d9bc65556be15"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/docs/v002-profile-position-mobile.png",
+    "sha256": "07712d9e8368678f2e244d22b64cce6bab52574b6c8174dcc977085126cfa154"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/experience.js",
+    "sha256": "7d3ceb27a021609b8e01b2ef0d028dfdbd857f0f6691bd5c2666ac8a3aa6290b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/group-map.js",
+    "sha256": "6ed9c3856f63e6672842ad79afff5d16e802346d9d5886f87b275d55538b2b2c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/index.html",
+    "sha256": "b11f1c5390ce0115db75148990a5586fe113d4d998e6cd6a0fe4dc783a221771"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/LICENSE",
+    "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/package.json",
+    "sha256": "768be98c3ee43a007d9ec6c2d707ba51ad5b6b70906b34a15ccc5aecaddae64f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/participation.js",
+    "sha256": "d2a851912a979eda0b1a4c29c60f714deba47c3aaf0ab4779cb1d94f3ffbbaeb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/profile-volleyball-transparent.png",
+    "sha256": "9e0d517a4b660cd870e64cacabfab22c1184e56a4d5c0c748b1bf9fc8a6f92fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/README.md",
+    "sha256": "a90105f936fc432cc2f28abc0f031994131ff0235c7174060a73747740e3b885"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/avatars.mjs",
+    "sha256": "f0864d34b9dd40bb584f9b28964bd439e1dd7cfa0fde0315dd904300ae1313bc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/browser.mjs",
+    "sha256": "fba621ca04a2b8825c5aa353dac3fd3c7054f24d50f2b67ea07997eee9e3d19d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/core.test.mjs",
+    "sha256": "ba8c6fe95bacddb3297de1ed2ee954c1cdd5db8be35e88dcd187cff818850f59"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/crop-layout.mjs",
+    "sha256": "6d6061cf66684a7e12d3839c101a94a042ef9f76cc36c120d05677eda86c2b09"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/map.mjs",
+    "sha256": "8007035f8bcbcb650414a5813d0641a4bce43db7f49345e4a9a610ffb0418e4c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/next-ux.mjs",
+    "sha256": "3767fe854ce06cf5e42dd754f8a05a0f56419f8475a792c4aad48702e65358af"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/robustness.mjs",
+    "sha256": "7f72d5c7af11d6cc1f5fb0131faf4d3c743bd12f81412e3549c3053826056da3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/server.mjs",
+    "sha256": "9210c6b3c9b1e190b9458580dc8572d72a5254f8da14ce825c1dceb5fb57027f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tests/smoke.mjs",
+    "sha256": "594b8aa325a2bf8c4fd9b14fa7850401c8976c3764966e37f97faf4a1dca12b2"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/toolbar-volleyball-transparent.png",
+    "sha256": "8938406f5387d98c3df3c3f1186f487a350b245670e7da31f5dc9108e65384e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tools/optimize-portrait.ps1",
+    "sha256": "48121e256be521600882d1a107cb9dc332a11f854f9d6ddc05f823269be4bbd5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tools/serve.mjs",
+    "sha256": "b4e59de5f9ab5d29dbb534857d88fa564dff475482f495a673583413c6c536bc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tools/update-avatar-manifest.mjs",
+    "sha256": "8e5079b112e727e6414e62272070396abd7244c249a82aba7b6c6bf9e1b46f2a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tools/verify-scope.mjs",
+    "sha256": "724817be4ddef15d8fb5c67c3c2ceef89d4f655482118f957a05417ae15c51f1"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/tour.js",
+    "sha256": "8b2cc4ff16734987b5eec6ec60f18698251b25feb56110d524422ec4c9876ba4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/translations.js",
+    "sha256": "07ecb2120a8d50932113cbce8e0c0492323b77bf3a29217530290bb57312bc3d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v002/views.js",
+    "sha256": "aaa9df6751d175475610a1d94f2e5a849a4bb6ec3c3f1ec43b95d5ec1c85c889"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/admin.html",
+    "sha256": "bec621a5035808ce346ba75fbe6c72e8212ee00ee946adb92d3eeaf1a6d917a2"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/AGENTS.md",
+    "sha256": "e58a31acc3755b3d511a2ed933a6652f4d0423262198ad97472c4ad23bc2c672"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/app.css",
+    "sha256": "c822dfaa6ff6122527b3bc2b8f03e6b71ded8886606234a3d014dc80a2381ea0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/app.js",
+    "sha256": "94e1621ac5e0169c5cc4ac332f7b62d6e58ae415f8b04e5863199e496b44d416"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-01.jpg",
+    "sha256": "75906842cb25a05a0ee760c9f012c8090b35d186d8784a9f1cc9b6b4608d4980"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-02.jpg",
+    "sha256": "e49afe7d8f2adcdb996c9a017c4bd36e0fc81df66311cbcbc39016256ea262bc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-03.jpg",
+    "sha256": "786ffb6cdbac9c942e9df37914f660e6af7036a72311525f95d0fa1e725369c3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-04.jpg",
+    "sha256": "6d0fbe37d49893a00260e78b404077f0e089dd49aa998bf7ca1da7dc9068e6b5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-05.jpg",
+    "sha256": "dcdf447e2693530b6056bd41025c12e07528f59bdb3509a8efa135c273096541"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-06.jpg",
+    "sha256": "f77ce0b66f8b6555e707c374faf4c25ecd8123277bedee5200f01c50500ba087"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-07.jpg",
+    "sha256": "60f4eaf2cea7d6cb52b475c9e5d22320e74edf7946ba59e1dd2bbb55586823bd"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-08.jpg",
+    "sha256": "c5c0ab60e1033a0ee03e90e75dd9ad7a9de3dca1d886db6f80cb7ef19bd38805"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-09.jpg",
+    "sha256": "8cb32d07bcf95afffb4c7d1d8d4efe88f6fc774882d841bdea06e61475d3fecf"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-10.jpg",
+    "sha256": "14c3aa3212a4292029a669468351986508ff84faf704a959d782402cee482b45"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-11.jpg",
+    "sha256": "4dd8be0989458acd7c5add6223169b2105c56dd2397617c681b28db447a8dd2e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bg-12.jpg",
+    "sha256": "c461fbc05a38f05062e0a46040bf56b4cd292e30e8f5a7ba4de0d4fb5c326bb4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-01.jpg",
+    "sha256": "af5b1f189bc9abe2b97c6c5010545a99ab765fe9ffda56d71f50493dc9b0d670"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-02.jpg",
+    "sha256": "7d123a42462fd12d8b0b85d0465306fcd9c9c92b138bf29eacfd5e7a657db27d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-03.jpg",
+    "sha256": "bc747f89b23b31f09b6f1d0f2db2572a1fbe290559019615c0946835db2aa8b0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-04.jpg",
+    "sha256": "d532700d42bd120d9cf34b7e3f13c5c9be235f4cca77e82a5e4f469f1c91c54f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-05.jpg",
+    "sha256": "7e3dc21fb3f707d23b97b5cbe514ed3669f8349d7ac3ff6468e61fbecd482797"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-06.jpg",
+    "sha256": "f6998af21bc382d2c76bfb4a34abf525cdeab9cdf3f77142840e76671b8bafff"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-07.jpg",
+    "sha256": "60869ac5aa0f2e9f9f166f87bbf13fa68a2a67cd510b6b543e55cd608fe5451d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-08.jpg",
+    "sha256": "5e2794816974a3626a0dd7b49d06518c6f641ca83c1eecc68110fdf932bc02f4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-09.jpg",
+    "sha256": "5ddc7d2acafffb8ebd6c268b1701b370c416992fcb5d01c27d0dac0f62023cec"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-10.jpg",
+    "sha256": "e52b1c0ee458164b4f457acb68d878b24f68b7200498ec6e39bffef1aec353a0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-11.jpg",
+    "sha256": "3510de2e9814c6523ab3e06a0e5ec17afb208b85af91068b6c72c89d88efd7e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-12.jpg",
+    "sha256": "a00b083b1eed4c38b09bde70e35b6fd58c1b91743f686a8a93c594755fa9e57c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-13.jpg",
+    "sha256": "0deaa4b55779aee0c3cbd62109d9bba1c5c23dcf2ee0b1908b42210ab3d3d810"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-friends-14.jpg",
+    "sha256": "a162b430c27b6c7d972cb39bbd1bb81d04afcd3342985e9de83bd1f35b53490c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-01.jpg",
+    "sha256": "f1935150cae707c9f5957f4da1de07e1ff55e4ea8a0cb574ea0dbb29086403de"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-02.jpg",
+    "sha256": "bee954f8f41995358063ce27f0b3d44f943b4d916f4fa8a474eee1cd880f9f4e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-03.jpg",
+    "sha256": "11f1c7bb374de89d753dca2f333288db847a94daf570c895fa9abec7f311d2a7"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-04.jpg",
+    "sha256": "64d12d610000c735f50662f531f2a10f8ac06b8f3b413fc32bbeb66a70ffd2bb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-05.jpg",
+    "sha256": "b25e009f90f026f8d9ffbdd6338abd7e5763615933bdec7e2a678c8aebfda8bf"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-06.jpg",
+    "sha256": "771c10e5cebf634914fab35c17b3b88c5d8398a69a9a004bc834708351e11bd7"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-07.jpg",
+    "sha256": "69f045d3d0a008c238f9d21bd27bb206138b5a62deab80023a70e3e27e9737e9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-08.jpg",
+    "sha256": "09e81646dece27d38e63cc6e4cda215a4a3e824bdbb8e63f5287705ff25659f9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-09.jpg",
+    "sha256": "35b21418d3803931327694a2f3610b69d87a73d1dd35b08726f7d7bc321290f6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-10.jpg",
+    "sha256": "7da37ee3e5090f027a0538daf5d51342c3c2ee1aa0bb9a5db77e5c6001f51150"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-11.jpg",
+    "sha256": "3edfdc3fe5836224403efcf7c2ed3142b27974ef574dd46e16737933714ce2e2"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-12.jpg",
+    "sha256": "63524dd696d69a6ba0996962c74f02e8e9c96cdf06cd8724650156b093104f14"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-13.jpg",
+    "sha256": "67d3e7f42ffd78b233bbc68b04b240ab17c9e8be713ae0c8d4db04759a34a1ca"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/avatars/bs-leonessa-14.jpg",
+    "sha256": "3ca563226b1ebc5e4d4b3d3419834f4736eca75aac8bf979104f0a9e1200a99e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/emoji-license.txt",
+    "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/emoji.json",
+    "sha256": "4af73899e1db5585d0facdbd0d445c7b134b10e1343c60f9b8c7b7da7773e25f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bg-bagher.svg",
+    "sha256": "d6670da4686f963a733788e4d993ffb934f82b0db7f95b221e43942dfbbb87cc"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bg-smash.svg",
+    "sha256": "a45ac7de92a3a527d50bcf32cbbb0b17470a26f26c004a61f2b14d5224e2866e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bg-volley-spritz.svg",
+    "sha256": "da060dda6040a527929864596f38feeb9270587df5d9c3761448e581d86cf72b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bg-voltaren.svg",
+    "sha256": "9984b2a2e8440608625877d7f62ed7bb86699931faaf2ff6d2792a3e61fe8780"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bs-friends.svg",
+    "sha256": "f110e0bcb53f05c89b491bcd5e39f928f230483081ed8ffbd9bd2621e7dd74a5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/groups/bs-leonessa.svg",
+    "sha256": "452af79ef246d3d3d8bdf6e4c263e634454a65b75295d9cdeea7aeba7ba14313"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/leaflet/leaflet.css",
+    "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/leaflet/leaflet.js",
+    "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/assets/leaflet/LICENSE",
+    "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/avatar-manifest.js",
+    "sha256": "687a00157489ac7caf2efe26c77d600773c264d7d739113ef0625f59a636f489"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/core.js",
+    "sha256": "142ae0f6f7724e21b84a2f3ac8c434faf2dc054bb5aa4b485bfaac19388ef684"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/crop.js",
+    "sha256": "d00a4134a93b35880d2b03be1d50fe1fe5d3d5683b94ccaa0f9be1220bac8a6b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/data.js",
+    "sha256": "ae52ddaee321577b65bebc1eec920d618ef207a5216c2c6dd6a21220ba3d9ed5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/dates.js",
+    "sha256": "0bcc72e9de972fe1936bd4d0c9416337cfa2835ed259dcdabd2820d058ee6bde"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/discovery.js",
+    "sha256": "11c98c03e18d7400af821a6f8b4517bc352eef60b6ee585954861a9b19aeb413"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/avatar-manifest.json",
+    "sha256": "153fc39f2826a0b1dbe6d463ca306b2d28d2a6a646fbefcb894571e778dd210e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/avatar-test-results.json",
+    "sha256": "52b68a786eb6727375f5d064b88df8760f2c61720efc5a030a3cc5171d89f314"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/avatars-contact-sheet.png",
+    "sha256": "24e28d92a55a956d2544e432007654c677cf62e84751fbce72023bcd22ae923f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/browser-results.json",
+    "sha256": "c3ec4c5794b6c6d54b8a0f60233fe8b19c3cf2a830a8b28b46bc099741d56594"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/chat-results.json",
+    "sha256": "cf9e9c1f4368ed6d1f15e1d51f22977d9f353934f5dcf6ed527c054efc4aeb94"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/copied-v001.html.txt",
+    "sha256": "1cdacd376843f069f32229db5113265c4608e8684e2842834bf291895d73c507"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/copy-desktop.png",
+    "sha256": "4a3a2abae49ac7b30a298397971eb65ff8ab99f4505f51db17aed19f4fc50645"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/copy-mobile.png",
+    "sha256": "5212fc6de50b2e97e0e5e7d093bbc6d91f40b2ddf3fd4a4eb2838fe16a6eb54d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/core-test-results.txt",
+    "sha256": "9eb9d078f3acc33e94df0237ecdb8ed4c85cca374d42f91e2ad5a7c31444d17d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/crop-layout-results.json",
+    "sha256": "2bbcddb0b4b3f7f8f3702b2deca2815ff04f99e78f55e5e69fd007258e90362c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/discovery-results.json",
+    "sha256": "058cc38af6ead7d7a629f09ebf372d441c7f67e1eeadd0736906fb2687783319"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/failure-create-group-access-flags-recurrence-duplicate-edit.png",
+    "sha256": "454bdc1d89af3d3edd7d5bc5cd026a22b346adaf7137af1995f0e110366609c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/failure-pending-hold-notifications-acceptance-payment-refund-admin.png",
+    "sha256": "19c3c5158efe458ad7316f2ea091bd649b1d670d0b74d19648691b0036423aff"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/final-verification.json",
+    "sha256": "81044b0d0ab3cc228143665e73704c4e1646226f79bc08d76e12403b66fcdf53"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/geographic-map-desktop.png",
+    "sha256": "a031ccd7e720a984221e7cf4f6ef63f1dc73e83583d35b41a3deb6a2739ceefe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/geographic-map-mobile.png",
+    "sha256": "eaf61e64946f0b79fffe430ccbf8797c188ca9b42b0b830ec65dd9992e669fe1"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/inbox-results.json",
+    "sha256": "4e2d73a5c3181d09c57c579e7452e5d6d14eb9687c357bdc3ffc038ae27e998c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/map-results.json",
+    "sha256": "19ef96923d3374ed03947d6f7f66b268058fbd2dee16baa2ae559ee2839f4d16"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/new-chat-search-results.json",
+    "sha256": "1addc7d3de49feaba808e02b9f13310b210239ab7d3d466cd21d39ea44b8a970"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/next-tour-mobile.png",
+    "sha256": "afa3a9a44456079173cfdfc6ed6c84c2e413b14f59ff3fd368369ac28fa36b2a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/next-ux-results.json",
+    "sha256": "5a132fd4fff2176bf9fa3fa4e924eb690d14f0083525700286d0b8761b543a23"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/polish-results.json",
+    "sha256": "8d251f57fa0d4302501aa664dc319793b81e6540d8dacd8e4687628188c5a0b5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/PROTOTYPE_SUMMARY.md",
+    "sha256": "08aee775ff4cb5cc537f783838d30080df187c26d2614eaf2b6bb0605dab39c4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/robustness-results.json",
+    "sha256": "2d02b0c18fc187d03fafeea7d0b606ddb408892098e84d67bc754f8a2ee5723d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/smoke-mobile.png",
+    "sha256": "d46cb9388fd637c54cd20c5d12d9598fb1cb345926bef447d34d89e1942201a9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/social-results.json",
+    "sha256": "bfc4b1390d1638a38abcf645444f08595bf50673edef655aaa7ef7be149b65c9"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/source-baseline.json",
+    "sha256": "f0b54f8be81c0067381c4a65751b5c33be2785df7cec1a6d145d91fc9ba88326"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/TECHNICAL_BRIEF.md",
+    "sha256": "f59e18a326d2a26ae3108352c5e2099c6a7a5f0b968f4ddcd940119c21fbb50b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/base.css.txt",
+    "sha256": "d94ecfc897d2e3fb8e92e4cc841335419563c6eb71d3e78636080063a0fbe2b6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/copy-check.mjs.txt",
+    "sha256": "f5b40bef0b7c31045427b79b71d8242cda130d8ae062f612981dbee7c61eb820"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/detail.css.txt",
+    "sha256": "aedc1f717fe9124eadc4a855f14f700f7c228eb6cbd2ade4a5eaa73d8824f337"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/detail.js.txt",
+    "sha256": "64b96596293315219e9a281d5aa1e17cea7c145535bccd0d82930d039b6c8a2a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/english.mjs.txt",
+    "sha256": "661a440dc2d6e928f521314a0ba94185857d6877f61769edadf497e04f92ccba"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/flows.mjs.txt",
+    "sha256": "819d42a078a7a9f2c60e430d51beeb72948eacd0fad7fb7e25c9ec4db56f614a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/group-court.js.txt",
+    "sha256": "e98e22f8d416abfac4d4c4db430d2fa430d9fc64fc8dc42ece818c9b527feba6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/group-court.mjs.txt",
+    "sha256": "9b0975cb988a0afbf155a737a55bdfdc6d596376dc7ab27ef78195744830e5fb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/groups.js.txt",
+    "sha256": "a2328706ef9dca729962cc808f6273d6aa6cef6ede91a2a814c2df5798893c45"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/i18n.js.txt",
+    "sha256": "e39f5b7007d127277b6d7882402172c50dce35a684f68339e9dc90c9189825fd"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/language-settings.js.txt",
+    "sha256": "dfe40981a4993c9d8b0c1507541c516a1c203e39d70fb377bcb0fd3f170e96e6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/profile-avatar.jpg",
+    "sha256": "bb578016c141dd4dd1c05780983b50c35d6186206d73fa5d9941e04518364a32"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v001-reference/version-notes.js.txt",
+    "sha256": "6ebeca7324f463d015486d74245e7a662047a4ad134b4d6d5f0c72f911b87deb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/V001_PROGRESS.md",
+    "sha256": "ed86e409504fa4beb15687fab153fa7eddfa55265ced11233560514c867bc21b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-1440-dark.png",
+    "sha256": "dec85f748a52e207781075e5b3e88a3d2099ebcd4e77b4ef95d1bdefc758e0ef"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-1440-light.png",
+    "sha256": "c295a87a37c7580def47b58bbce9ac934bb3e1aac21639921ba216d20b5a0386"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-390-dark.png",
+    "sha256": "6cbd6ea59805946b090e96a1e5619d9423a3c7d1c2e092c1cc5109bac3e83f91"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-390-light.png",
+    "sha256": "036009de830f0268c70e4d05d5aeffe2e4d000f5ccdec667fda5ae2c7a8b3a41"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-820-dark.png",
+    "sha256": "aa170b76d4e8ee6493a841ee019da8953b6541b3b8cfb4153477e4b556267a4d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-820-light.png",
+    "sha256": "a96ab5bff16465e30ba198972881e3a602675d97be91510c676c7b523d18a063"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-membership-mobile.png",
+    "sha256": "3f05612d89e9f8838422f9a33f84415e3ff65bdba6330515c0f2847ef0f428f3"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-payment-reminder-mobile.png",
+    "sha256": "5ed9f1a8370a9b5fefb302486970404caa32ddecc55d09cc643500cea0576337"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v002-profile-position-mobile.png",
+    "sha256": "07712d9e8368678f2e244d22b64cce6bab52574b6c8174dcc977085126cfa154"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-announcements-mobile.png",
+    "sha256": "f227c85376a4efa3bcb0d7c8d24dc6517c8526ea75441b69eedffe41cd5efb21"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-chat-desktop.png",
+    "sha256": "c9b2159c5b28db684b3a83b9b1fa93055c29dfb59e1f3494ed93e0619f60581d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-chat-mobile.png",
+    "sha256": "561fc1c7b2ef3dce6ed1ada509fc6bf0feb357fac9fec0e11a9d0ce8a3d61eb0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-empty-inbox.png",
+    "sha256": "c8bc3bf4221a602992111a47320f84cd47379f6ecb5340b959a81da1bc5931ac"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-my-groups.png",
+    "sha256": "cc7c2f075ef9dc608c345cef80504b212210e9076396262a5360ef01e51075a6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/docs/v003-profile-ratings.png",
+    "sha256": "d2a37ac9425c9617b48041f07b7aad0a29b6ed4c9eaf0e74ce334629bb580740"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/emoji-picker.js",
+    "sha256": "41c7876335b7d394bc5c2a64c3beb25df58078e9f85896f73896155ce2ab392c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/experience.js",
+    "sha256": "7d3ceb27a021609b8e01b2ef0d028dfdbd857f0f6691bd5c2666ac8a3aa6290b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/group-map.js",
+    "sha256": "0cf324c115fa4245b91f82834fe7c131b03641861ceeb70f093ebb28274e061b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/index.html",
+    "sha256": "88263e48e28789cb06812233c51714089ac1c48db708db88bba8e1fa05e43111"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/LICENSE",
+    "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/package.json",
+    "sha256": "768be98c3ee43a007d9ec6c2d707ba51ad5b6b70906b34a15ccc5aecaddae64f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/participation.js",
+    "sha256": "d2a851912a979eda0b1a4c29c60f714deba47c3aaf0ab4779cb1d94f3ffbbaeb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/profile-volleyball-transparent.png",
+    "sha256": "9e0d517a4b660cd870e64cacabfab22c1184e56a4d5c0c748b1bf9fc8a6f92fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/README.md",
+    "sha256": "94650019f11e4326fd9f72bd4bdfa2bb3986c52831b8f949617a2283d5ca5d9a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/social.js",
+    "sha256": "770955d27602e5576122e56d7a0fcb5ee4272e9582309114d948f1693cde7b8b"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/avatars.mjs",
+    "sha256": "f6cec2e934d35257a1ced8e0fcee195ca58f52e18e0220ca7a78f58a0c8622c0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/browser.mjs",
+    "sha256": "74baf9e4c2fd74b06ef7f347f981bd2a0c1de625e6f47856ad6f6c9527391d85"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/chat.mjs",
+    "sha256": "be2ff4b9d7d4adee104acff517f773ff545cf9d056e5898b07d83171d80dec53"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/core.test.mjs",
+    "sha256": "3b66960e387bf927ec16c048bbb6de2424a6b4a583644913d7ac4159a740c00f"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/crop-layout.mjs",
+    "sha256": "f3c985772de8958757cd4d380ed6267530a9e5d54d3813b63ed3d467dfc2a012"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/discovery-unit.mjs",
+    "sha256": "3d8e1bb69a5f235667360fb7e10739c0606f0bb515ca34ce84ad68f8dc17aaf1"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/discovery.mjs",
+    "sha256": "ec0095af82f69c4d27514282a05311a4499e0958b2b0e2c1529200643a9ac511"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/inbox.mjs",
+    "sha256": "b9c20db35cbe4c092f8c98563d4a08c8f8995b45f2c2bb67d3eeb10d6c80633e"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/map.mjs",
+    "sha256": "161cd357d43d0c8259ad2f0fa923d686089847d46f0de9c2cd43c535c9f1271a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/new-chat-search.mjs",
+    "sha256": "20320101be39fcc6b4c45b21b067d74e340ee7429b3cd9dec6eaaf314b89ae5c"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/next-ux.mjs",
+    "sha256": "099307fd42f063f9643d8994051561b495120d4711212c68eea033165e115ccb"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/polish.mjs",
+    "sha256": "d97e3578d89a9d50199f3bf1ecd89db203d303a659454b006410655d66abce0d"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/robustness.mjs",
+    "sha256": "ff81897b59c1808bb46b81e9352168ab94953c2087eff562e9eaab1977451408"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/server.mjs",
+    "sha256": "a5e9059d64202b31bcb7326eafa87f069ad4fdf98652f845dc42538e79fac2a5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/smoke.mjs",
+    "sha256": "594b8aa325a2bf8c4fd9b14fa7850401c8976c3764966e37f97faf4a1dca12b2"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tests/social.mjs",
+    "sha256": "934f8f3155280bd4f886ad805e972c4bdd78815c41caa9c9393051c375e47889"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/toolbar-volleyball-transparent.png",
+    "sha256": "8938406f5387d98c3df3c3f1186f487a350b245670e7da31f5dc9108e65384e0"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tools/optimize-portrait.ps1",
+    "sha256": "48121e256be521600882d1a107cb9dc332a11f854f9d6ddc05f823269be4bbd5"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tools/serve.mjs",
+    "sha256": "7481d1dfc1dc7b9d2176ad7d4d56aebd44ce0e432a0199f7b41dae2266d096f4"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tools/update-avatar-manifest.mjs",
+    "sha256": "8e5079b112e727e6414e62272070396abd7244c249a82aba7b6c6bf9e1b46f2a"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tools/verify-scope.mjs",
+    "sha256": "724817be4ddef15d8fb5c67c3c2ceef89d4f655482118f957a05417ae15c51f1"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/tour.js",
+    "sha256": "2fe762ea3c4d8dc296df7ee92d49e2ffc15c09136d2ce04a5181ba452e0d4620"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/translations.js",
+    "sha256": "637c3c9270930ffccf5ab74a786a2262b10c86b27947b7a7f930e47649e6f0fe"
+  },
+  {
+    "path": "prototypes/staseravolley-fabio/v003/views.js",
+    "sha256": "2b2e9195264fe3eae7456f3eb66c3b9fa62d61f7d01c37a799fee0912da1f2db"
+  }
+]

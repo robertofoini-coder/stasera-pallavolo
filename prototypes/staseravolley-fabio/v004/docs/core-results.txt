@@ -1,0 +1,42 @@
+✔ six groups, 28 distinct Brescia profiles, 14/16 bookings with 12 field + 2 bench (14.2883ms)
+✔ seeds stable; reopening does not duplicate matches; future seeded evenings roll once (7.3547ms)
+✔ no seat, occupied seat, invalid seat and duplicate booking rejected without mutation (7.395ms)
+✔ nonmembers and pending members cannot book; group approval comes first (5.1416ms)
+✔ pending booking holds seat and counts in capacity; expires at min(24h,start) (3.9927ms)
+✔ acceptance, authorization and double decision are consistent (4.1081ms)
+✔ rejection releases the seat and allows a new booking (4.4105ms)
+✔ expiry on reopening frees holds; repeated reconciliation does not repeat history/notifications (4.6251ms)
+✔ hold expires at match start even if TTL is longer; expiry without background timers (6.2583ms)
+✔ independent access settings; membership must finish before booking approval (19.0052ms)
+✔ settings are not retroactive; membership decisions do not book seats (4.6832ms)
+✔ payments only for confirmed bookings; cancellation/refunds keep commission (5.1883ms)
+✔ late cancellation refunds zero; pending cancellation releases hold; capacity never exceeded (8.5702ms)
+✔ match edits preserve bookings and notify, block shrinking an occupied bench (3.8535ms)
+✔ group creation, recurrence and independent attendance, duplicate fields without members (3.5982ms)
+✔ notification reads are isolated, admin authorized, prototype hold configuration validated (5.034ms)
+✔ review storage isolated from original versions (0.0324ms)
+✔ 30-player capacity with distinct field and reserve slots, no overbooking (22.4507ms)
+✔ rejected and expired requests can never be paid (8.9001ms)
+✔ hold configuration never changes existing deadlines; expired notices are emitted once (4.7609ms)
+✔ date and profile validation reject invalid canonical values (4.2671ms)
+✔ ratings cover actual past participants, accept partial scores and reject repeat submission (3.7131ms)
+✔ rendering every view is read-only and both catalogs cover all rendered messages (15.1639ms)
+✔ demo photo upgrade preserves bookings, custom uploads and later removals (3.034ms)
+✔ organizer is confirmed in preferred zone on every newly created match, without requests (5.2163ms)
+✔ organizer auto-enrollment does not overwrite occupied seats, rebook cancellations or duplicate (5.3402ms)
+✔ only a group manager can upload or remove a validated logo (4.0902ms)
+✔ legacy organizer migration never displaces occupied preferred positions (4.2084ms)
+✔ payment reminder derives confirmed unpaid future fees, never pending requests, and clears after payment/cancellation (12.168ms)
+✔ group edit saves image, details and rules atomically and preserves owner/members/bookings (3.8778ms)
+✔ group deletion cancels future matches and pending requests, refunds quota and retains ledger/fees (10.9353ms)
+✔ V003 messages are local, validated and readable only by the matching recipient action (4.9622ms)
+✔ chat requires approved common membership and announcements notify only group members (5.8616ms)
+✔ organizer exemption is limited to own matches, unpaid legacy seats migrate, paid ledger stays intact (3.1032ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 290.7615

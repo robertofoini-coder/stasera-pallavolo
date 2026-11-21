@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-21T21:43:16.127Z",
+  "status": "passed",
+  "checks": [
+    "crop cancellation",
+    "draft isolated until save",
+    "group logo persisted once",
+    "no JavaScript errors"
+  ]
+}
