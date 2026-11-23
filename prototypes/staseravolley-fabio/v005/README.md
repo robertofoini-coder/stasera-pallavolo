@@ -30,3 +30,7 @@ Sintassi JavaScript verificata con `node --check app.js`. Edge headless: percors
 ## Pubblicazione
 
 Sorgenti: `prototypes/staseravolley-fabio/v005/` sul branch Html del repository Roberto. Percorso pubblico previsto: `/mockup/v005/`. Le versioni precedenti non vengono sostituite. HTML, CSS e JavaScript senza framework o dipendenze aggiunte.
+
+## Aggiornamento Pulse
+
+La V005 mantiene i percorsi e lo storage esistenti e adotta lo stile Pulse: header e navigazione color inchiostro, accenti lime, schede con data laterale, loghi demo dei gruppi e icone SVG coerenti per ricerca, posizione, filtri, mappa, messaggi, notifiche, gestione, navigazione e freccia indietro. Pulsanti principali lime, campo verde tattico e posizione selezionata evidenziata. Focus da tastiera e preferenza di movimento ridotto rispettati. Nessuna delle funzionalità incomplete elencate sopra viene presentata come integrata da questo aggiornamento grafico.
