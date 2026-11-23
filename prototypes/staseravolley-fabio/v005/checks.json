@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "journey": "membership approval, seat selection, booking, payment, cancellation",
+  "widths": [
+    320,
+    390,
+    820,
+    1440
+  ],
+  "errors": []
+}
