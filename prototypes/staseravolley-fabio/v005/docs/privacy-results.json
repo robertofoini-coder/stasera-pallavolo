@@ -1,0 +1,151 @@
+{
+  "at": "2026-11-24T08:38:03.238Z",
+  "results": [
+    {
+      "name": "Banner shown on first use",
+      "status": "passed"
+    },
+    {
+      "name": "No organizer on Explore cards",
+      "status": "passed"
+    },
+    {
+      "name": "No external requests before choice",
+      "status": "passed"
+    },
+    {
+      "name": "Essential choice closes banner",
+      "status": "passed"
+    },
+    {
+      "name": "Map blocked with explanation",
+      "status": "passed"
+    },
+    {
+      "name": "Denied map does not contact providers",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown town explains privacy restriction",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown town does not contact provider without permission",
+      "status": "passed"
+    },
+    {
+      "name": "Maps default off",
+      "status": "passed"
+    },
+    {
+      "name": "Allowed map contacts provider",
+      "status": "passed"
+    },
+    {
+      "name": "Revocation removes map",
+      "status": "passed"
+    },
+    {
+      "name": "Saved choice survives reload",
+      "status": "passed"
+    },
+    {
+      "name": "Revoked map sends no new requests",
+      "status": "passed"
+    },
+    {
+      "name": "Demo privacy page opens",
+      "status": "passed"
+    },
+    {
+      "name": "Demo privacy page has real content",
+      "status": "passed"
+    },
+    {
+      "name": "Demo terms page opens",
+      "status": "passed"
+    },
+    {
+      "name": "Demo terms page has real content",
+      "status": "passed"
+    },
+    {
+      "name": "Demo cookies page opens",
+      "status": "passed"
+    },
+    {
+      "name": "Demo cookies page has real content",
+      "status": "passed"
+    },
+    {
+      "name": "Organizer retained in detail",
+      "status": "passed"
+    },
+    {
+      "name": "English legal page",
+      "status": "passed"
+    },
+    {
+      "name": "English owner placeholder",
+      "status": "passed"
+    },
+    {
+      "name": "Privacy dialog no overflow 320",
+      "status": "passed"
+    },
+    {
+      "name": "Page no overflow 320",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation visible 320",
+      "status": "passed"
+    },
+    {
+      "name": "Privacy dialog no overflow 390",
+      "status": "passed"
+    },
+    {
+      "name": "Page no overflow 390",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation visible 390",
+      "status": "passed"
+    },
+    {
+      "name": "Privacy dialog no overflow 820",
+      "status": "passed"
+    },
+    {
+      "name": "Page no overflow 820",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation visible 820",
+      "status": "passed"
+    },
+    {
+      "name": "Privacy dialog no overflow 1440",
+      "status": "passed"
+    },
+    {
+      "name": "Page no overflow 1440",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation visible 1440",
+      "status": "passed"
+    },
+    {
+      "name": "Corrupt choice returns to safe defaults",
+      "status": "passed"
+    },
+    {
+      "name": "No missing translations",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "externalRequests": 8
+}

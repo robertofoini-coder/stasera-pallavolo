@@ -1,0 +1,162 @@
+{
+  "at": "2026-11-24T08:37:59.397Z",
+  "results": [
+    {
+      "name": "Settings menu privacy",
+      "status": "passed"
+    },
+    {
+      "name": "Settings menu terms",
+      "status": "passed"
+    },
+    {
+      "name": "Settings menu cookies",
+      "status": "passed"
+    },
+    {
+      "name": "Settings menu preferences",
+      "status": "passed"
+    },
+    {
+      "name": "Support says draft not sent",
+      "status": "passed"
+    },
+    {
+      "name": "No external form POST",
+      "status": "passed"
+    },
+    {
+      "name": "Support draft persisted",
+      "status": "passed"
+    },
+    {
+      "name": "Draft can be deleted",
+      "status": "passed"
+    },
+    {
+      "name": "Logout profile shows demo login",
+      "status": "passed"
+    },
+    {
+      "name": "Logout preserves bookings",
+      "status": "passed"
+    },
+    {
+      "name": "Logout persists after reload",
+      "status": "passed"
+    },
+    {
+      "name": "Chat requires demo login",
+      "status": "passed"
+    },
+    {
+      "name": "Selected character logged in",
+      "status": "passed"
+    },
+    {
+      "name": "Logout action restored",
+      "status": "passed"
+    },
+    {
+      "name": "Arena surface exists",
+      "status": "passed"
+    },
+    {
+      "name": "Exactly 12 field positions",
+      "status": "passed"
+    },
+    {
+      "name": "Regulation numbers kept",
+      "status": "passed"
+    },
+    {
+      "name": "Reserves separate",
+      "status": "passed"
+    },
+    {
+      "name": "Player profile remains clickable",
+      "status": "passed"
+    },
+    {
+      "name": "Returns to the court",
+      "status": "passed"
+    },
+    {
+      "name": "Arena no overflow 320",
+      "status": "passed"
+    },
+    {
+      "name": "All player centers on court 320",
+      "status": "passed"
+    },
+    {
+      "name": "Arena no overflow 390",
+      "status": "passed"
+    },
+    {
+      "name": "All player centers on court 390",
+      "status": "passed"
+    },
+    {
+      "name": "Arena no overflow 820",
+      "status": "passed"
+    },
+    {
+      "name": "All player centers on court 820",
+      "status": "passed"
+    },
+    {
+      "name": "Arena no overflow 1440",
+      "status": "passed"
+    },
+    {
+      "name": "All player centers on court 1440",
+      "status": "passed"
+    },
+    {
+      "name": "English support",
+      "status": "passed"
+    },
+    {
+      "name": "English logout",
+      "status": "passed"
+    },
+    {
+      "name": "No untranslated keys",
+      "status": "passed"
+    },
+    {
+      "name": "New demo account created",
+      "status": "passed"
+    },
+    {
+      "name": "New demo account logged in",
+      "status": "passed"
+    },
+    {
+      "name": "New account persists after reload",
+      "status": "passed"
+    },
+    {
+      "name": "Delete cancellation preserves account",
+      "status": "passed"
+    },
+    {
+      "name": "Deleted account logs out",
+      "status": "passed"
+    },
+    {
+      "name": "Deleted account excluded from login",
+      "status": "passed"
+    },
+    {
+      "name": "Deleted account name and photo removed",
+      "status": "passed"
+    },
+    {
+      "name": "No untranslated account keys",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

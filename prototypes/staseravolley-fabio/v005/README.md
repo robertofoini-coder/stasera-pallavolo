@@ -1,5 +1,7 @@
 # StaseraVolley V005 — Pulse con tutte le funzionalità V004
 
+> Revisione del 24 novembre 2026: tema blu/azzurro, campo Arena 3D interattivo, nome organizzatore rimosso dalle sole schede Serate, menu legali e supporto nelle Impostazioni, login/logout e creazione/eliminazione account demo. Pubblicazione autorizzata sul branch Html dei repository Roberto e Fabio e nello stesso percorso V005 su Vercel. Gli esiti di rilascio vengono verificati separatamente.
+
 Aggiornamento del 24 novembre 2026. Questa versione sostituisce la precedente proposta ridotta V005 con il runtime completo della V004 e il linguaggio visivo Pulse. HTML, CSS e JavaScript; nessun framework o backend aggiunto. Le versioni V000–V004 e l'app principale rimangono separate e invariate.
 
 ## Apertura e strumenti demo
@@ -14,7 +16,7 @@ Aggiornamento del 24 novembre 2026. Questa versione sostituisce la precedente pr
 
 ## Navigazione e identità visiva
 
-Inchiostro scuro per header e navigazione, accenti lime, icone SVG lineari, serate a biglietto con data laterale e loghi dei gruppi. Campo tattico con fotografie, numeri regolamentari, colori squadra, proprio posto e riserve. La navigazione inferiore contiene Home, Serate, Gruppi e Profilo; i messaggi restano nell'header.
+Blu scuro per header e navigazione, accenti azzurri, icone SVG lineari, serate a biglietto con data laterale e loghi dei gruppi. Campo tattico con fotografie, numeri regolamentari, colori squadra, proprio posto e riserve. La navigazione inferiore contiene Home, Serate, Gruppi e Profilo; i messaggi restano nell'header. L'organizzatore resta nel dettaglio partita e nel gruppo, ma non nelle schede dell'elenco Serate.
 
 Home conserva l'elenco completo delle prenotazioni, In programma e Storico, richieste pendenti, pagamento, disdetta, apertura della partita e valutazioni. Il promemoria globale dei pagamenti rimane chiudibile e nelle notifiche. Il dettaglio evento si apre sul Campo; Partecipanti e Info restano disponibili. Il pannello organizzatore affianca tutti i gruppi gestibili alla gestione completa delle richieste. La guida all'adesione spiega ingresso → approvazione → prenotazione senza sostituire i controlli del modello.
 
@@ -89,6 +91,34 @@ node tests/all-screens.mjs
 node tests/responsive-screens.mjs
 node tests/versions.mjs
 node tests/group-photo-check.mjs
+node tests/privacy-browser.mjs
+node tests/arena-account-browser.mjs
 ```
 
 I test browser richiedono Playwright/Edge e `PLAYWRIGHT_MODULE` se installato fuori dal progetto. Rapporti attuali in `docs/`. Non si tratta di test su dispositivi fisici o di una certificazione completa di accessibilità.
+
+## Privacy e condizioni — prova locale
+
+Footer e Impostazioni aprono schermate demo in italiano e inglese per Privacy, Condizioni demo, Cookie e archiviazione e Preferenze privacy. Titolare e contatti sono esplicitamente da definire: nessun dato aziendale è inventato. Non è richiesta una firma o accettazione contrattuale della bozza per usare l'app.
+
+Il codice usa localStorage, non integra analisi/pubblicità e non scrive cookie applicativi. Questo non certifica hosting o altri servizi esterni. Mappe e ricerche di località non già note sono facoltative e disattivate inizialmente: il pannello blocca davvero tile OpenStreetMap e richieste Nominatim finché non sono abilitate. I link Google Maps sono navigazioni esterne avviate dall'utente. Il permesso geolocalizzazione del browser è distinto.
+
+Le scelte sono riapribili, modificabili e salvate su questo browser con `staseravolley-v005-privacy-v1`, versione informativa e data della scelta. Non costituiscono una prova server di consenso multiutente. Una scelta assente, non valida o di altra versione mantiene le mappe disattivate. Nessuna categoria analitica/pubblicitaria fittizia è presentata come attiva. Rifiuto e consenso alle mappe hanno pari evidenza; si può continuare a usare le funzioni locali senza abilitarle. Il reset dei dati demo non cancella le preferenze privacy: modificarle nel relativo pannello.
+
+Verifiche aggiuntive locali: 35 test modello, 10 scenari browser, 44 controlli responsive e 36 controlli privacy/interfaccia superati. Il test privacy intercetta i provider remoti e usa risposte simulate per misurare invio/blocco delle richieste senza dipendere dalle tile reali; la regressione con mappe abilitate prova anche il percorso geografico esistente. Controllati persistenza, revoca, ricerca esterna negata, assenza iniziale di richieste, dati corrotti, IT/EN, overflow e navigazione. Nessuna prova su dispositivi fisici o valutazione legale definitiva.
+
+Prima di un uso reale occorre completare l'identità del titolare/gestore, contatti, finalità e basi giuridiche, destinatari e fornitori, conservazione, diritti, eventuali trasferimenti e condizioni economiche effettive, oltre a verificare la configurazione dell'hosting. Riferimenti: [Garante — Linee guida cookie](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876) e [GDPR — articolo 13](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679). Le schermate restano bozze per il prototipo.
+
+## Campo Arena 3D, account e supporto
+
+Il campo riprende la variante Arena scelta: pavimento blu in prospettiva, linee, rete a maglia e pali, fotografie circolari e numeri delle posizioni. È realizzato in HTML/CSS, non con uno screenshot statico: selezione posto, apertura profili, riserve, cambio posto e prenotazione restano collegati al modello V004. I giocatori non sono trasformati in prospettiva, per preservare leggibilità e controlli da tastiera. Temi chiaro/scuro e numerazione regolamentare restano disponibili.
+
+Impostazioni presenta menu a righe per Privacy, Condizioni demo, Cookie e archiviazione, Preferenze privacy, e una sezione Aiuto con Contatta il supporto. Il footer conserva collegamenti piccoli e sobri. Le pagine sono bozze IT/EN; non inventano titolare, contatti o condizioni contrattuali definitive.
+
+Nel Profilo è disponibile Esci dalla demo, con conferma. I dati del modello restano salvati. Dopo l'uscita appare Accedi alla demo con selettore personaggio; chat, prenotazioni personali e comandi che modificano il modello richiedono il rientro nella sessione demo. Lo stato di uscita persiste alla riapertura. Per compatibilità, le sessioni del prototipo già esistenti rimangono inizialmente attive. Questo controllo dell'interfaccia non è autenticazione sicura o Supabase Auth: gli strumenti Personaggio demo restano intenzionalmente strumenti di sviluppo.
+
+Crea account demo genera un nuovo profilo locale con identificativo stabile, nome, città e posizione preferita, senza password, email verificata, adesioni automatiche o privilegi amministrativi. Il nuovo profilo può usare le funzioni del modello esistente. Elimina account demo è disponibile sui profili creati nella prova e richiede conferma; i personaggi precaricati e gli amministratori sono protetti. Se il profilo organizza gruppi attivi deve prima gestirli/eliminarli, per non lasciare membri senza organizzatore. Le prenotazioni future vengono disdette tramite le regole di rimborso esistenti, senza duplicare movimenti; nome, foto, adesioni, messaggi associati e bozza supporto vengono rimossi. Il rendiconto e i riferimenti storici restano associati a un segnaposto senza nome/foto dell'utente. Il profilo eliminato non è più selezionabile per l'accesso. Non è un servizio reale di cancellazione GDPR.
+
+Il modulo supporto permette di inserire nome dimostrativo, email facoltativa, argomento e messaggio, salvare o eliminare la bozza e riprenderla dopo la riapertura. La chiave è `staseravolley-v005-support-draft-v1`. Il destinatario NON è configurato: nessuna email, ticket o richiesta viene inviata, come indicato accanto al modulo e nel messaggio di salvataggio. Nessun servizio o costo esterno è introdotto. L'utente ha confermato di mantenere login demo e supporto senza invio fino a comunicazione dell'email.
+
+Verifiche della revisione: 41 test modello/account, 39 controlli browser Arena/account/supporto, 36 controlli privacy/interfaccia, 10 scenari funzionali, 44 verifiche responsive a 320/820 pixel e ritaglio logo superati. Rapporti in `docs/`. Gli scenari di creazione/eliminazione includono persistenza, annullamento della conferma, blocco dei profili protetti, gestione dei gruppi posseduti, liberazione posti e conservazione coerente di rimborso/commissione. Non sono test su dispositivi fisici o autenticazione multiutente.

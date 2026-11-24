@@ -15,7 +15,7 @@ async function check(name,fn,width=390,height=844){
  const p=await ctx.newPage(),errors=[];p.setDefaultTimeout(12000);p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  try{
   await p.addInitScript(()=>{localStorage.setItem('staseravolley-v003-state-v1','original-state-untouched');localStorage.setItem('staseravolley-v003-settings-v1','original-settings-untouched');});
-  await p.goto(base,{waitUntil:'networkidle'});await fn(p);
+  await p.goto(base,{waitUntil:'networkidle'});if(await p.locator('#privacyBanner').isVisible())await p.locator('#privacyBanner [data-privacy=allow]').click();await fn(p);
   assert.deepEqual(errors,[],'Browser errors');assert.deepEqual(await p.evaluate(()=>SV005.missingTranslations()),[]);
   assert.equal(await p.evaluate(()=>localStorage.getItem('staseravolley-v003-state-v1')),'original-state-untouched');
   assert.equal(await p.evaluate(()=>localStorage.getItem('staseravolley-v003-settings-v1')),'original-settings-untouched');

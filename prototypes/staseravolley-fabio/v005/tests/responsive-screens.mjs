@@ -8,7 +8,7 @@ try{
  for(const [width,lang,theme] of [[320,'en','dark'],[820,'it','light']]){
   const ctx=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce',timezoneId:'Europe/Rome'}),p=await ctx.newPage();p.setDefaultTimeout(10000);p.on('pageerror',e=>errors.push(e.message));p.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
   try{
-   await p.goto(base,{waitUntil:'networkidle'});await p.evaluate(({lang,theme})=>localStorage.setItem(SV005.keys.settings,JSON.stringify({actorId:'bs-friends-01',language:lang,theme,preview:'auto'})),{lang,theme});await p.reload({waitUntil:'networkidle'});
+   await p.goto(base,{waitUntil:'networkidle'});if(await p.locator('#privacyBanner').isVisible())await p.locator('#privacyBanner [data-privacy=allow]').click();await p.evaluate(({lang,theme})=>localStorage.setItem(SV005.keys.settings,JSON.stringify({actorId:'bs-friends-01',language:lang,theme,preview:'auto'})),{lang,theme});await p.reload({waitUntil:'networkidle'});
    await check(p,'explore',width);assert.equal(await p.locator('.quick-filters').evaluate(el=>{const date=el.querySelector('.date-filters').lastElementChild.getBoundingClientRect(),filter=el.querySelector('.filter-trigger').getBoundingClientRect();return date.right>filter.left-3;}),false,'date shortcuts overlap filters');
    for(const key of ['groups','bookings','messages','profile']){await nav(p,key);await check(p,key,width);}
    await p.locator('[data-action=edit-profile]').click();await check(p,'profile-editor',width);await p.locator('#profileForm [name=days]').last().focus();await p.keyboard.press('Space');await p.locator('#profileForm button[type=submit]').click();

@@ -39,8 +39,8 @@
     },
     {
       "file": "group-map.js",
-      "equal": true,
-      "normalization": "none"
+      "equal": false,
+      "normalization": "Revisione locale: richieste geografiche e mappe condizionate alle preferenze privacy; regole del modello invariate."
     },
     {
       "file": "emoji-picker.js",

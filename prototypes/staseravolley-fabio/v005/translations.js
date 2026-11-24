@@ -1,3 +1,5 @@
+import {accountRows} from './account-copy.js';
+import {legalRows} from './legal-copy.js';
 const rows=`
 home|Home|Home
 v005HomeTitle|Il tuo volley|Your volleyball
@@ -385,7 +387,7 @@ tourSearchText|Scrivi il nome del gruppo, della palestra o della città. I risul
 tourDatesTitle|Scegli quando giocare|Choose when to play
 tourDatesText|Filtra oggi, domani, settimana o una data precisa senza cambiare la posizione delle palestre.|Filter today, tomorrow, this week or an exact date without changing event locations.
 tourEventTitle|Prima conosci il gruppo|Discover the group first
-tourEventText|La scheda mostra logo, organizzatore, quota e disponibilità. Aprila per conoscere il gruppo e poi scegliere la serata.|The card shows its logo, organizer, fee and availability. Open it to discover the group, then choose its match.
+tourEventText|La scheda mostra logo, data, orari, quota e disponibilità. Aprila per vedere il campo e le informazioni della serata.|The card shows its logo, date, time, fee and availability. Open it to view the court and match details.
 tourNavTitle|Muoviti nell’app|Navigate the app
 tourNavText|Esplora cerca le serate, Prenotazioni gestisce i tuoi posti, Gruppi raccoglie i gruppi e Profilo contiene i tuoi dati.|Explore finds matches, Bookings manages your seats, Groups lists groups and Profile contains your details.
 tourBellTitle|Pagamenti sempre recuperabili|Payments stay accessible
@@ -636,6 +638,6 @@ pulseEyebrow|Si gioca insieme|Play together
 pulseTitle|Si gioca vicino a te.|Play near you.
 pulseSubtitle|Scegli la serata. Trova il tuo posto.|Pick a match. Find your spot.
 `;
-export const catalog={it:{},en:{}};for(const row of rows.trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
+export const catalog={it:{},en:{}};for(const row of (rows+legalRows+accountRows).trim().split('\n')){const [key,it,en]=row.split('|');catalog.it[key]=it;catalog.en[key]=en;}
 export const missingKeys=new Set();
 export function translator(language='it'){return (key,params={})=>{const text=catalog[language]?.[key];if(text===undefined){missingKeys.add(key);return `⟦${key}⟧`;}return text.replace(/\{(\w+)\}/g,(_,p)=>String(params[p]??''));};}
