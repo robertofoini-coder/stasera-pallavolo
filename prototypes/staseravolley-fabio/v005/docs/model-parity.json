@@ -1,0 +1,56 @@
+{
+  "protectedFiles": 438,
+  "changed": 0,
+  "modules": [
+    {
+      "file": "core.js",
+      "equal": true,
+      "normalization": "storage namespace only"
+    },
+    {
+      "file": "data.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "dates.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "participation.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "social.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "crop.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "discovery.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "group-map.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "emoji-picker.js",
+      "equal": true,
+      "normalization": "none"
+    },
+    {
+      "file": "avatar-manifest.js",
+      "equal": true,
+      "normalization": "none"
+    }
+  ]
+}

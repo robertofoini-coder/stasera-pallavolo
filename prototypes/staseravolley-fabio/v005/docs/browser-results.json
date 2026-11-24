@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-23T21:31:45.980Z",
+  "browser": "Microsoft Edge headless",
+  "results": [
+    {
+      "name": "Compact mobile results and accessible filters",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Each selected event opens its own Info and Maps destination",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Location search GPS ordering and functional geographic map",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Group membership reserve booking payment and cancellation",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Approval and organizer access remain functional",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Profile save chat empty state and shared-group messaging",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Italian English dark theme persistence keyboard tour",
+      "status": "passed",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Responsive navigation width 320",
+      "status": "passed",
+      "width": 320,
+      "height": 900
+    },
+    {
+      "name": "Responsive navigation width 820",
+      "status": "passed",
+      "width": 820,
+      "height": 900
+    },
+    {
+      "name": "Responsive navigation width 1440",
+      "status": "passed",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "metrics": [
+    {
+      "firstCardTop": 322.03125,
+      "fullCards": 3,
+      "width": 390,
+      "height": 844
+    }
+  ]
+}

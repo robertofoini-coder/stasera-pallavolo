@@ -1,0 +1,226 @@
+{
+  "at": "2026-11-24T07:20:34.589Z",
+  "results": [
+    {
+      "name": "explore",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "groups",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "bookings",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "messages",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "profile",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "profile-editor",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "group",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "members",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "group-info",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "group-editor",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "match-editor",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "recurrence-editor",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "court",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "match-info",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "participants",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "requests",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "notices",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "settings",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "prototype-tools",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "new-chat",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "contact-results",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "tutorial",
+      "width": 320,
+      "status": "passed"
+    },
+    {
+      "name": "explore",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "groups",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "bookings",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "messages",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "profile",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "profile-editor",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "group",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "members",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "group-info",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "group-editor",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "match-editor",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "recurrence-editor",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "court",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "match-info",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "participants",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "requests",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "notices",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "settings",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "prototype-tools",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "new-chat",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "contact-results",
+      "width": 820,
+      "status": "passed"
+    },
+    {
+      "name": "tutorial",
+      "width": 820,
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

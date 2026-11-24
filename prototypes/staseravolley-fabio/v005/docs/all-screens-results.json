@@ -1,0 +1,457 @@
+{
+  "at": "2026-11-23T21:32:12.011Z",
+  "browser": "Microsoft Edge headless",
+  "results": [
+    {
+      "screen": "explore",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "notifications",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "my-groups",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "directory",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "groups-map",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-evenings",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-members",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-info",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-info",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-court",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-participants",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "player-profile",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "invite",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "bookings-upcoming",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "payment",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "bookings-history",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "rating",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "profile",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "profile-edit",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "photo-crop",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "messages",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "new-chat",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "new-chat-search",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "chat",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "emoji-picker",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "chat-actions",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "archived-chats",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "confirmation",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "membership-pending",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "requests",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "requests-history",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-organizer",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-edit",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "group-create",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-create",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-repeat",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "match-edit",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "settings",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "prototype-tools",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "settings-dark-en",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "profile-dark-en",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "messages-dark-en",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "admin-dark-en",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "tutorial",
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "screen": "explore",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "notifications",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "my-groups",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "directory",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "groups-map",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-evenings",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-members",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-info",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-info",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-court",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-participants",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "player-profile",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "invite",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "bookings-upcoming",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "payment",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "bookings-history",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "rating",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "profile",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "profile-edit",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "photo-crop",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "messages",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "new-chat",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "new-chat-search",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "chat",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "emoji-picker",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "chat-actions",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "archived-chats",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "confirmation",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "membership-pending",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "requests",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "requests-history",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-organizer",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-edit",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "group-create",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-create",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-repeat",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "match-edit",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "settings",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "prototype-tools",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "settings-dark-en",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "profile-dark-en",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "messages-dark-en",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "admin-dark-en",
+      "width": 1440,
+      "status": "passed"
+    },
+    {
+      "screen": "tutorial",
+      "width": 1440,
+      "status": "passed"
+    }
+  ],
+  "flows": [
+    {
+      "width": 390,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

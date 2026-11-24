@@ -1,0 +1,9 @@
+{
+  "name": "staseravolley-v005",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs 4197",
+    "test": "node --test tests/core.test.mjs"
+  }
+}
