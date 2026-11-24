@@ -1,0 +1,2 @@
+export function sharesGroup(s,a,b){return Object.values(s.groups).some(g=>!g.deletedAt&&s.memberships[g.id+':'+a]?.status==='active'&&s.memberships[g.id+':'+b]?.status==='active');}
+export function visibleMessages(s,actor){return Object.values(s.messages||{}).filter(m=>(m.senderId===actor||m.recipientId===actor)&&Number(m.id.split('-').at(-1))>Number(s.chatPrefs?.[actor+':'+(m.senderId===actor?m.recipientId:m.senderId)]?.clearedThrough||0));}

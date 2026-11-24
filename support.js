@@ -1,0 +1,4 @@
+export const SUPPORT_KEY='staseravolley-v005-support-draft-v1';
+export function readSupportDraft(){try{const d=JSON.parse(localStorage.getItem(SUPPORT_KEY));return d&&typeof d==='object'?Object.fromEntries(['name','email','topic','message'].map(k=>[k,typeof d[k]==='string'?d[k]:''])):{};}catch{return {};}}
+export function saveSupportDraft(value){const d={name:String(value.name||'').trim().slice(0,70),email:String(value.email||'').trim().slice(0,160),topic:['booking','payment','technical','privacy','other'].includes(value.topic)?value.topic:'other',message:String(value.message||'').trim().slice(0,2000)};if(d.message.length<10)throw Error('invalidForm');localStorage.setItem(SUPPORT_KEY,JSON.stringify({...d,savedAt:new Date().toISOString()}));return d;}
+export const clearSupportDraft=()=>localStorage.removeItem(SUPPORT_KEY);

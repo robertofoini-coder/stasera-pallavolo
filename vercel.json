@@ -1,5 +1,7 @@
 {
-  "redirects": [
-    { "source": "/app.html", "destination": "/", "permanent": true }
-  ]
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": ".",
+  "ignoreCommand": "git log -1 --format=%s | grep -Fxq \"Riordina main con StaseraVolley V005\""
 }
