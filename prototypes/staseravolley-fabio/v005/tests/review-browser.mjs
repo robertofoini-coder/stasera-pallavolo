@@ -34,7 +34,8 @@ try{
   const prices=await p.locator('.match-numbers b').allTextContents();assert.ok(prices[0].includes('7,00'));assert.ok(prices[1].includes('8,00'));
   await p.locator('[data-action=open-filters]').click();await p.locator('#exploreSearch').fill('Leonessa');assert.equal(await p.locator('.match-card').count(),1);
   await p.locator('[data-action=reset-discovery]').click();assert.equal(await p.locator('.match-card').count(),6);
-  await p.locator('[data-action=date-filter][data-value=today]').click();assert.equal(await p.locator('.match-card').count(),0);
+  const todayCount=await p.evaluate(async()=>{const {dateKey}=await import(new URL('dates.js',location.href));return Object.values(SV005.getState().matches).filter(m=>m.status==='active'&&m.date===dateKey(Date.now())&&Date.parse(m.startsAt)>Date.now()).length;});
+  await p.locator('[data-action=date-filter][data-value=today]').click();assert.equal(await p.locator('.match-card').count(),todayCount);
   await p.locator('[data-action=date-filter][data-value=all]').click();assert.equal(await p.locator('.match-card').count(),6);
   assert.equal(await p.locator('#requestsButton').isVisible(),false);
  });
